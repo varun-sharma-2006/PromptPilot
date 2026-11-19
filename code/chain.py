@@ -42,7 +42,8 @@ class Chain:
 
     # ---------- T1 ----------
     def generate(self, passage, competency, difficulty, n, feedback=None):
-        values = dict(N=n, DIFFICULTY=difficulty, COMPETENCY=competency, PASSAGE=passage)
+        values = dict(N=n, DIFFICULTY=difficulty, COMPETENCY=competency, PASSAGE=passage,
+                      KEY_ORDER=prompts.key_order(n))
         name = "T1_generate"
         if feedback:
             name = "T1_revise"
@@ -50,7 +51,7 @@ class Chain:
         obj, err = self._run(name, **values)
         if obj is None:
             return {"questions": [], "note": f"Output was not valid JSON: {err}"}
-        qs = checks.extract_questions(obj) or []
+        qs = checks.extract_questions(obj, prompts.key_order(max(n, 1)).split(", ")) or []
         note = obj.get("note", "") if isinstance(obj, dict) else ""
         # keep only questions that pass the automatic schema/quote checks
         kept, dropped = [], []
