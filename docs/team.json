@@ -1,0 +1,21 @@
+{
+  "_note": "Fill every value marked TODO, then run: python docs/build_pdf.py",
+  "team_id": "PE-B37-07",
+  "team_name": "PromptPilot",
+  "project_title": "KarmaQuiz: A Prompt-Engineered Workflow to Generate, Quality-Check and Competency-Tag MCQs from Learning Material (SIH26101, iGOT Karmayogi)",
+  "short_title": "KarmaQuiz",
+  "batch": "B37 - B48",
+  "faculty": "TODO faculty name",
+  "course": "SCSE4041 Prompt Engineering Mini Project, Bennett University",
+  "members": [
+    {"name": "Varun Sharma", "enrollment": "TODO", "leader": true},
+    {"name": "Yashika Garg", "enrollment": "TODO", "leader": false},
+    {"name": "Om Bansal", "enrollment": "TODO", "leader": false}
+  ],
+  "links": {
+    "prototype": "TODO Streamlit app URL after deploying (see README)",
+    "repository": "https://github.com/varun-sharma-2006/PromptPilot",
+    "reel": "TODO Drive or unlisted YouTube link",
+    "reel_seconds": "TODO"
+  }
+}

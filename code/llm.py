@@ -36,7 +36,8 @@ def _get_key():
 def client():
     global _client
     if _client is None:
-        _client = genai.Client(api_key=_get_key())
+        _client = genai.Client(api_key=_get_key(),
+                               http_options=types.HttpOptions(timeout=120_000))  # ms; avoid hung calls
     return _client
 
 
