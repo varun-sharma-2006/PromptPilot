@@ -30,15 +30,41 @@ def quote_in_passage(quote, passage):
     return q.lower() in _norm(passage).lower()
 
 
-def extract_questions(obj):
+def assemble(qs, letters):
+    """From v5 the model returns {"answer", "distractors": [3]} and code places them at A-D.
+
+    letters: list of key letters, one per question (balanced order from prompts.key_order).
+    Questions already in v1-v4 form (with "options"/"correct") are returned unchanged.
+    """
+    out = []
+    for i, q in enumerate(qs):
+        if isinstance(q, dict) and "answer" in q and isinstance(q.get("distractors"), list):
+            key = letters[i % len(letters)]
+            wrong = [str(d) for d in q["distractors"]][:3]
+            others = [k for k in "ABCD" if k != key]
+            opts = {key: str(q["answer"])}
+            for k, d in zip(others, wrong):
+                opts[k] = d
+            q = {k: v for k, v in q.items() if k not in ("answer", "distractors")}
+            q["options"] = {k: opts[k] for k in "ABCD" if k in opts}
+            q["correct"] = key
+        out.append(q)
+    return out
+
+
+def extract_questions(obj, letters=None):
     """v1 asks for a bare list, later versions for {"questions": [...]}."""
+    qs = None
     if isinstance(obj, list):
-        return obj
-    if isinstance(obj, dict):
+        qs = obj
+    elif isinstance(obj, dict):
         for k in ("questions", "mcqs", "items"):
             if isinstance(obj.get(k), list):
-                return obj[k]
-    return None
+                qs = obj[k]
+                break
+    if qs is None:
+        return None
+    return assemble(qs, letters or list("ABCD"))
 
 
 def check_question(q, passage):
@@ -57,8 +83,8 @@ def check_question(q, passage):
     }
 
 
-def check_run(obj, passage):
-    qs = extract_questions(obj) if obj is not None else None
+def check_run(obj, passage, letters=None):
+    qs = extract_questions(obj, letters) if obj is not None else None
     if qs is None:
         return {"json_ok": obj is not None, "schema_ok": False, "n_questions": 0, "per_question": []}
     per = [check_question(q, passage) for q in qs]

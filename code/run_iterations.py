@@ -52,10 +52,11 @@ def run_version(version, repeats):
                                 PASSAGE=meta["text"], KEY_ORDER=prompts.key_order(n, seed=r))
             text, info = llm.call(user, p["system"], p["temperature"], p["json_mode"])
             obj, err = llm.parse_json(text)
-            res = checks.check_run(obj, meta["text"])
+            letters = prompts.key_order(n, seed=r).split(", ")
+            res = checks.check_run(obj, meta["text"], letters)
             runs.append({
                 "input": pid, "difficulty": diff, "n_requested": n, "repeat": r + 1,
-                "meta": info, "parse_error": err, "checks": res, "raw_output": text,
+                "meta": info, "parse_error": err, "checks": res, "raw_output": text, "key_letters": letters,
             })
             print(f"{version} {pid} r{r+1}: json={res['json_ok']} schema={res['schema_ok']} n={res['n_questions']}")
     return runs
@@ -69,7 +70,7 @@ def judge(runs):
     p = prompts.load(*JUDGE)
     for r in runs:
         obj, _ = llm.parse_json(r["raw_output"])
-        qs = checks.extract_questions(obj) if obj is not None else None
+        qs = checks.extract_questions(obj, r.get("key_letters")) if obj is not None else None
         if not qs:
             r["judge"] = []
             continue
@@ -86,7 +87,7 @@ def judge(runs):
 def repeated_sources(r):
     """Questions in one run whose source_sentence is the same as another question's."""
     obj, _ = llm.parse_json(r["raw_output"])
-    qs = checks.extract_questions(obj) or [] if obj is not None else []
+    qs = (checks.extract_questions(obj, r.get("key_letters")) or []) if obj is not None else []
     srcs = [checks._norm(str(q.get("source_sentence", ""))).lower() for q in qs if isinstance(q, dict)]
     return sum(srcs.count(s) > 1 for s in srcs)
 
