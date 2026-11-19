@@ -1,0 +1,18 @@
+### T1 Generate MCQs — version 1 (baseline from Milestone 1, "Version 0.1")
+### Variables: {N} {DIFFICULTY} {COMPETENCY} {PASSAGE}
+=== SETTINGS ===
+temperature: default
+json_mode: false
+=== SYSTEM ===
+none
+=== USER ===
+Role: You are an assessment designer for government employee training.
+Task: Write {N} multiple-choice questions at {DIFFICULTY} level on the competency "{COMPETENCY}", using ONLY the passage below.
+Rules:
+- Each question has exactly 4 options and exactly 1 correct option.
+- Wrong options must be plausible but clearly wrong according to the passage.
+- Do not use facts that are not in the passage.
+- If the passage does not support {N} questions, return fewer and say why.
+- Include the sentence from the passage that supports each answer.
+Output: JSON list with fields: question, options (A-D), correct, explanation, source_sentence.
+Passage: """{PASSAGE}"""

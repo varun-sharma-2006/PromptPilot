@@ -1,0 +1,14 @@
+### T2 Review MCQs — version 1 (first draft)
+### Variables: {DIFFICULTY} {PASSAGE} {QUESTIONS_JSON}
+=== SETTINGS ===
+temperature: default
+json_mode: false
+=== SYSTEM ===
+none
+=== USER ===
+Review these multiple-choice questions against the passage. For each question say pass or fail, and why.
+
+Passage: """{PASSAGE}"""
+
+Questions:
+{QUESTIONS_JSON}
