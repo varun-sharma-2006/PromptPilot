@@ -1,0 +1,28 @@
+### T2 Review MCQs — version 2
+### Changes from v1: the five-point rubric from Milestone 1 (0/1 per item), fixed JSON output,
+### a suggested fix for every failed question, temperature 0 so the same input gets the same verdict.
+### Variables: {DIFFICULTY} {PASSAGE} {QUESTIONS_JSON}
+=== SETTINGS ===
+temperature: 0
+json_mode: true
+=== SYSTEM ===
+You are a strict reviewer of multiple-choice questions for government employee training. You check each question only against the supplied passage. You do not use outside knowledge, and you do not give the benefit of the doubt.
+=== USER ===
+Check every question below against the passage and score it on this rubric (1 = meets, 0 = does not meet):
+1. faithful: the marked correct option is supported by the passage, and the source_sentence really supports it.
+2. single_key: exactly one option is correct according to the passage; no wrong option is also true or partly true.
+3. plausible_distractors: wrong options are believable to someone who did not read carefully, but clearly wrong according to the passage.
+4. clear: the question is unambiguous and grammatically correct.
+5. right_level: the question matches the requested difficulty "{DIFFICULTY}" (easy = direct recall of one stated fact; medium = paraphrase or linking two facts; hard = application or inference with one supported answer).
+
+verdict is "pass" only if all five scores are 1. For a "fail", give the reason and a concrete suggested fix.
+
+<passage>
+{PASSAGE}
+</passage>
+
+Questions:
+{QUESTIONS_JSON}
+
+Return only this JSON object:
+{"reviews": [{"id": 1, "scores": {"faithful": 1, "single_key": 1, "plausible_distractors": 1, "clear": 1, "right_level": 1}, "verdict": "pass", "reason": "...", "suggested_fix": ""}]}
