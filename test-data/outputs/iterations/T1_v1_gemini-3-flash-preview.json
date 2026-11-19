@@ -1,0 +1,724 @@
+{
+  "prompt": "v1/T1_generate",
+  "date": "2026-11-19",
+  "model": "gemini-3-flash-preview",
+  "summary": {
+    "runs": 12,
+    "json_valid": 12,
+    "schema_valid": 11,
+    "questions": 60,
+    "quote_verbatim": 60,
+    "four_distinct_options": 59,
+    "count_as_requested_normal": 9,
+    "normal_runs": 9,
+    "short_passage_question_counts": [
+      6,
+      6,
+      6
+    ],
+    "answer_positions": {
+      "A": 8,
+      "B": 25,
+      "C": 25,
+      "D": 2
+    }
+  },
+  "runs": [
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 10.6
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "B",
+          "C",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which former legislation was replaced by the Right to Information Act, 2005?\",\n    \"options\": {\n      \"A\": \"The Official Secrets Act, 1923\",\n      \"B\": \"The Freedom of Information Act, 2002\",\n      \"C\": \"The Information Technology Act, 2000\",\n      \"D\": \"The Public Records Act, 1993\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage explicitly states that the RTI Act 2005 replaced the Freedom of Information Act, 2002.\",\n    \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n  },\n  {\n    \"question\": \"Under the RTI Act, 2005, what is the mandatory response time for a public authority if the information request involves a petitioner's life and liberty?\",\n    \"options\": {\n      \"A\": \"Within 24 hours\",\n      \"B\": \"Within 30 days\",\n      \"C\": \"Within 48 hours\",\n      \"D\": \"Within 7 days\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"While the standard response time is thirty days, the passage specifies a shorter window of 48 hours for matters of life and liberty.\",\n    \"source_sentence\": \"which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n  },\n  {\n    \"question\": \"What proactive measure are public authorities required to take to ensure citizens need minimum recourse to formal requests?\",\n    \"options\": {\n      \"A\": \"Establish help desks in every government office\",\n      \"B\": \"Computerize records for wide dissemination and proactively publish certain information\",\n      \"C\": \"Provide free legal counsel to all RTI petitioners\",\n      \"D\": \"Translate all government documents into every regional language\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The Act mandates computerization and proactive publication of information to reduce the need for formal requests.\",\n    \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n  },\n  {\n    \"question\": \"According to the passage, how is the Right to Information classified in relation to the Constitution of India?\",\n    \"options\": {\n      \"A\": \"It is explicitly listed as a Fundamental Right in the Constitution.\",\n      \"B\": \"It is an amendment to the Directive Principles of State Policy.\",\n      \"C\": \"It is not a Fundamental Right, but it protects rights under Article 19(1)(a) and Article 21.\",\n      \"D\": \"It is a right that replaces Article 19 and Article 21 of the Constitution.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The text clarifies that RTI itself is not a Fundamental Right but serves to protect other specific Fundamental Rights guaranteed by the Constitution.\",\n    \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n  },\n  {\n    \"question\": \"In the context of the RTI Act, 2005, what does the term 'public authority' refer to?\",\n    \"options\": {\n      \"A\": \"Any private organization operating within India\",\n      \"B\": \"Only the Parliament of India and Delhi Legislative Assembly\",\n      \"C\": \"A body of Government or an instrumentality of State\",\n      \"D\": \"Individual citizens who request information\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage defines a public authority as a body of government or an instrumentality of the State.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days...\"\n  }\n]\n```"
+    },
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 8.5
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "B",
+          "C",
+          "D",
+          "B"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which specific legislation was replaced by the Right to Information Act, 2005?\",\n    \"options\": {\n      \"A\": \"The Public Records Act, 1993\",\n      \"B\": \"The Freedom of Information Act, 2002\",\n      \"C\": \"The Official Secrets Act, 1923\",\n      \"D\": \"The Delhi Legislative Assembly Act, 2005\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage explicitly states that the RTI Act, 2005 replaced the former Freedom of Information Act, 2002.\",\n    \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n  },\n  {\n    \"question\": \"Under the RTI Act 2005, what is the mandatory response time for a request involving a petitioner's life and liberty?\",\n    \"options\": {\n      \"A\": \"24 hours\",\n      \"B\": \"48 hours\",\n      \"C\": \"30 days\",\n      \"D\": \"7 working days\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"While the standard response time is 30 days, the passage notes a shorter deadline of 48 hours for matters of life and liberty.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n  },\n  {\n    \"question\": \"What is one of the proactive duties of a public authority mentioned in the Act to reduce the need for formal RTI requests?\",\n    \"options\": {\n      \"A\": \"Charging high fees to discourage unnecessary requests\",\n      \"B\": \"Hiring private consultants to manage citizen queries\",\n      \"C\": \"Computerizing records for wide dissemination\",\n      \"D\": \"Limiting information access to only Fundamental Rights matters\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage states that authorities must computerize records and proactively publish information to minimize formal requests.\",\n    \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n  },\n  {\n    \"question\": \"According to the passage, which constitutional rights does the RTI Act protect?\",\n    \"options\": {\n      \"A\": \"Right to Property and Right against Exploitation\",\n      \"B\": \"Right to Equality and Right to Constitutional Remedies\",\n      \"C\": \"Freedom of Religion and Cultural Rights\",\n      \"D\": \"Freedom of Expression and Speech, and Right to Life and Personal Liberty\"\n    },\n    \"correct\": \"D\",\n    \"explanation\": \"The RTI Act protects the rights under Article 19(1)(a) and Article 21, which correspond to Speech/Expression and Life/Liberty.\",\n    \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n  },\n  {\n    \"question\": \"Which statement accurately describes the status of the Right to Information in the Constitution of India based on the text?\",\n    \"options\": {\n      \"A\": \"It is directly included as a Fundamental Right.\",\n      \"B\": \"It is not a Fundamental Right but protects other fundamental rights.\",\n      \"C\": \"It was established by the Delhi Legislative Assembly as a new Fundamental Right.\",\n      \"D\": \"It is an amendment to Article 19 of the Constitution.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage clarifies that while RTI itself isn't a Fundamental Right, it serves to protect existing Fundamental Rights like Article 19(1)(a) and Article 21.\",\n    \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 8.2
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "C",
+          "A",
+          "B",
+          "C",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"According to the RTI Act 2005, what is the standard time frame within which a public authority is required to reply to a request for information?\",\n    \"options\": {\n      \"A\": \"Within 48 hours\",\n      \"B\": \"Within fifteen days\",\n      \"C\": \"Within thirty days\",\n      \"D\": \"Within sixty days\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage specifies that for standard requests, the public authority is required to reply within thirty days.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n  },\n  {\n    \"question\": \"Which of the following acts was replaced by the Right to Information Act, 2005?\",\n    \"options\": {\n      \"A\": \"Freedom of Information Act, 2002\",\n      \"B\": \"Right to Speech and Expression Act, 2002\",\n      \"C\": \"The Delhi Legislative Assembly Act, 2005\",\n      \"D\": \"The Public Records Act, 2002\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage states that the RTI Act 2005 took the place of the Freedom of Information Act, 2002.\",\n    \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n  },\n  {\n    \"question\": \"How does the RTI Act 2005 relate to the Constitution of India according to the text?\",\n    \"options\": {\n      \"A\": \"It is explicitly listed as a Fundamental Right in the Constitution.\",\n      \"B\": \"It protects the fundamental rights under Article 19(1)(a) and Article 21.\",\n      \"C\": \"It replaces Article 19 and Article 21 of the Constitution.\",\n      \"D\": \"It is a constitutional amendment to the Fundamental Rights section.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage clarifies that while RTI is not a Fundamental Right itself, it serves to protect existing fundamental rights related to speech and life.\",\n    \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n  },\n  {\n    \"question\": \"What is a mandatory requirement for public authorities to ensure citizens have 'minimum recourse' to formal information requests?\",\n    \"options\": {\n      \"A\": \"Providing responses to all requests within 48 hours regardless of the subject matter.\",\n      \"B\": \"Limiting requests only to matters of life and liberty.\",\n      \"C\": \"Computerizing records and proactively publishing certain categories of information.\",\n      \"D\": \"Replacing the Parliament's role in information dissemination.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"Public authorities are required to computerize and proactively publish info so citizens don't always have to file formal requests.\",\n    \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n  },\n  {\n    \"question\": \"In the context of the RTI Act 2005, what does the term 'public authority' refer to?\",\n    \"options\": {\n      \"A\": \"Any private organization operating within India.\",\n      \"B\": \"Only the Parliament of India and Delhi Legislative Assembly.\",\n      \"C\": \"A body of Government or an 'instrumentality of State'.\",\n      \"D\": \"Any citizen who holds public records.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage defines a public authority as a government body or an instrumentality of the state.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 7.4
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "C",
+          "B",
+          "C",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which ministry launched the Government e Marketplace (GeM) initiative on 9 August 2016?\",\n    \"options\": {\n      \"A\": \"Ministry of Finance\",\n      \"B\": \"Ministry of Corporate Affairs\",\n      \"C\": \"Ministry of Commerce and Industry\",\n      \"D\": \"Ministry of Electronics and Information Technology\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage explicitly states that the initiative was launched by the Ministry of Commerce and Industry on 9 August 2016.\",\n    \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n  },\n  {\n    \"question\": \"According to the General Financial Rules (GFR) 2017, which rule makes the use of GeM mandatory for government users?\",\n    \"options\": {\n      \"A\": \"Rule No. 100\",\n      \"B\": \"Rule No. 149\",\n      \"C\": \"Rule No. 2016\",\n      \"D\": \"Rule No. 5\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The Ministry of Finance authorized and made the use of GeM mandatory by adding Rule No. 149 in the General Financial Rules, 2017.\",\n    \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n  },\n  {\n    \"question\": \"The GeM platform is owned by GeM SPV. What is the nature of this company?\",\n    \"options\": {\n      \"A\": \"A private profit-making corporation\",\n      \"B\": \"A 50 percent government-owned joint venture\",\n      \"C\": \"A 100 percent Government-owned, non-profit company\",\n      \"D\": \"A foreign-owned consultancy firm\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage describes GeM SPV as a 100 percent Government-owned, non-profit company.\",\n    \"source_sentence\": \"The platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\"\n  },\n  {\n    \"question\": \"Based on the assessment by the World Bank, what is the average percentage of savings for buyers on the GeM portal?\",\n    \"options\": {\n      \"A\": \"5.25% on the median price\",\n      \"B\": \"9.75% on the median price\",\n      \"C\": \"12.5% on the maximum price\",\n      \"D\": \"20% on the total cost\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The World Bank's independent assessment found average savings to be approximately 9.75% on the median price.\",\n    \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n  },\n  {\n    \"question\": \"What information must sellers mandatorily display on products sold on the GeM portal?\",\n    \"options\": {\n      \"A\": \"Maximum Retail Price (MRP)\",\n      \"B\": \"Warranty period\",\n      \"C\": \"Country of origin\",\n      \"D\": \"Seller's bank details\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The Government of India has made it a mandatory requirement for sellers to display the 'country of origin' on GeM.\",\n    \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 9.6
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": false,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": false,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "C",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which Ministry in the Government of India launched the Government e Marketplace (GeM) initiative?\",\n    \"options\": {\n      \"A\": \"Ministry of Finance\",\n      \"B\": \"Ministry of Commerce and Industry\",\n      \"C\": \"Ministry of Electronics and Information Technology\",\n      \"D\": \"Ministry of Home Affairs\",\n      \"A\": \"The Ministry of Finance authorized its use, but the initiative was launched by the Ministry of Commerce and Industry.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the passage, the Ministry of Commerce and Industry launched the GeM initiative on 9 August 2016.\",\n    \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n  },\n  {\n    \"question\": \"Under which rule of the General Financial Rules, 2017 has the use of GeM been made mandatory for Government users?\",\n    \"options\": {\n      \"A\": \"Rule No. 101\",\n      \"B\": \"Rule No. 2016\",\n      \"C\": \"Rule No. 149\",\n      \"0\": \"Rule No. 9\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage states that Rule No. 149 was added to the General Financial Rules, 2017 to make GeM mandatory.\",\n    \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n  },\n  {\n    \"question\": \"What are the three pillars of public procurement that the GeM portal aims to drive?\",\n    \"options\": {\n      \"A\": \"Contactless, Paperless, and Cashless\",\n      \"B\": \"Efficiency, Usability, and Cost Savings\",\n      \"C\": \"Openness, Fairness, and Inclusiveness\",\n      \"D\": \"Visibility, Transparency, and Manual Processing\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage explicitly identifies openness, fairness, and inclusiveness as the three pillars of the portal.\",\n    \"source_sentence\": \"The portal has transformed public procurement in India by driving its three pillars, namely openness, fairness and inclusiveness, and aims to achieve greater usability, transparency, efficiency and cost savings.\"\n  },\n  {\n    \"question\": \"What type of entity is GeM SPV, the owner of the GeM platform?\",\n    \"options\": {\n      \"A\": \"A private-sector for-profit corporation\",\n      \"B\": \"A 100 percent Government-owned, non-profit company\",\n      \"C\": \"A manual oversight body under DGS&D\",\n      \"D\": \"An independent international agency\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage describes GeM SPV as a Special Purpose Vehicle that is a 100 percent Government-owned, non-profit company.\",\n    \"source_sentence\": \"The platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\"\n  },\n  {\n    \"question\": \"According to the World Bank's assessment, what is the average savings for buyers on the GeM portal?\",\n    \"options\": {\n      \"A\": \"About 5.50% on the median price\",\n      \"B\": \"About 12.25% on the median price\",\n      \"C\": \"About 9.75% on the median price\",\n      \"D\": \"About 100% on the median price\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage cites a World Bank assessment stating that average savings for buyers is approximately 9.75% on the median price.\",\n    \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 8.6
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "A",
+          "D",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"On which date was the Government e Marketplace (GeM) initiative officially launched?\",\n    \"options\": {\n      \"A\": \"15 August 2016\",\n      \"B\": \"9 August 2016\",\n      \"C\": \"9 August 2017\",\n      \"D\": \"1 January 2017\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the passage, the initiative was launched by the Ministry of Commerce and Industry on 9 August 2016.\",\n    \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n  },\n  {\n    \"question\": \"Which specific rule was added to the General Financial Rules (GFR), 2017 to make the use of GeM mandatory for government users?\",\n    \"options\": {\n      \"A\": \"Rule No. 149\",\n      \"B\": \"Rule No. 2017\",\n      \"C\": \"Rule No. 100\",\n      \"D\": \"Rule No. 5\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The Ministry of Finance made the use of GeM mandatory by adding Rule No. 149 to the General Financial Rules, 2017.\",\n    \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n  },\n  {\n    \"question\": \"Who owns the Special Purpose Vehicle (GeM SPV) that operates the GeM platform?\",\n    \"options\": {\n      \"A\": \"The World Bank\",\n      \"B\": \"A group of private investors\",\n      \"C\": \"The Directorate General of Supplies and Disposals (DGS&D)\",\n      \"D\": \"The Government of India (100 percent ownership)\"\n    },\n    \"correct\": \"D\",\n    \"explanation\": \"The platform is owned by GeM SPV, which is a 100 percent Government-owned, non-profit company.\",\n    \"source_sentence\": \"The platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\"\n  },\n  {\n    \"question\": \"What are the three pillars driving public procurement through the GeM portal?\",\n    \"options\": {\n      \"A\": \"Efficiency, Speed, and Savings\",\n      \"B\": \"Openness, Fairness, and Inclusiveness\",\n      \"C\": \"Contactless, Paperless, and Cashless\",\n      \"D\": \"Visibility, Transparency, and Record-keeping\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage states that the portal transformed public procurement by driving the three pillars of openness, fairness, and inclusiveness.\",\n    \"source_sentence\": \"The portal has transformed public procurement in India by driving its three pillars, namely openness, fairness and inclusiveness, and aims to achieve greater usability, transparency, efficiency and cost savings.\"\n  },\n  {\n    \"question\": \"What information has the Government of India made mandatory for sellers to display on products sold on the GeM portal?\",\n    \"options\": {\n      \"A\": \"Maximum Retail Price (MRP)\",\n      \"B\": \"Date of expiry\",\n      \"C\": \"Country of origin\",\n      \"D\": \"Company registration number\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage confirms that sellers must display the 'country of origin' on their products on the GeM portal.\",\n    \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 12.4
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "C",
+          "B",
+          "A",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Based on the historical progression of Indian sanitation initiatives described in the passage, which program was directly restructured to establish the Swachh Bharat Mission in 2014?\",\n    \"options\": {\n      \"A\": \"The Central Rural Sanitation Programme\",\n      \"B\": \"The Total Sanitation Campaign\",\n      \"C\": \"The Nirmal Bharat Abhiyan\",\n      \"D\": \"The Formal Sanitation Programme of 1954\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage explicitly states that the Swachh Bharat Mission is a restructured version of the Nirmal Bharat Abhiyan.\",\n    \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n  },\n  {\n    \"question\": \"What is the primary strategic purpose of implementing Phase 2 of the Swachh Bharat Mission between the years 2020–21 and 2024–25?\",\n    \"options\": {\n      \"A\": \"To complete the construction of the remaining 90 million planned toilets.\",\n      \"B\": \"To transition the mission's focus from ODF villages to municipal waste management.\",\n      \"C\": \"To strengthen and sustain the progress made during the initial phase.\",\n      \"D\": \"To launch the country-wide campaign for the 150th anniversary of Mahatma Gandhi.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the text, Phase 2 is being implemented specifically to reinforce what was achieved in Phase 1.\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n  },\n  {\n    \"question\": \"In the context of the Swachh Bharat Mission's approach to municipal waste, which specific components constitute the 'scientific solid waste management' process?\",\n    \"options\": {\n      \"A\": \"Segregation, collection, processing, and disposal\",\n      \"B\": \"Collection, processing, recycling, and landfilling\",\n      \"C\": \"Segregation, transportation, incineration, and disposal\",\n      \"D\": \"Collection, segregation, processing, and monetization\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage defines scientific solid waste management as including four specific stages: segregation, collection, processing, and disposal.\",\n    \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\"\n  },\n  {\n    \"question\": \"While the Swachh Bharat Mission is widely known for toilet construction and waste management, which of the following is also an explicit objective mentioned in the passage regarding public health?\",\n    \"options\": {\n      \"A\": \"Eradicating water-borne diseases in ODF villages\",\n      \"B\": \"Improving municipal drainage systems for better disposal\",\n      \"C\": \"Enhancing awareness surrounding menstrual health management\",\n      \"D\": \"Providing scientific processing techniques for industrial waste\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage notes that the program's aims extend to increasing awareness of menstrual health management.\",\n    \"source_sentence\": \"The program also aims to increase awareness of menstrual health management.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 10.9
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "B",
+          "C",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which of the following statements accurately describes the evolutionary relationship between the Swachh Bharat Mission (SBM) and its predecessor programs as stated in the passage?\",\n    \"options\": {\n      \"A\": \"SBM is a direct continuation of the first formal sanitation programme launched in 1954.\",\n      \"B\": \"SBM is a restructured version of the Nirmal Bharat Abhiyan, which was originally initiated as the Total Sanitation Campaign in 1999.\",\n      \"C\": \"SBM replaced the Central Rural Sanitation Programme, which had been active since 2012.\",\n      \"D\": \"SBM was the first program to integrate solid waste management, whereas the 1999 campaign focused only on menstrual health.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage states that SBM is a restructured version of the Nirmal Bharat Abhiyan, and that the Nirmal Bharat Abhiyan was launched in 1999 under the name Total Sanitation Campaign.\",\n    \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n  },\n  {\n    \"question\": \"According to the passage, which specific components constitute the 'scientific solid waste management' emphasized by the Swachh Bharat Mission?\",\n    \"options\": {\n      \"A\": \"Collection, recycling, chemical treatment, and disposal.\",\n      \"B\": \"Segregation, collection, processing, and disposal of municipal waste.\",\n      \"C\": \"Waste reduction, segregation, composting, and landfill management.\",\n      \"D\": \"Identification, collection, transportation, and incineration.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage explicitly lists four specific actions under scientific solid waste management: segregation, collection, processing, and disposal.\",\n    \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\"\n  },\n  {\n    \"question\": \"Based on the chronological milestones provided in the text, which year is correctly associated with the launch of the Central Rural Sanitation Programme?\",\n    \"options\": {\n      \"A\": \"1954\",\n      \"B\": \"1999\",\n      \"C\": \"1986\",\n      \"D\": \"2012\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage lists the timeline of programs: 1954 (first formal program), 1986 (Central Rural Sanitation Programme), 1999 (TSC), and 2012 (Nirmal Bharat Abhiyan).\",\n    \"source_sentence\": \"A formal sanitation programme was first launched in India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012.\"\n  },\n  {\n    \"question\": \"Regarding the implementation phases of the Swachh Bharat Mission, which of the following is true according to the passage?\",\n    \"options\": {\n      \"A\": \"Phase 2 began immediately on 3 October 2019 to maintain the momentum of Phase 1.\",\n      \"B\": \"The construction of 90 million toilets is the primary target for Phase 2 implementation.\",\n      \"C\": \"Phase 2 is scheduled to run from 2020–21 to 2024–25 with the intent of solidifying Phase 1's results.\",\n      \"D\": \"Phase 1 was primarily concerned with menstrual health, while Phase 2 shifted focus to ODF villages.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage specifies that Phase 2 is being implemented between 2020–21 and 2024–25 and its purpose is to 'reinforce the achievements of Phase 1.'\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 10.9
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "B",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"Which of the following identifies the correct chronological sequence of formal sanitation initiatives in India as described in the passage?\",\n    \"options\": {\n      \"A\": \"Central Rural Sanitation Programme (1954), Total Sanitation Campaign (1986), Nirmal Bharat Abhiyan (1999), Swachh Bharat Mission (2014)\",\n      \"B\": \"First formal sanitation programme (1954), Central Rural Sanitation Programme (1986), Total Sanitation Campaign (1999), Nirmal Bharat Abhiyan (2012)\",\n      \"C\": \"First formal sanitation programme (1954), Central Rural Sanitation Programme (1986), Nirmal Bharat Abhiyan (1999), Swachh Bharat Mission (2012)\",\n      \"D\": \"Central Rural Sanitation Programme (1954), Nirmal Bharat Abhiyan (1986), Total Sanitation Campaign (1999), Swachh Bharat Mission (2014)\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the passage, the first programme was in 1954, followed by the CRSP in 1986, the TSC in 1999, and the NBA in 2012.\",\n    \"source_sentence\": \"A formal sanitation programme was first launched in India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012.\"\n  },\n  {\n    \"question\": \"According to the passage, what specific set of activities constitutes the 'scientific solid waste management' emphasized under the Swachh Bharat Mission?\",\n    \"options\": {\n      \"A\": \"Construction of toilets, awareness of menstrual health, and elimination of open defecation.\",\n      \"B\": \"Segregation, collection, processing, and disposal of municipal waste.\",\n      \"C\": \"Construction of 90 million toilets and the restructuring of the Nirmal Bharat Abhiyan.\",\n      \"D\": \"Recycling, incineration, collection, and urban waste distribution.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage explicitly defines scientific solid waste management as including segregation, collection, processing, and disposal of municipal waste.\",\n    \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\"\n  },\n  {\n    \"question\": \"Which of the following statements accurately describes the relationship between the Swachh Bharat Mission and the Nirmal Bharat Abhiyan?\",\n    \"options\": {\n      \"A\": \"The Swachh Bharat Mission is an expansion of the Central Rural Sanitation Programme initiated in 1986.\",\n      \"B\": \"The Swachh Bharat Mission is a restructured version of the Nirmal Bharat Abhiyan.\",\n      \"C\": \"The Nirmal Bharat Abhiyan was the second phase of the Swachh Bharat Mission launched in 2012.\",\n      \"D\": \"The Swachh Bharat Mission replaced the Total Sanitation Campaign which had been renamed from the Nirmal Bharat Abhiyan.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The text states that the Swachh Bharat Mission is a restructured version of the Nirmal Bharat Abhiyan, which was originally launched as the Total Sanitation Campaign.\",\n    \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n  },\n  {\n    \"question\": \"What is the primary objective of Phase 2 of the Swachh Bharat Mission, and what is its implementation timeframe?\",\n    \"options\": {\n      \"A\": \"To construct 90 million toilets between 2014 and 2019.\",\n      \"B\": \"To achieve 'open-defecation free' status by the 150th anniversary of Mahatma Gandhi.\",\n      \"C\": \"To reinforce the achievements of Phase 1 between 2020–21 and 2024–25.\",\n      \"D\": \"To introduce menstrual health management awareness between 2019 and 2021.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage states that Phase 2 is being implemented from 2020–21 to 2024–25 specifically to reinforce what was achieved in Phase 1.\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 9.8
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "C",
+          "A",
+          "B",
+          "A"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"What was the primary objective behind the creation of the Central Vigilance Commission in 1964?\",\n    \"options\": {\n      \"A\": \"To regulate international trade agreements\",\n      \"B\": \"To address governmental corruption\",\n      \"C\": \"To manage the election process for central government\",\n      \"D\": \"To provide legal defense for government employees\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage explicitly states that the CVC was created in 1964 as a governmental body to address corruption within the government.\",\n    \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n  },\n  {\n    \"question\": \"How did the legal status of the Central Vigilance Commission change in 2003?\",\n    \"options\": {\n      \"A\": \"It was placed under the direct control of the executive branch.\",\n      \"B\": \"It was disbanded and reformed as a private entity.\",\n      \"C\": \"The Parliament enacted a law conferring statutory status on it.\",\n      \"D\": \"It was merged with the central law enforcement agencies.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"According to the passage, the Parliament passed legislation in 2003 that gave the CVC its statutory status.\",\n    \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n  },\n  {\n    \"question\": \"Which of the following describes the relationship between the CVC and executive authorities?\",\n    \"options\": {\n      \"A\": \"The CVC reports directly to the executive authority for all decisions.\",\n      \"B\": \"The executive authority has the power to review all CVC investigations.\",\n      \"C\": \"The CVC is an autonomous body free of control from any executive authority.\",\n      \"D\": \"The CVC functions as a subsidiary department of the executive office.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage confirms that the CVC is an autonomous body and operates without control from executive authorities.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India...\"\n  },\n  {\n    \"question\": \"What is the primary responsibility of the CVC regarding central government organizations?\",\n    \"options\": {\n      \"A\": \"Monitoring all vigilance activity under the Central Government of India\",\n      \"B\": \"Managing the human resources and payroll of central departments\",\n      \"C\": \"Drafting criminal laws for the Indian Parliament\",\n      \"D\": \"Conducting judicial trials for corrupt officials\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage states that the CVC is charged with the specific task of monitoring all vigilance activity under the Central Government.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  },\n  {\n    \"question\": \"In what capacity does the CVC interact with central government authorities regarding their vigilance work?\",\n    \"options\": {\n      \"A\": \"By providing financial grants for departmental expansion\",\n      \"B\": \"By advising them on planning, executing, and reforming vigilance work\",\n      \"C\": \"By acting as a training center for all new government recruits\",\n      \"D\": \"By directly appointing the heads of all government organizations\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage highlights the advisory role of the CVC in several stages of vigilance work, including planning and execution.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  },\n  {\n    \"question\": \"According to the text, the CVC's advisory role includes which of the following functions?\",\n    \"options\": {\n      \"A\": \"Reviewing and reforming vigilance work in central organizations\",\n      \"B\": \"Setting tax rates for central government employees\",\n      \"C\": \"Advising the Parliament on international ethics treaties\",\n      \"D\": \"Executing public infrastructure projects for the government\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The text specifies that the CVC advises on 'planning, executing, reviewing, and reforming' the vigilance work of central government organizations.\",\n    \"source_sentence\": \"...advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 8.9
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "B",
+          "A",
+          "C",
+          "B"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"What was the primary reason for the establishment of the Central Vigilance Commission in 1964?\",\n    \"options\": {\n      \"A\": \"To draft new legislation for the Indian Parliament.\",\n      \"B\": \"To address corruption within the government.\",\n      \"C\": \"To provide executive control over central organizations.\",\n      \"D\": \"To monitor international trade vigilance activity.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the passage, the CVC was created in 1964 specifically to address the issue of governmental corruption.\",\n    \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n  },\n  {\n    \"question\": \"In which year did the Central Vigilance Commission receive statutory status through Parliamentary legislation?\",\n    \"options\": {\n      \"A\": \"1964\",\n      \"B\": \"1993\",\n      \"C\": \"2003\",\n      \"D\": \"2013\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The text explicitly states that the Parliament enacted a law conferring statutory status on the CVC in 2003.\",\n    \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n  },\n  {\n    \"question\": \"Regarding the governance of the CVC, which statement best describes its relationship with executive authorities?\",\n    \"options\": {\n      \"A\": \"It operates under the direct supervision of the executive branch.\",\n      \"B\": \"It is an autonomous body free from executive control.\",\n      \"C\": \"It acts as a secondary department to the central executive authority.\",\n      \"D\": \"It requires executive approval for all its monitoring activities.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage states that the CVC has the status of an autonomous body and is free of control from any executive authority.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India...\"\n  },\n  {\n    \"question\": \"What is the scope of the Central Vigilance Commission's monitoring mandate?\",\n    \"options\": {\n      \"A\": \"All vigilance activity under the Central Government of India.\",\n      \"B\": \"Only the legislative work of the Indian Parliament.\",\n      \"C\": \"The financial activities of private sector organizations.\",\n      \"D\": \"The reform of state government municipal bodies.\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage defines its scope as monitoring all vigilance activity specifically under the Central Government of India.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India...\"\n  },\n  {\n    \"question\": \"Which of the following is a key advisory function of the CVC for central government organizations?\",\n    \"options\": {\n      \"A\": \"Collecting taxes and managing government revenue.\",\n      \"B\": \"Enforcing the legal status of statutory bodies.\",\n      \"C\": \"Reforming and reviewing vigilance work within organizations.\",\n      \"D\": \"Drafting criminal laws for the Indian Parliament.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The text mentions the CVC advises authorities in planning, executing, reviewing, and reforming their vigilance work.\",\n    \"source_sentence\": \"advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  },\n  {\n    \"question\": \"According to the passage, what is the role of the CVC in relation to central Government organizations?\",\n    \"options\": {\n      \"A\": \"It manages the day-to-day operations of central departments.\",\n      \"B\": \"It advises authorities on the execution of their vigilance work.\",\n      \"C\": \"It serves as the executive head of all governmental bodies.\",\n      \"D\": \"It creates statutory laws for governmental authorities.\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage specifies that the CVC advises central government organizations on planning, executing, reviewing, and reforming their vigilance work.\",\n    \"source_sentence\": \"advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  }\n]\n```"
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3-flash-preview",
+        "temperature": "default",
+        "json_mode": false,
+        "seconds": 10.4
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "B",
+          "C",
+          "A",
+          "C",
+          "A"
+        ]
+      },
+      "raw_output": "```json\n[\n  {\n    \"question\": \"What was the primary objective behind the creation of the Central Vigilance Commission (CVC) in 1964?\",\n    \"options\": {\n      \"A\": \"To grant statutory status to central government organizations\",\n      \"B\": \"To address corruption within the government\",\n      \"C\": \"To exercise control over the executive authority\",\n      \"D\": \"To monitor the legislative activities of the Parliament\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"According to the passage, the CVC was created specifically to address governmental corruption in 1964.\",\n    \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n  },\n  {\n    \"question\": \"In which year did the Central Vigilance Commission (CVC) receive statutory status through an act of Parliament?\",\n    \"options\": {\n      \"A\": \"1964\",\n      \"B\": \"2003\",\n      \"C\": \"1998\",\n      \"D\": \"2013\"\n    },\n    \"correct\": \"B\",\n    \"explanation\": \"The passage states that the Parliament enacted a law conferring statutory status on the CVC in 2003.\",\n    \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n  },\n  {\n    \"question\": \"Regarding its relationship with the executive branch, how is the Central Vigilance Commission (CVC) described?\",\n    \"options\": {\n      \"A\": \"It operates under the direct supervision of the executive authority.\",\n      \"B\": \"It is a subsidiary body of the executive branch of the Central Government.\",\n      \"C\": \"It is an autonomous body that is free of control from any executive authority.\",\n      \"D\": \"It advises the executive authority on how to control statutory bodies.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage explicitly mentions that the CVC has the status of an autonomous body and is free of control from any executive authority.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India...\"\n  },\n  {\n    \"question\": \"Which of the following falls under the primary mandate of the Central Vigilance Commission (CVC)?\",\n    \"options\": {\n      \"A\": \"Monitoring all vigilance activity under the Central Government of India\",\n      \"B\": \"Enacting laws to reform central government organizations\",\n      \"C\": \"Providing legal defense for employees accused of corruption\",\n      \"D\": \"Executing the day-to-day operations of executive authorities\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage identifies the CVC as the body charged with monitoring all vigilance activity under the Central Government.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India...\"\n  },\n  {\n    \"question\": \"What role does the Central Vigilance Commission (CVC) play in relation to central Government organizations?\",\n    \"options\": {\n      \"A\": \"It acts as a primary executive authority for their financial planning.\",\n      \"B\": \"It reviews and reforms the constitutional status of those organizations.\",\n      \"C\": \"It advises authorities in these organizations on planning and executing vigilance work.\",\n      \"D\": \"It monitors the personal ethics of employees outside of their official duties.\"\n    },\n    \"correct\": \"C\",\n    \"explanation\": \"The passage states that the CVC advises various authorities in central Government organizations regarding their vigilance work.\",\n    \"source_sentence\": \"...advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  },\n  {\n    \"question\": \"According to the passage, the CVC's advisory role in central Government organizations covers which specific aspects of vigilance work?\",\n    \"options\": {\n      \"A\": \"Planning, executing, reviewing, and reforming\",\n      \"B\": \"Hiring, firing, and salary negotiations\",\n      \"C\": \"Legislative drafting and judicial review\",\n      \"D\": \"Budgetary allocation and executive oversight\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage lists planning, executing, reviewing, and reforming as the areas where the CVC advises central Government organizations on vigilance work.\",\n    \"source_sentence\": \"...advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n  }\n]\n```"
+    }
+  ]
+}
