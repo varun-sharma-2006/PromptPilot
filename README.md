@@ -56,7 +56,7 @@ code/
   screenshots.py     screenshots of real app runs
 test-data/
   passages/          6 public passages (Wikipedia, CC BY-SA 4.0) with revision IDs
-  cases/             the 15 test inputs with expected outputs
+  cases/             the 16 test inputs with expected outputs
   outputs/           every saved output: iterations/ (per prompt version) and tests/ (per test)
 docs/
   diagrams/  screenshots/  Milestone 2 PDF and supporting document

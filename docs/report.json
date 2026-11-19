@@ -325,7 +325,7 @@
   "abstract": {
     "title": "Five measured prompt versions for source-faithful, competency-tagged MCQ generation (KarmaQuiz, SIH26101)",
     "problem": "iGOT Karmayogi needs many correct, level-appropriate assessment questions, but one-shot LLM questions often have wrong keys, repeated facts and weak difficulty control.",
-    "method": "We built a five-prompt chain (generate, review, revise, tag, gap summary) on Gemini gemini-3.1-flash-lite and improved the generator prompt over five versions. Each version ran on the same four public passages, three times each (12 runs). Code checked JSON, schema, verbatim source sentences, question counts and answer-letter balance. A fixed reviewer prompt at temperature 0 scored every question on a five-point rubric. The final chain was then tested on 15 normal, edge and invalid inputs.",
+    "method": "We built a five-prompt chain (generate, review, revise, tag, gap summary) on Gemini gemini-3.1-flash-lite and improved the generator prompt over five versions. Each version ran on the same four public passages, three times each (12 runs). Code checked JSON, schema, verbatim source sentences, question counts and answer-letter balance. A fixed reviewer prompt at temperature 0 scored every question on a five-point rubric. The final chain was then tested on 16 normal, edge and invalid inputs.",
     "results": "The baseline produced valid JSON in 10/12 runs, never used option D as the key, and passed the rubric for 37/48 questions (77%). Rules, few-shot examples and JSON mode fixed format (12/12) but not quality (46/60). Asking the model to place answers at given letters caused 7 key mismatches. Letting code place the options and giving a question pattern per difficulty raised the pass rate to 42/43 (98%), with every key supported by the source sentence and balanced key letters (10/11/12/10). The cost was quantity: only 4/9 normal runs returned all requested questions. On 16 end-to-end tests the chain passed 8; the reviewer caught both real flawed questions, but gibberish input still produced questions.",
     "conclusion": "Moving mechanical jobs (key placement, counting) from the prompt into code improved faithfulness more than added instructions did. The judge is an LLM, so human scoring of a sample is our next step.",
     "table": null
@@ -341,7 +341,7 @@
     {
       "name": "Yashika Garg",
       "role": "Prompt versions and testing",
-      "tasks": "Test passages; automatic checks; experiment runner and fixed judge; T1 v2 and v3, T2 v2 and final; 15 test cases and runner; test results; diagrams; research abstract",
+      "tasks": "Test passages; automatic checks; experiment runner and fixed judge; T1 v2-v4, T2 v2 and final; 16 test cases and runner; test results; diagrams; research abstract",
       "evidence": "code/fetch_passages.py, code/checks.py, code/run_iterations.py, code/run_tests.py, code/make_diagrams.py, prompts/v2, prompts/v3, test-data/; commits by yashikagarg16",
       "percent": 35
     },
