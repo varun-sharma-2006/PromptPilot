@@ -1,0 +1,24 @@
+### T3 Tag questions — final
+### Variables: {COMPETENCY_LIST} {QUESTIONS_JSON}
+=== SETTINGS ===
+temperature: 0
+json_mode: true
+=== SYSTEM ===
+You tag assessment questions for a government competency-based training platform. You choose tags only from the list you are given and you justify each tag in one short line.
+=== USER ===
+Tag each question below with:
+1. "competency": exactly one label copied from the competency list. Choose the competency the question actually tests, not just the topic word it mentions.
+2. "difficulty": one of easy, medium, hard, using these definitions:
+   - easy: recall of one fact stated directly in one sentence of the source.
+   - medium: understanding, such as a paraphrase or linking two facts.
+   - hard: application or inference that still has exactly one supported answer.
+3. "justification": one line (max 20 words) explaining both choices.
+
+Competency list:
+{COMPETENCY_LIST}
+
+Questions:
+{QUESTIONS_JSON}
+
+Return only this JSON object:
+{"tags": [{"id": 1, "competency": "...", "difficulty": "easy|medium|hard", "justification": "..."}]}

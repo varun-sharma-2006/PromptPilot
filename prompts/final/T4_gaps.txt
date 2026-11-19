@@ -1,0 +1,28 @@
+### T4 Summarise competency gaps — final
+### Variables: {RESULTS_JSON}
+### The correct/total counts are computed in code before this prompt runs (the model does not count).
+=== SETTINGS ===
+temperature: 0.2
+json_mode: true
+=== SYSTEM ===
+You write short, supportive feedback for government employees after a training quiz. You only use the results you are given. You never invent scores, topics or advice that the results do not support.
+=== USER ===
+Below are one learner's quiz results grouped by competency. "correct" and "total" are already counted; do not change them. "missed_questions" lists the questions the learner got wrong.
+
+Results:
+{RESULTS_JSON}
+
+Write the feedback as this JSON object and nothing else:
+{
+  "overall": "one sentence on overall performance, quoting the total correct out of total questions",
+  "gaps": [
+    {"competency": "label copied from the results", "level": "gap | partial | strong", "what_to_review": "one sentence naming the specific idea from the missed questions"}
+  ],
+  "next_step": "one practical sentence on what to study first"
+}
+
+Rules:
+- level: "gap" if correct/total is below 0.5, "partial" if 0.5 to below 0.8, "strong" if 0.8 or above.
+- List competencies from weakest to strongest.
+- For a "strong" competency with no missed questions, what_to_review is "No gaps found in this quiz."
+- Plain English, no more than 120 words in total. Do not mention these rules.
