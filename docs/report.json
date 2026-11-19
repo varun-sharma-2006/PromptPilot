@@ -1,0 +1,367 @@
+{
+  "tool_model": "Google Gemini API, model gemini-3.1-flash-lite, called from Python (google-genai SDK)",
+  "counts": {
+    "prompts": 5,
+    "tests": 16,
+    "versions": 5
+  },
+  "design_summary": [
+    "<b>Problem and users.</b> iGOT Karmayogi (SIH26101) needs a steady supply of correct, clear, competency-tagged assessment questions for about 2 crore government learners. Writing them by hand does not scale, and one-shot LLM questions often have wrong keys or weak distractors. KarmaQuiz serves trainers and course creators, who get reviewed draft questions; subject-matter reviewers, who see the source sentence for every question; and learners, who get a short competency-gap summary after a quiz.",
+    "<b>Input and output.</b> Input: a passage of public learning material, a competency label, a difficulty (easy, medium or hard) and the number of questions wanted. Output: JSON MCQs with four options, one key, an explanation and a source sentence copied word for word, plus rubric scores, a competency and difficulty tag, and, after a learner answers, a per-competency table and a short gap summary.",
+    "<b>How many prompts and why.</b> Five prompts in a chain. T1 generates; T2 reviews each question on the five-point rubric from Milestone 1; T1R repairs questions T2 rejected (at most 2 rounds); T3 tags competency and difficulty from a fixed list; T4 writes the gap summary. Splitting the work keeps each prompt short and checkable, and lets a separate reviewer catch errors the generator makes. Plain Python sits between the prompts: it drops questions whose source sentence is not in the passage, assigns the answer-key letters, and counts scores, because the model was unreliable at those jobs.",
+    "<b>Tool and model.</b> Google Gemini API, gemini-3.1-flash-lite, from a Python Streamlit app. The free tier needs no payment, JSON response mode makes the output parseable, and calling through code lets us log every prompt, setting and raw output. gemini-2.5-flash is no longer offered to new API keys; gemini-3-flash-preview allowed only 20 free requests a day (its 12 v1 runs are kept in the repository); the 3.5+ Flash models returned 503 (high demand) on our test day.",
+    "<b>What changed since Milestone 1.</b> (1) We moved from a chat interface to the API so runs are logged and repeatable. (2) We added T1R, the revise step the Milestone 1 workflow described but did not define as a prompt. (3) T4 no longer counts scores; Python does. (4) The T1 prompt went through four measured versions (Section 3). (5) Answer-key letters are now assigned by code, because the model ignored the instruction to spread them. (6) Automatic non-LLM checks run before review."
+  ],
+  "prompt_sheets": [
+    {
+      "file": "final/T1_generate.txt",
+      "id_name": "T1 Generate MCQs",
+      "step": "Step 1: first call of the chain",
+      "purpose": "Write N source-faithful MCQs at the requested difficulty from the passage only.",
+      "variables": "{N} number of questions; {DIFFICULTY} easy/medium/hard; {COMPETENCY} competency label; {PASSAGE} source text. (Answer letters are not a variable: code places 'answer' and 'distractors' at A-D in a balanced order.)",
+      "examples": "1 worked example (a 2-question passage on Lok Adalat, not in the test set)",
+      "output_format": "JSON object {facts: [..], questions: [{fact_ids, question, answer, distractors[3], explanation, source_sentence}], note}; code converts each question to options A-D + correct",
+      "sample_run": {
+        "test": 1,
+        "prompt": "final/T1_generate",
+        "limit": 60
+      }
+    },
+    {
+      "file": "final/T2_review.txt",
+      "id_name": "T2 Review MCQs",
+      "step": "Step 2: after T1 and the automatic checks; repeated after each T1R",
+      "purpose": "Score each question 0/1 on the five rubric items against the passage and pass or fail it with a fix.",
+      "variables": "{DIFFICULTY} requested level; {PASSAGE} source text; {QUESTIONS_JSON} numbered questions from T1/T1R",
+      "examples": "1 worked example (a failed question with two correct options)",
+      "output_format": "JSON object {reviews: [{id, scores{faithful, single_key, plausible_distractors, clear, right_level}, verdict, reason, suggested_fix}]}",
+      "sample_run": {
+        "test": 7,
+        "prompt": "final/T2_review"
+      }
+    },
+    {
+      "file": "final/T1_revise.txt",
+      "id_name": "T1R Revise failed MCQs",
+      "step": "Step 2b: only for questions T2 failed; at most 2 rounds",
+      "purpose": "Rewrite each rejected question so that it fixes the reviewer's reason, or drop it and say why.",
+      "variables": "{N} number of failed questions; {DIFFICULTY}; {COMPETENCY}; {PASSAGE}; {FEEDBACK_JSON} each failed question with its T2 review",
+      "examples": "0 (the reviewer's comments act as the guidance)",
+      "output_format": "Same JSON object as T1",
+      "sample_run": {
+        "test": 16,
+        "prompt": "final/T1_revise"
+      }
+    },
+    {
+      "file": "final/T3_tag.txt",
+      "id_name": "T3 Tag questions",
+      "step": "Step 3: on questions that passed T2",
+      "purpose": "Give each accepted question one competency from a fixed list, a difficulty and a one-line justification.",
+      "variables": "{COMPETENCY_LIST} allowed labels, one per line; {QUESTIONS_JSON} numbered accepted questions",
+      "examples": "0 (difficulty definitions given instead)",
+      "output_format": "JSON object {tags: [{id, competency, difficulty, justification}]}; a label outside the list is replaced by UNTAGGED in code",
+      "sample_run": {
+        "test": 11,
+        "prompt": "final/T3_tag"
+      }
+    },
+    {
+      "file": "final/T4_gaps.txt",
+      "id_name": "T4 Summarise competency gaps",
+      "step": "Step 4: after a learner answers the tagged quiz",
+      "purpose": "Turn per-competency results (counted in Python) into a short, supportive gap summary.",
+      "variables": "{RESULTS_JSON} list of {competency, correct, total, missed_questions}",
+      "examples": "0 (output shape and level thresholds given instead)",
+      "output_format": "JSON object {overall, gaps: [{competency, level, what_to_review}], next_step}",
+      "sample_run": {
+        "test": 5,
+        "prompt": "final/T4_gaps"
+      }
+    }
+  ],
+  "what_is_built": [
+    "A working Python prototype with a Streamlit web interface (code/app.py) that runs the full chain on Gemini. Tab 1 takes a passage (or one of six public sample passages), a competency, a difficulty and N, then shows each T2 review round with rubric scores, and the accepted questions with key, explanation, source sentence and T3 tags. Tab 2 lets a user answer the quiz and runs T4 for the gap summary. Tab 3 shows every LLM call in the run with its settings and raw output.",
+    "Behind the interface: code/chain.py (the chain), code/checks.py (non-LLM checks), code/prompts.py (loads versioned prompt files and fills variables), code/llm.py (API wrapper; key from environment or Streamlit secret). Two runners produce all numbers in this report: code/run_iterations.py (prompt versions) and code/run_tests.py (test table). Every raw output is saved under test-data/outputs/."
+  ],
+  "modules": [
+    {
+      "module": "Passage input",
+      "does": "Paste text or pick one of 6 public sample passages; shows source and licence",
+      "status": "Working",
+      "notes": "English and Hindi passages tested"
+    },
+    {
+      "module": "T1 Generate",
+      "does": "Writes N MCQs as JSON from the passage only",
+      "status": "Working",
+      "notes": "Final = v5. Often writes fewer than N for medium/hard (tests 1, 4); turned gibberish into questions (test 14); wrote Hindi stems for a Hindi passage (test 9)."
+    },
+    {
+      "module": "Automatic checks",
+      "does": "Drops questions without A-D options or with a source sentence not in the passage",
+      "status": "Working",
+      "notes": "Python, no LLM"
+    },
+    {
+      "module": "T2 Review",
+      "does": "Scores each question on the 5-point rubric; pass/fail with fix",
+      "status": "Working",
+      "notes": "Caught a real two-key question (test 6) and a real wrong key (test 7), but passed gibberish questions (test 14)."
+    },
+    {
+      "module": "T1R Revise loop",
+      "does": "Rewrites failed questions and sends them back to T2 (max 2 rounds)",
+      "status": "Working",
+      "notes": "Test 16: a real wrong-key question was repaired and then passed T2. In tests 1-14, T2 passed every generated question, so the loop ran only there."
+    },
+    {
+      "module": "T3 Tag",
+      "does": "Competency (fixed list) + difficulty + justification per question",
+      "status": "Partly working",
+      "notes": "Works with a fixed list (test 11), but dropped a label prefix (test 4) and disagreed with T2 on 'hard' (test 3)."
+    },
+    {
+      "module": "Quiz + T4 Gap summary",
+      "does": "Learner answers the quiz; Python counts per competency; T4 writes the summary",
+      "status": "Working",
+      "notes": "Tested on synthetic answers (tests 5, 15)"
+    },
+    {
+      "module": "Human reviewer step",
+      "does": "Reviewer approves or edits questions before use",
+      "status": "Partly working",
+      "notes": "Reviewer can read every review and download the JSON to edit; there is no in-app edit or approve button yet"
+    },
+    {
+      "module": "Run log",
+      "does": "Shows every LLM call with prompt ID, settings and raw output",
+      "status": "Working",
+      "notes": "Same log is saved for each test"
+    }
+  ],
+  "iteration_intro": "The iteration log follows T1, the main prompt. Each version was run on the same 4 inputs (RTI medium 5, GeM easy 5, Swachh Bharat hard 4, and the short CVC passage asked for 6), 3 times each, giving 12 runs per version. JSON, schema, count and quote numbers come from code (code/checks.py). The 'judge pass' numbers come from one fixed LLM judge (prompts/v2/T2_review.txt, temperature 0) used for every version. It is an LLM, not a human, so we report it as an indicator only. T2 also changed from v1 (free text) to v2 (rubric + JSON) to final (+1 worked example).",
+  "iterations": [
+    {
+      "version": "v1",
+      "files": [
+        "v1/T1_generate.txt"
+      ],
+      "changed": "First prompt: the Milestone 1 baseline (role, 5 rules, 'JSON list' output). Default temperature, no system prompt, no examples.",
+      "why": "Starting point",
+      "result": "12 runs: JSON valid 10/12 (2 failed with a trailing comma, both on the short CVC passage). The short passage, asked for 6, gave 0, 6, 0 questions, so the 'return fewer' rule was never used. 11 questions reused another question's source sentence. Correct option was never D (A 10, B 20, C 18). Judge pass 37/48; all 11 fails were 'right level' (e.g. all 5 'medium' RTI questions in run 2 were plain recall). On gemini-3-flash-preview the same prompt also produced a wrong key (Swachh Bharat Phase 2) and an option keyed '0' instead of 'D'."
+    },
+    {
+      "version": "v2",
+      "files": [
+        "v2/T1_generate.txt"
+      ],
+      "changed": "Added a system role, difficulty definitions, 'each question tests a different fact', a stronger return-fewer rule with a 'note' field, option rules (no partly-true option, similar length, keys exactly A-D), 'spread answers across A-D', an injection guard, and a JSON object schema.",
+      "why": "v1 never returned fewer questions, repeated facts, skewed keys, and broke JSON twice",
+      "result": "JSON valid 12/12. Short passage gave 3, 4, 3 questions, each with a note. Shared source sentences fell from 11 to 2. Judge pass 45/49. New problem: it under-produced. RTI asked for 5 gave 4 in all 3 runs, so normal runs got the N asked 6/9 (v1: 9/9). The answer was still almost never D (2 of 49), and 1 question had an unsupported key."
+    },
+    {
+      "version": "v3",
+      "files": [
+        "v3/T1_generate.txt"
+      ],
+      "changed": "Defined one 'fact' (one sentence can hold several); correct-option letters assigned by code through {KEY_ORDER}; a self-check that the source sentence states the keyed answer; English output for non-English passages; 1 worked example; temperature 0.2; JSON response mode.",
+      "why": "v2 under-produced on normal passages and ignored 'spread the answers'",
+      "result": "Normal runs got the N asked 9/9 again. Correct-answer letters balanced: A 13, B 15, C 18, D 14. JSON 12/12. But it overcorrected: the short passage gave 6, 6, 6, and 17 questions reused a source sentence. Judge pass 46/60; 'right level' 48/60, since more questions were plain recall marked medium or hard."
+    },
+    {
+      "version": "v4",
+      "files": [
+        "v4/T1_generate.txt"
+      ],
+      "changed": "The model must first list the passage's distinct facts in a 'facts' field, then write at most one question per fact (fact_id).",
+      "why": "v3 gave 6 questions on the short CVC passage and 17 questions reused a source sentence",
+      "result": "Worse overall. Judge pass fell to 28/60 (v3: 46/60). Faithful fell to 53/60: in 7 questions the key letter pointed at a wrong option, because the model wrote the answer in one place and the {KEY_ORDER} letter in another. Right level fell to 33/60. Useful finding: the facts list showed the CVC passage really has 6 distinct facts, so 6 questions there is not over-production. Our 'too short for 6' assumption was wrong."
+    },
+    {
+      "version": "v5 (final)",
+      "files": [
+        "final/T1_generate.txt"
+      ],
+      "changed": "The model returns 'answer' + 3 'distractors' and code places them at A-D (no letters from the model). A concrete question pattern for each difficulty (medium links two facts or paraphrases; hard is a short workplace scenario). The facts list is kept.",
+      "why": "v4 had 7 key-letter mismatches (faithful 53/60) and only 33/60 questions at the requested level",
+      "result": "Judge pass 42/43 (98%; v3 77%, v4 47%). Faithful 43/43, right level 42/43, single key 43/43. Keys balanced (A 10, B 11, C 12, D 10). Shared source sentences 4. JSON 12/12. Trade-off: fewer questions. Normal runs got the N asked 4/9 (RTI medium gave 3, 4, 3 of 5; Swachh Bharat hard gave 3, 3, 4 of 4), and 4 short runs left 'note' empty, breaking the 'say why' rule. We chose quality over count; see limitations."
+    }
+  ],
+  "iteration_metrics": [
+    [
+      "Measure",
+      "v1",
+      "v2",
+      "v3",
+      "v4",
+      "v5 (final)"
+    ],
+    [
+      "Valid JSON (runs)",
+      "10/12",
+      "12/12",
+      "12/12",
+      "12/12",
+      "12/12"
+    ],
+    [
+      "Schema valid (runs)",
+      "10/12",
+      "12/12",
+      "12/12",
+      "12/12",
+      "12/12"
+    ],
+    [
+      "Normal inputs: got the N asked",
+      "9/9",
+      "6/9",
+      "9/9",
+      "9/9",
+      "4/9"
+    ],
+    [
+      "Short CVC passage, asked 6: questions returned",
+      "0, 6, 0",
+      "3, 4, 3",
+      "6, 6, 6",
+      "6, 6, 6",
+      "3, 2, 3"
+    ],
+    [
+      "Source sentence verbatim (questions)",
+      "48/48",
+      "49/49",
+      "60/60",
+      "60/60",
+      "43/43"
+    ],
+    [
+      "Questions sharing a source sentence",
+      "11",
+      "2",
+      "17",
+      "19",
+      "4"
+    ],
+    [
+      "Correct option A/B/C/D",
+      "10/20/18/0",
+      "13/16/18/2",
+      "13/15/18/14",
+      "13/15/18/14",
+      "10/11/12/10"
+    ],
+    [
+      "Judge: pass (all 5 rubric items)",
+      "37/48",
+      "45/49",
+      "46/60",
+      "28/60",
+      "42/43"
+    ],
+    [
+      "Judge: faithful",
+      "48/48",
+      "48/49",
+      "59/60",
+      "53/60",
+      "43/43"
+    ],
+    [
+      "Judge: right level",
+      "37/48",
+      "46/49",
+      "48/60",
+      "33/60",
+      "42/43"
+    ]
+  ],
+  "iteration_metrics_note": "Answer positions show how often the correct option was A/B/C/D. 'Questions sharing a source sentence' counts questions in a run that reuse another question's source sentence (a sign of repeated facts). Raw outputs: test-data/outputs/iterations/T1_&lt;version&gt;.json.",
+  "test_intro": "16 test inputs run on the final prompts: 5 Normal, 8 Edge and 3 Invalid. Expected outputs and the pass/fail rule for each test were written in test-data/cases/test_cases.json before running (test 16 was added after we saw that no run had triggered T1R). 'Actual output' is what code/run_tests.py recorded. Where the rule result needs context, we add 'Our note'; we did not change any Pass/Fail result.",
+  "screenshots": [
+    {
+      "file": "run_generate_full.png",
+      "width": 150,
+      "caption": "Screenshot 1 (test 1 input: RTI passage, medium, 4 questions). A real run of the Streamlit app on gemini-3.1-flash-lite, showing the T2 review round and the accepted questions with key, source sentence and T3 tags. It was taken in a separate app run, so the questions differ from the saved test 1 output."
+    },
+    {
+      "file": "run_gap_summary.png",
+      "width": 150,
+      "caption": "Screenshot 2 (test 5 scenario: T4 on the quiz from the test 1 input). Synthetic answers: option A for questions 1 and 3, option B for questions 2 and 4. Python counts per competency, and T4 writes the gap summary."
+    },
+    {
+      "file": "run_log.png",
+      "width": 150,
+      "caption": "Screenshot 3 (same run). The run log tab lists every LLM call with its prompt ID, settings and raw JSON output."
+    }
+  ],
+  "limitations": [
+    {
+      "limit": "No-content input: gibberish text produced 3 accepted questions about which strings appear (test 14), and T2 did not reject them.",
+      "next": "Add a T1 rule and a T2 rubric item that a fact must be meaningful learning content, and a cheap code check (share of dictionary words) before T1."
+    },
+    {
+      "limit": "Count versus quality: v5 passes the rubric for 42/43 questions but returns fewer questions than asked for medium/hard (only 4/9 runs got the full N), sometimes with an empty note (tests 1, 4).",
+      "next": "Make code check the count and, if short with no note, call T1 again for the missing number with the used facts listed. Then compare counts on the same 12 runs."
+    },
+    {
+      "limit": "Difficulty and tags are inconsistent: T3 tagged none of the 3 'hard' questions as hard (test 3), dropped a label prefix (test 4), and output language followed the passage, not the rule (test 9).",
+      "next": "Give T3 the same per-level patterns as T1, map labels by exact list index instead of text, and add an English-only check with a retry."
+    },
+    {
+      "limit": "All quality numbers come from an LLM judge, and a free-tier model (about 5-50 s per call, daily limit). The judge passed the gibberish questions, so it is not fully reliable.",
+      "next": "Milestone 3: two members hand-score 40 final questions on the rubric and report how often the judge agrees with them. Repeat the version comparison on a second model."
+    }
+  ],
+  "repo_changes": [
+    "Milestone 1 had no repository; it is now set up with prompts/, code/, test-data/ and docs/ as the guidelines require, plus a dated CHANGELOG.md.",
+    "Four versions of T1 and three of T2 are saved as separate files, with the raw output of every experiment run (test-data/outputs/iterations/).",
+    "A working Streamlit prototype and the 5-prompt chain were added in code/.",
+    "Six public test passages (with Wikipedia revision IDs), 15 test cases and their saved outputs were added in test-data/.",
+    "Diagrams, this PDF and the research abstract are generated by scripts in code/ and docs/ from the repository contents."
+  ],
+  "abstract": {
+    "title": "Five measured prompt versions for source-faithful, competency-tagged MCQ generation (KarmaQuiz, SIH26101)",
+    "problem": "iGOT Karmayogi needs many correct, level-appropriate assessment questions, but one-shot LLM questions often have wrong keys, repeated facts and weak difficulty control.",
+    "method": "We built a five-prompt chain (generate, review, revise, tag, gap summary) on Gemini gemini-3.1-flash-lite and improved the generator prompt over five versions. Each version ran on the same four public passages, three times each (12 runs). Code checked JSON, schema, verbatim source sentences, question counts and answer-letter balance. A fixed reviewer prompt at temperature 0 scored every question on a five-point rubric. The final chain was then tested on 15 normal, edge and invalid inputs.",
+    "results": "The baseline produced valid JSON in 10/12 runs, never used option D as the key, and passed the rubric for 37/48 questions (77%). Rules, few-shot examples and JSON mode fixed format (12/12) but not quality (46/60). Asking the model to place answers at given letters caused 7 key mismatches. Letting code place the options and giving a question pattern per difficulty raised the pass rate to 42/43 (98%), with every key supported by the source sentence and balanced key letters (10/11/12/10). The cost was quantity: only 4/9 normal runs returned all requested questions. On 16 end-to-end tests the chain passed 8; the reviewer caught both real flawed questions, but gibberish input still produced questions.",
+    "conclusion": "Moving mechanical jobs (key placement, counting) from the prompt into code improved faithfulness more than added instructions did. The judge is an LLM, so human scoring of a sample is our next step.",
+    "table": null
+  },
+  "contribution": [
+    {
+      "name": "Varun Sharma",
+      "role": "Team leader; chain and app",
+      "tasks": "Repository setup; API wrapper and prompt loader; v1 prompts; chain code (T1, checks, T2/T1R loop, T3, T4); final T1R, T3, T4 prompts; Streamlit app; screenshots; Milestone 2 PDF builder",
+      "evidence": "code/llm.py, code/prompts.py, code/chain.py, code/app.py, prompts/final/T1_revise.txt, T3_tag.txt, T4_gaps.txt, docs/build_pdf.py; commits by varun-sharma-2006",
+      "percent": 35
+    },
+    {
+      "name": "Yashika Garg",
+      "role": "Prompt versions and testing",
+      "tasks": "Test passages; automatic checks; experiment runner and fixed judge; T1 v2 and v3, T2 v2 and final; 15 test cases and runner; test results; diagrams; research abstract",
+      "evidence": "code/fetch_passages.py, code/checks.py, code/run_iterations.py, code/run_tests.py, code/make_diagrams.py, prompts/v2, prompts/v3, test-data/; commits by yashikagarg16",
+      "percent": 35
+    },
+    {
+      "name": "Om Bansal",
+      "role": "TODO",
+      "tasks": "TODO: a specific task Om did (for example: recorded and voiced the reel; tried Quizizz and Quizgecko on the same passages)",
+      "evidence": "TODO: file, link or section",
+      "percent": 30
+    }
+  ],
+  "test_notes": {
+    "1": "v5 trade-off: T1 wrote 3 of 4 medium questions and left the note empty.",
+    "2": "One GeM question was tagged Domain: e-Governance. Defensible, since GeM is a digital platform, but it is not the expected tag.",
+    "3": "T2 judged all 3 questions to be at 'hard' level, but T3 tagged them easy/medium. Reviewer and tagger disagree on difficulty.",
+    "4": "T3 returned 'e-Governance' without the 'Domain: ' prefix. The code safeguard correctly replaced the off-list label with UNTAGGED.",
+    "5": "The T4 summary was correct (1/3, level 'gap' as computed). It fails our rule because test 1 produced 3 questions instead of 4, so the expected 2/4 could not occur.",
+    "9": "All 3 questions were written in Hindi, even though rule 6 asks for English. Source sentences were copied correctly.",
+    "10": "Inconclusive. No question asked about the changed 'ninety days' fact. The keyed '48 hours' is correct for the life-and-liberty case.",
+    "14": "Serious failure. The model listed strings such as 'qwerty' and '1234' as facts and asked which number appears in the text. T2 passed these questions."
+  },
+  "test_summary": "8 of 16 passed"
+}

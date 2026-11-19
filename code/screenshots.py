@@ -26,7 +26,7 @@ def main():
         time.sleep(8)
         with sync_playwright() as p:
             b = p.chromium.launch(channel="chrome")
-            page = b.new_page(viewport={"width": 1280, "height": 900})
+            page = b.new_page(viewport={"width": 1280, "height": 2900})  # Streamlit scrolls inside its own container, so use a tall window
             page.goto(f"http://localhost:{PORT}")
             page.get_by_text("Sample passage").wait_for(timeout=60000)
 
@@ -58,7 +58,9 @@ def main():
 
             page.get_by_role("tab", name="Run log").click()
             time.sleep(2)
-            page.screenshot(path=str(SHOTS / "run_log.png"), full_page=False)
+            page.get_by_text("final/T1_generate").first.click()
+            time.sleep(1)
+            page.screenshot(path=str(SHOTS / "run_log.png"), clip={"x": 0, "y": 0, "width": 1280, "height": 1300})
             b.close()
         print("screenshots saved to", SHOTS)
     finally:

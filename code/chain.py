@@ -42,8 +42,7 @@ class Chain:
 
     # ---------- T1 ----------
     def generate(self, passage, competency, difficulty, n, feedback=None):
-        values = dict(N=n, DIFFICULTY=difficulty, COMPETENCY=competency, PASSAGE=passage,
-                      KEY_ORDER=prompts.key_order(n))
+        values = dict(N=n, DIFFICULTY=difficulty, COMPETENCY=competency, PASSAGE=passage)
         name = "T1_generate"
         if feedback:
             name = "T1_revise"
