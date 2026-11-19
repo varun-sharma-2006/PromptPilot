@@ -1,0 +1,1536 @@
+{
+  "prompt": "v3/T1_generate",
+  "date": "2026-11-19",
+  "model": "gemini-3.1-flash-lite",
+  "summary": {
+    "runs": 12,
+    "json_valid": 12,
+    "schema_valid": 12,
+    "questions": 60,
+    "quote_verbatim": 60,
+    "four_distinct_options": 60,
+    "count_as_requested_normal": 9,
+    "normal_runs": 9,
+    "short_passage_question_counts": [
+      6,
+      6,
+      6
+    ],
+    "answer_positions": {
+      "A": 13,
+      "B": 15,
+      "C": 18,
+      "D": 14
+    },
+    "questions_sharing_a_source_sentence": 17,
+    "judge_questions": 60,
+    "judge_pass": 46,
+    "judge_faithful": 59,
+    "judge_single_key": 59,
+    "judge_plausible_distractors": 60,
+    "judge_clear": 60,
+    "judge_right_level": 48
+  },
+  "runs": [
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 15.3
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary purpose of the RTI Act, 2005 regarding public records?\",\n      \"options\": {\n        \"A\": \"To mandate the computerization of records for wide dissemination\",\n        \"B\": \"To ensure all government records are destroyed after thirty days\",\n        \"C\": \"To restrict access to information to only government officials\",\n        \"D\": \"To prevent the public from requesting information formally\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The Act requires public authorities to computerize records to ensure wide dissemination and reduce the need for formal requests.\",\n      \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n    },\n    {\n      \"question\": \"What is the standard timeframe for a public authority to respond to an information request under the RTI Act?\",\n      \"options\": {\n        \"A\": \"Within 48 hours for all types of requests\",\n        \"B\": \"Within thirty days of receiving the request\",\n        \"C\": \"Within seven days of the request submission\",\n        \"D\": \"Within sixty days as per the legislative assembly\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage specifies that a public authority is required to reply within thirty days, unless the matter involves life and liberty.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"question\": \"How does the RTI Act, 2005 relate to the Constitution of India?\",\n      \"options\": {\n        \"A\": \"It is explicitly listed as a Fundamental Right in the Constitution\",\n        \"B\": \"It replaces the Freedom of Information Act, 2002\",\n        \"C\": \"It is a law passed by the Parliament of India and the Delhi Legislative Assembly\",\n        \"D\": \"It protects the fundamental rights to Freedom of Expression and Speech and Right to Life\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage states that while not a Fundamental Right itself, the Act protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.\",\n      \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n    },\n    {\n      \"question\": \"What specific condition allows for a shortened response time of 48 hours for an RTI request?\",\n      \"options\": {\n        \"A\": \"When the request is made by a government official\",\n        \"B\": \"When the information is already computerized\",\n        \"C\": \"When the matter involves a petitioner's life and liberty\",\n        \"D\": \"When the public authority is a body of the Delhi Legislative Assembly\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states that the response time is 48 hours specifically in cases involving a petitioner's life and liberty.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"question\": \"Which legislation was superseded by the implementation of the RTI Act, 2005?\",\n      \"options\": {\n        \"A\": \"The Constitution of India\",\n        \"B\": \"The Article 19(1)(a) Act\",\n        \"C\": \"The Freedom of Information Act, 2002\",\n        \"D\": \"The Delhi Legislative Assembly Act\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage explicitly states that the RTI Act, 2005 replaced the Freedom of Information Act, 2002.\",\n      \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 0,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "fail",
+          "reason": "The question asks how the Act relates to the Constitution, but option C is also a true statement according to the passage, making the question have multiple correct options.",
+          "suggested_fix": "Change the question to: 'Which of the following statements describes the relationship between the RTI Act, 2005 and the Constitution of India?'"
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        }
+      ]
+    },
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 14.0
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "A",
+          "C",
+          "B",
+          "D",
+          "D"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary function of the RTI Act, 2005 regarding information access?\",\n      \"options\": {\n        \"A\": \"It establishes regulations and methods for citizens to obtain information.\",\n        \"B\": \"It mandates that all government records be destroyed after thirty days.\",\n        \"C\": \"It restricts the types of information that citizens can request from states.\",\n        \"D\": \"It forces citizens to provide personal data to access government records.\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage states the Act sets out the rules and procedures regarding citizens' right to access information.\",\n      \"source_sentence\": \"The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.\"\n    },\n    {\n      \"question\": \"What is the standard timeframe for a public authority to respond to an information request?\",\n      \"options\": {\n        \"A\": \"Within 48 hours of receiving the request.\",\n        \"B\": \"Within seven days of the request submission.\",\n        \"C\": \"Within thirty days of receiving the request.\",\n        \"D\": \"Within sixty days of the request submission.\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage specifies that a public authority is required to reply within thirty days for standard requests.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"question\": \"How does the RTI Act, 2005 aim to reduce the need for formal information requests?\",\n      \"options\": {\n        \"A\": \"By requiring public authorities to proactively publish specific categories of information.\",\n        \"B\": \"By limiting the number of requests a single citizen can make in one year.\",\n        \"C\": \"By charging high fees for formal requests to discourage unnecessary inquiries.\",\n        \"D\": \"By allowing citizens to access private records without any government oversight.\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The Act requires public authorities to proactively publish information so that citizens need minimum recourse to request information formally.\",\n      \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n    },\n    {\n      \"question\": \"What is the relationship between the RTI Act, 2005 and the Constitution of India?\",\n      \"options\": {\n        \"A\": \"It is explicitly defined as a Fundamental Right within the Constitution.\",\n        \"B\": \"It replaces the need for Article 19 and Article 21 of the Constitution.\",\n        \"C\": \"It is a constitutional amendment that modifies the Freedom of Speech.\",\n        \"D\": \"It protects the fundamental rights guaranteed by the Constitution.\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage clarifies that while not a Fundamental Right itself, the RTI Act protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.\",\n      \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n    },\n    {\n      \"question\": \"Which legislation did the RTI Act, 2005 replace?\",\n      \"options\": {\n        \"A\": \"The Constitution of India, 1950.\",\n        \"B\": \"The Public Records Act, 1993.\",\n        \"C\": \"The Information Technology Act, 2000.\",\n        \"D\": \"The Freedom of Information Act, 2002.\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage explicitly states that the RTI Act replaced the Freedom of Information Act, 2002.\",\n      \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 0,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "fail",
+          "reason": "The explanation and source sentence provided for option B do not match the correct option A.",
+          "suggested_fix": "Change the explanation to: 'The passage states that the Act requires public authorities to proactively publish information to minimize the need for formal requests.' and ensure the correct option is marked as A."
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        }
+      ]
+    },
+    {
+      "input": "P1_rti",
+      "difficulty": "medium",
+      "n_requested": 5,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 9.5
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "A",
+          "D",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary function of the RTI Act, 2005 regarding information access?\",\n      \"options\": {\n        \"A\": \"It mandates the immediate destruction of all physical government records\",\n        \"B\": \"It establishes rules and procedures for citizens to access information\",\n        \"C\": \"It grants the government total control over all public information\",\n        \"D\": \"It restricts information access to only high-ranking government officials\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The Act sets out the rules and procedures regarding citizens' right to access information.\",\n      \"source_sentence\": \"The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.\"\n    },\n    {\n      \"question\": \"What is the standard timeframe for a public authority to respond to an RTI request?\",\n      \"options\": {\n        \"A\": \"Within 48 hours of receiving the request\",\n        \"B\": \"Within 15 days of receiving the request\",\n        \"C\": \"Within 30 days of receiving the request\",\n        \"D\": \"Within 60 days of receiving the request\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage specifies that a public authority is required to reply within thirty days for standard requests.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"question\": \"What action must public authorities take to reduce the need for formal information requests?\",\n      \"options\": {\n        \"A\": \"Proactively publish certain categories of information\",\n        \"B\": \"Charge high fees for all information provided\",\n        \"C\": \"Limit the number of requests a citizen can make\",\n        \"D\": \"Only provide information through physical mail\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The Act requires public authorities to proactively publish information to minimize the need for formal requests.\",\n      \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n    },\n    {\n      \"question\": \"How is the Right to Information classified within the Constitution of India?\",\n      \"options\": {\n        \"A\": \"It is a Directive Principle of State Policy\",\n        \"B\": \"It is a specific Fundamental Right\",\n        \"C\": \"It is a statutory right rather than a Fundamental Right\",\n        \"D\": \"It is not included as a Fundamental Right\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage explicitly states that the Right to Information is not included as a Fundamental Right in the Constitution.\",\n      \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n    },\n    {\n      \"question\": \"Which legislation did the RTI Act, 2005 replace?\",\n      \"options\": {\n        \"A\": \"The Constitution of India, 1950\",\n        \"B\": \"The Freedom of Expression Act, 1999\",\n        \"C\": \"The Freedom of Information Act, 2002\",\n        \"D\": \"The Public Authority Act, 2001\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states that the 2005 Act replaced the Freedom of Information Act, 2002.\",\n      \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is too simple for a 'medium' difficulty level as it requires only direct recall of the first sentence.",
+          "suggested_fix": "Change the question to require linking two facts, such as: 'How does the RTI Act, 2005 aim to reduce the burden of formal information requests on public authorities?'"
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": "none"
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": "none"
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": "none"
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is too simple for a 'medium' difficulty level as it requires only direct recall of a specific fact.",
+          "suggested_fix": "Change the question to require synthesis, such as: 'Which of the following statements accurately describes the legislative history and purpose of the RTI Act, 2005?'"
+        }
+      ]
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 21.1
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "A",
+          "B",
+          "D",
+          "C",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"On which date was the Government e Marketplace (GeM) initiative launched?\",\n      \"options\": {\n        \"A\": \"9 August 2016\",\n        \"B\": \"15 August 2017\",\n        \"C\": \"26 January 2016\",\n        \"D\": \"1 October 2017\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage states that the initiative was launched on 9 August 2016.\",\n      \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n    },\n    {\n      \"question\": \"Which rule in the General Financial Rules, 2017, mandates the use of GeM by government users?\",\n      \"options\": {\n        \"A\": \"Rule No. 101\",\n        \"B\": \"Rule No. 149\",\n        \"C\": \"Rule No. 205\",\n        \"D\": \"Rule No. 312\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The Ministry of Finance mandated the use of GeM by adding Rule No. 149 to the General Financial Rules, 2017.\",\n      \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n    },\n    {\n      \"question\": \"What is the estimated average savings for buyers on the GeM portal according to the World Bank?\",\n      \"options\": {\n        \"A\": \"5.25%\",\n        \"B\": \"7.50%\",\n        \"C\": \"12.50%\",\n        \"D\": \"9.75%\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The World Bank assessment indicates that average savings for buyers on the GeM portal is about 9.75%.\",\n      \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n    },\n    {\n      \"question\": \"Which organization formerly oversaw the manual procurement processes that GeM replaced?\",\n      \"options\": {\n        \"A\": \"Ministry of Finance\",\n        \"B\": \"GeM SPV\",\n        \"C\": \"Directorate General of Supplies and Disposals (DGS&D)\",\n        \"D\": \"World Bank\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The manual processes were formerly overseen by the Directorate General of Supplies and Disposals (DGS&D).\",\n      \"source_sentence\": \"GeM is a contactless, paperless and cashless online marketplace which replaced a variety of manual processes undertaken within a fragmented policy context, formerly overseen by the Directorate General of Supplies and Disposals (DGS&D) in 2016.\"\n    },\n    {\n      \"question\": \"What are the three pillars that drive the transformation of public procurement in India through GeM?\",\n      \"options\": {\n        \"A\": \"Speed, cost, and quality\",\n        \"B\": \"Security, reliability, and trust\",\n        \"C\": \"Openness, fairness, and inclusiveness\",\n        \"D\": \"Efficiency, technology, and accountability\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The portal drives public procurement through the three pillars of openness, fairness, and inclusiveness.\",\n      \"source_sentence\": \"The portal has transformed public procurement in India by driving its three pillars, namely openness, fairness and inclusiveness, and aims to achieve greater usability, transparency, efficiency and cost savings.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        }
+      ]
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 23.2
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "A",
+          "C",
+          "B",
+          "D",
+          "D"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"On which date was the Government e Marketplace (GeM) initiative launched?\",\n      \"options\": {\n        \"A\": \"9 August 2016\",\n        \"B\": \"15 August 2017\",\n        \"C\": \"26 January 2016\",\n        \"D\": \"1 October 2017\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage explicitly states that the initiative was launched on 9 August 2016.\",\n      \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n    },\n    {\n      \"question\": \"Which Ministry authorized the use of GeM by Government users through the General Financial Rules, 2017?\",\n      \"options\": {\n        \"A\": \"Ministry of Home Affairs\",\n        \"B\": \"Ministry of Electronics and IT\",\n        \"C\": \"Ministry of Finance\",\n        \"D\": \"Ministry of Corporate Affairs\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states that the Ministry of Finance made the use of GeM mandatory by adding a new rule to the General Financial Rules, 2017.\",\n      \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n    },\n    {\n      \"question\": \"What is the ownership structure of the GeM SPV?\",\n      \"options\": {\n        \"A\": \"A 50 percent Government-owned private firm\",\n        \"B\": \"A 100 percent Government-owned, non-profit company\",\n        \"C\": \"A public-private partnership with 25 percent stake\",\n        \"D\": \"A foreign-owned entity under the Ministry of Finance\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage defines GeM SPV as a 100 percent Government-owned, non-profit company.\",\n      \"source_sentence\": \"The platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\"\n    },\n    {\n      \"question\": \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n      \"options\": {\n        \"A\": \"Approximately 5.25%\",\n        \"B\": \"Exactly 12.50%\",\n        \"C\": \"Around 7.50%\",\n        \"D\": \"About 9.75%\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage cites an independent assessment by the World Bank stating savings of about 9.75%.\",\n      \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n    },\n    {\n      \"question\": \"What information are sellers now required to display on the GeM portal for their products?\",\n      \"options\": {\n        \"A\": \"Manufacturing date\",\n        \"B\": \"Warranty period\",\n        \"C\": \"Shipping weight\",\n        \"D\": \"Country of origin\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage mentions that the Government of India made it mandatory for sellers to display the 'country of origin' on products.\",\n      \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        }
+      ]
+    },
+    {
+      "input": "P2_gem",
+      "difficulty": "easy",
+      "n_requested": 5,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 40.2
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 5,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "A",
+          "D",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"On which date was the Government e Marketplace (GeM) initiative launched?\",\n      \"options\": {\n        \"A\": \"15 August 2017\",\n        \"B\": \"9 August 2016\",\n        \"C\": \"5 September 2016\",\n        \"D\": \"26 January 2017\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states the initiative was launched on 9 August 2016.\",\n      \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n    },\n    {\n      \"question\": \"Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?\",\n      \"options\": {\n        \"A\": \"Rule No. 101\",\n        \"B\": \"Rule No. 125\",\n        \"C\": \"Rule No. 149\",\n        \"D\": \"Rule No. 160\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The Ministry of Finance added Rule No. 149 to the General Financial Rules, 2017, to mandate GeM usage.\",\n      \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n    },\n    {\n      \"question\": \"What is the ownership structure of GeM SPV?\",\n      \"options\": {\n        \"A\": \"100 percent Government-owned\",\n        \"B\": \"50 percent Government-owned\",\n        \"C\": \"Public-private partnership\",\n        \"D\": \"Privately held company\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage specifies that GeM SPV is a 100 percent Government-owned company.\",\n      \"source_sentence\": \"The platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\"\n    },\n    {\n      \"question\": \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n      \"options\": {\n        \"A\": \"5.25%\",\n        \"B\": \"7.50%\",\n        \"C\": \"8.15%\",\n        \"D\": \"9.75%\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The World Bank assessment indicates average savings of about 9.75% on the median price.\",\n      \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n    },\n    {\n      \"question\": \"What information are sellers required to display on products sold on the GeM portal?\",\n      \"options\": {\n        \"A\": \"Manufacturing date\",\n        \"B\": \"Product weight\",\n        \"C\": \"Country of origin\",\n        \"D\": \"Shipping dimensions\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The Government of India mandates that sellers display the 'country of origin' on products.\",\n      \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        }
+      ]
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 28.3
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "C",
+          "A",
+          "D",
+          "B"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary objective of the second phase of the Swachh Bharat Mission?\",\n      \"options\": {\n        \"A\": \"To initiate the construction of 90 million new toilets\",\n        \"B\": \"To replace the Nirmal Bharat Abhiyan framework\",\n        \"C\": \"To reinforce the achievements attained during Phase 1\",\n        \"D\": \"To launch the Total Sanitation Campaign nationwide\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"Phase 2 is explicitly stated to be implemented to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    },\n    {\n      \"question\": \"How does the Swachh Bharat Mission differentiate itself from the Nirmal Bharat Abhiyan?\",\n      \"options\": {\n        \"A\": \"It is a restructured version of the earlier Nirmal Bharat Abhiyan\",\n        \"B\": \"It focuses exclusively on menstrual health management awareness\",\n        \"C\": \"It was the first program to introduce solid waste management\",\n        \"D\": \"It operates independently of the Total Sanitation Campaign\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage identifies the Swachh Bharat Mission as a restructured version of the Nirmal Bharat Abhiyan.\",\n      \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n    },\n    {\n      \"question\": \"What was the specific target date set for achieving an 'open-defecation free' India under the initial mission?\",\n      \"options\": {\n        \"A\": \"1954\",\n        \"B\": \"1986\",\n        \"C\": \"1999\",\n        \"D\": \"2 October 2019\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The mission aimed to achieve an ODF India by the 150th anniversary of Mahatma Gandhi's birth, which is 2 October 2019.\",\n      \"source_sentence\": \"Initiated by the Government of India, the mission aimed to achieve an \\\"open-defecation free\\\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets.\"\n    },\n    {\n      \"question\": \"Which component of solid waste management is explicitly mentioned as part of the Swachh Bharat Mission's scientific approach?\",\n      \"options\": {\n        \"A\": \"The privatization of municipal waste collection services\",\n        \"B\": \"The segregation, collection, processing, and disposal of waste\",\n        \"C\": \"The complete elimination of all municipal waste production\",\n        \"D\": \"The funding of private waste management research centers\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The mission emphasizes scientific solid waste management, specifically listing segregation, collection, processing, and disposal.\",\n      \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "The question requires synthesizing information about the phases of the mission.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall) rather than 'hard' (inference/application).",
+          "suggested_fix": "Change the question to an inference: 'Based on the evolution of sanitation programs in India, what can be inferred about the Swachh Bharat Mission's relationship to its predecessors?'"
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall of a date).",
+          "suggested_fix": "Change to an application question: 'Why was 2 October 2019 chosen as the target date for the Swachh Bharat Mission's ODF goal?'"
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall of a list).",
+          "suggested_fix": "Change to an inference question: 'How does the Swachh Bharat Mission define a scientific approach to municipal waste management?'"
+        }
+      ]
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 4.0
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "A",
+          "D"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary objective of the Swachh Bharat Mission regarding the evolution of sanitation programs in India?\",\n      \"options\": {\n        \"A\": \"To replace the Total Sanitation Campaign with a new waste management framework\",\n        \"B\": \"To reinforce and expand upon the integrated sanitation foundations established by previous programs\",\n        \"C\": \"To terminate the Nirmal Bharat Abhiyan and initiate a completely new waste disposal system\",\n        \"D\": \"To transition from rural sanitation programs to exclusively urban waste management initiatives\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states that earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission.\",\n      \"source_sentence\": \"These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission.\"\n    },\n    {\n      \"question\": \"How does the implementation timeline of Phase 2 of the Swachh Bharat Mission relate to the goals of Phase 1?\",\n      \"options\": {\n        \"A\": \"Phase 2 focuses on initiating new waste management techniques not covered in Phase 1\",\n        \"B\": \"Phase 2 serves to replace the failed infrastructure projects of Phase 1\",\n        \"C\": \"Phase 2 is designed to strengthen and sustain the accomplishments achieved during Phase 1\",\n        \"D\": \"Phase 2 acts as a separate program to address menstrual health management exclusively\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage explicitly states that Phase 2 is being implemented to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    },\n    {\n      \"question\": \"What is the relationship between the Nirmal Bharat Abhiyan and the Total Sanitation Campaign?\",\n      \"options\": {\n        \"A\": \"The Nirmal Bharat Abhiyan is a restructured version of the Total Sanitation Campaign\",\n        \"B\": \"The Total Sanitation Campaign was launched to replace the Nirmal Bharat Abhiyan\",\n        \"C\": \"The Nirmal Bharat Abhiyan and the Total Sanitation Campaign are two names for the same 1954 program\",\n        \"D\": \"The Total Sanitation Campaign was the final phase of the Nirmal Bharat Abhiyan\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage states that the Swachh Bharat Mission is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.\",\n      \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n    },\n    {\n      \"question\": \"What was the strategic significance of the 2 October 2019 deadline for the Swachh Bharat Mission?\",\n      \"options\": {\n        \"A\": \"It marked the end of the Central Rural Sanitation Programme\",\n        \"B\": \"It signified the transition from the Total Sanitation Campaign to the Nirmal Bharat Abhiyan\",\n        \"C\": \"It was the date when the government decided to start Phase 2 of the mission\",\n        \"D\": \"It coincided with the 150th birth anniversary of Mahatma Gandhi\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The mission aimed to achieve an ODF India by 2 October 2019, which is identified as the 150th anniversary of the birth of Mahatma Gandhi.\",\n      \"source_sentence\": \"Initiated by the Government of India, the mission aimed to achieve an \\\"open-defecation free\\\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "None",
+          "suggested_fix": "None"
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "None",
+          "suggested_fix": "None"
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "None",
+          "suggested_fix": "None"
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "None",
+          "suggested_fix": "None"
+        }
+      ]
+    },
+    {
+      "input": "P4_sbm",
+      "difficulty": "hard",
+      "n_requested": 4,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 5.5
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 4,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "D",
+          "C",
+          "A"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary objective of the Swachh Bharat Mission regarding the evolution of previous sanitation initiatives?\",\n      \"options\": {\n        \"A\": \"To replace the Total Sanitation Campaign with a new framework\",\n        \"B\": \"To expand upon the integrated sanitation and waste management foundations\",\n        \"C\": \"To terminate the Nirmal Bharat Abhiyan in favor of new policies\",\n        \"D\": \"To revert to the Central Rural Sanitation Programme of 1986\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states that earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission.\",\n      \"source_sentence\": \"These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission.\"\n    },\n    {\n      \"question\": \"How does the timeline of Phase 2 of the Swachh Bharat Mission relate to the goals of the overall campaign?\",\n      \"options\": {\n        \"A\": \"It focuses on initiating new waste management techniques not covered in Phase 1\",\n        \"B\": \"It serves to replace the initial 2014 objectives with updated health targets\",\n        \"C\": \"It marks the transition from rural sanitation to urban waste disposal\",\n        \"D\": \"It functions to strengthen the accomplishments attained during Phase 1\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"Phase 2 is explicitly described as being implemented to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    },\n    {\n      \"question\": \"What is the relationship between the Nirmal Bharat Abhiyan and the Total Sanitation Campaign?\",\n      \"options\": {\n        \"A\": \"The Nirmal Bharat Abhiyan was the original name for the 1954 program\",\n        \"B\": \"The Total Sanitation Campaign was a later expansion of the Nirmal Bharat Abhiyan\",\n        \"C\": \"The Nirmal Bharat Abhiyan was a restructured version of the Total Sanitation Campaign\",\n        \"D\": \"The Total Sanitation Campaign was launched to replace the Nirmal Bharat Abhiyan\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states that the Swachh Bharat Mission is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.\",\n      \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n    },\n    {\n      \"question\": \"What was the specific target date set for achieving an 'open-defecation free' India?\",\n      \"options\": {\n        \"A\": \"2 October 2019\",\n        \"B\": \"2 October 2014\",\n        \"C\": \"2 October 1999\",\n        \"D\": \"2 October 2025\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The mission aimed to achieve an ODF India by 2 October 2019, which marked the 150th anniversary of Mahatma Gandhi's birth.\",\n      \"source_sentence\": \"Initiated by the Government of India, the mission aimed to achieve an \\\"open-defecation free\\\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "The question requires synthesizing information about the evolution of the program, meeting the 'hard' difficulty criteria.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "The question requires understanding the purpose of the second phase in relation to the first, meeting the 'hard' difficulty criteria.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "The question requires careful parsing of the historical lineage of the programs, meeting the 'hard' difficulty criteria.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "This question is a direct recall of a specific date, which classifies it as 'easy' rather than 'hard' as requested.",
+          "suggested_fix": "Change the question to an inference-based one, such as: 'Based on the timeline of the Swachh Bharat Mission, what is the significance of the date 2 October 2019 in relation to the mission's goals?'"
+        }
+      ]
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 1,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 4.7
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "D",
+          "C",
+          "B",
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary purpose for which the Central Vigilance Commission was established in 1964?\",\n      \"options\": {\n        \"A\": \"To manage the administrative reforms of the central government\",\n        \"B\": \"To oversee the financial auditing of all public sector units\",\n        \"C\": \"To provide legal counsel to government employees in court\",\n        \"D\": \"To address the issue of corruption within the government\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage states the CVC was created to address governmental corruption.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    },\n    {\n      \"question\": \"How did the legal standing of the CVC change in 2003?\",\n      \"options\": {\n        \"A\": \"It was dissolved and replaced by a new oversight committee\",\n        \"B\": \"It was granted the power to prosecute criminal offenders\",\n        \"C\": \"It was conferred with statutory status by the Parliament\",\n        \"D\": \"It was placed under the direct control of the judiciary\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage confirms that in 2003, the Parliament enacted a law giving the CVC statutory status.\",\n      \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n    },\n    {\n      \"question\": \"What is the nature of the CVC's operational independence?\",\n      \"options\": {\n        \"A\": \"It operates under the guidance of the Supreme Court\",\n        \"B\": \"It functions as an autonomous body free from executive control\",\n        \"C\": \"It reports directly to the legislative branch for all actions\",\n        \"D\": \"It is managed by a board of independent private auditors\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage describes the CVC as an autonomous body free from executive authority control.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"What is the specific scope of the CVC's monitoring responsibilities?\",\n      \"options\": {\n        \"A\": \"All vigilance activity under the Central Government of India\",\n        \"B\": \"The financial transactions of private corporations in India\",\n        \"C\": \"The disciplinary actions taken by state-level police forces\",\n        \"D\": \"The ethical conduct of elected members of the Parliament\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The CVC is charged with monitoring all vigilance activity under the Central Government of India.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"In what capacity does the CVC interact with central government organizations regarding their vigilance work?\",\n      \"options\": {\n        \"A\": \"By directly executing all disciplinary actions for the departments\",\n        \"B\": \"By advising authorities on planning, executing, and reforming work\",\n        \"C\": \"By auditing the annual budgets of all vigilance departments\",\n        \"D\": \"By appointing the heads of all internal vigilance units\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The CVC advises authorities in central government organizations on planning, executing, reviewing, and reforming vigilance work.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"When was the Central Vigilance Commission first established?\",\n      \"options\": {\n        \"A\": \"1947\",\n        \"B\": \"1950\",\n        \"C\": \"1964\",\n        \"D\": \"2003\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage explicitly states the CVC was created in 1964.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "All criteria met.",
+          "suggested_fix": ""
+        },
+        {
+          "id": 6,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is too easy (direct recall of a single fact) and does not meet the 'medium' difficulty requirement.",
+          "suggested_fix": "Change the question to require linking two facts, such as: 'Which of the following best describes the evolution of the CVC from its inception to its current legal status?'"
+        }
+      ]
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 2,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 36.0
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "D",
+          "A",
+          "C",
+          "B",
+          "C"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary purpose for which the Central Vigilance Commission was established in 1964?\",\n      \"options\": {\n        \"A\": \"To manage the administrative reforms of the Indian Parliament\",\n        \"B\": \"To address the issue of corruption within the government\",\n        \"C\": \"To oversee the financial audits of all autonomous bodies\",\n        \"D\": \"To provide legal advice to the executive branch of India\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states the CVC was created to address governmental corruption.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    },\n    {\n      \"question\": \"What significant change occurred regarding the status of the CVC in 2003?\",\n      \"options\": {\n        \"A\": \"It was granted the power to prosecute government officials\",\n        \"B\": \"It was merged with other central investigative agencies\",\n        \"C\": \"It was placed under the direct control of the executive\",\n        \"D\": \"It was conferred with statutory status by the Parliament\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The passage notes that in 2003, the Parliament enacted a law giving the CVC statutory status.\",\n      \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n    },\n    {\n      \"question\": \"How is the independence of the Central Vigilance Commission described in the passage?\",\n      \"options\": {\n        \"A\": \"It functions as an autonomous body free from executive control\",\n        \"B\": \"It operates under the supervision of the judiciary\",\n        \"C\": \"It is managed by a committee of elected government officials\",\n        \"D\": \"It is subject to periodic review by the executive authority\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage explicitly defines the CVC as an autonomous body free from executive authority control.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"What is the scope of the CVC's monitoring responsibilities?\",\n      \"options\": {\n        \"A\": \"It monitors vigilance activity in private sector organizations\",\n        \"B\": \"It monitors only the financial transactions of the Parliament\",\n        \"C\": \"It monitors all vigilance activity under the Central Government of India\",\n        \"D\": \"It monitors the daily operations of all state-level government bodies\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states the CVC is charged with monitoring all vigilance activity under the Central Government of India.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"In what capacity does the CVC interact with central government organizations regarding their vigilance work?\",\n      \"options\": {\n        \"A\": \"It acts as the primary executor of all vigilance investigations\",\n        \"B\": \"It advises authorities on planning, executing, reviewing, and reforming work\",\n        \"C\": \"It dictates the hiring policies for all vigilance department staff\",\n        \"D\": \"It serves as the final judicial authority for all corruption cases\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage specifies that the CVC advises authorities in central government organizations on planning, executing, reviewing, and reforming their vigilance work.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"When was the Central Vigilance Commission first established?\",\n      \"options\": {\n        \"A\": \"2003\",\n        \"B\": \"1947\",\n        \"C\": \"1964\",\n        \"D\": \"1950\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage states the CVC was created in 1964.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": ""
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": ""
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": ""
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "none",
+          "suggested_fix": ""
+        },
+        {
+          "id": 6,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is too easy (direct recall of a single date) and does not meet the requested 'medium' difficulty level.",
+          "suggested_fix": "Change the question to require linking the date to the event, such as: 'Which of the following statements accurately describes the timeline of the CVC's development?'"
+        }
+      ]
+    },
+    {
+      "input": "P3_cvc",
+      "difficulty": "medium",
+      "n_requested": 6,
+      "repeat": 3,
+      "meta": {
+        "model": "gemini-3.1-flash-lite",
+        "temperature": 0.2,
+        "json_mode": true,
+        "seconds": 9.8
+      },
+      "parse_error": null,
+      "checks": {
+        "json_ok": true,
+        "schema_ok": true,
+        "n_questions": 6,
+        "per_question": [
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          },
+          {
+            "fields_ok": true,
+            "four_options": true,
+            "key_ok": true,
+            "quote_verbatim": true
+          }
+        ],
+        "answer_positions": [
+          "B",
+          "C",
+          "A",
+          "D",
+          "B",
+          "A"
+        ]
+      },
+      "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"What is the primary objective for which the Central Vigilance Commission was established?\",\n      \"options\": {\n        \"A\": \"To manage the administrative budget of the government\",\n        \"B\": \"To address instances of governmental corruption\",\n        \"C\": \"To oversee the recruitment of civil servants\",\n        \"D\": \"To conduct audits of private sector organizations\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states that the CVC was created to address governmental corruption.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    },\n    {\n      \"question\": \"When did the Central Vigilance Commission receive its statutory status?\",\n      \"options\": {\n        \"A\": \"In 1964\",\n        \"B\": \"In 1990\",\n        \"C\": \"In 2003\",\n        \"D\": \"In 2010\"\n      },\n      \"correct\": \"C\",\n      \"explanation\": \"The passage specifies that the Parliament enacted a law in 2003 to confer statutory status on the CVC.\",\n      \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n    },\n    {\n      \"question\": \"How is the operational independence of the Central Vigilance Commission described?\",\n      \"options\": {\n        \"A\": \"It functions as an autonomous body free from executive control\",\n        \"B\": \"It operates under the direct supervision of the Prime Minister\",\n        \"C\": \"It is a subordinate office of the Ministry of Finance\",\n        \"D\": \"It requires parliamentary approval for all its daily decisions\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage defines the CVC as an autonomous body that is free from control by any executive authority.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"What is the scope of the Central Vigilance Commission's monitoring responsibilities?\",\n      \"options\": {\n        \"A\": \"It monitors vigilance activity within private corporations\",\n        \"B\": \"It monitors all vigilance activity under the State Governments\",\n        \"C\": \"It monitors international diplomatic relations\",\n        \"D\": \"It monitors all vigilance activity under the Central Government of India\"\n      },\n      \"correct\": \"D\",\n      \"explanation\": \"The CVC is specifically charged with monitoring vigilance activity under the Central Government of India.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"Which of the following describes the advisory role of the CVC regarding vigilance work?\",\n      \"options\": {\n        \"A\": \"It dictates the hiring policies of all government departments\",\n        \"B\": \"It advises authorities on planning, executing, reviewing, and reforming vigilance work\",\n        \"C\": \"It manages the legal defense of government employees accused of corruption\",\n        \"D\": \"It provides financial grants to organizations for vigilance training\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"The passage states that the CVC advises authorities in central government organizations on planning, executing, reviewing, and reforming their vigilance work.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"question\": \"In which year was the Central Vigilance Commission initially created?\",\n      \"options\": {\n        \"A\": \"1964\",\n        \"B\": \"1987\",\n        \"C\": \"2003\",\n        \"D\": \"1950\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage explicitly mentions that the CVC was created in 1964.\",\n      \"source_sentence\": \"Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+      "judge": [
+        {
+          "id": 1,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is too simple and qualifies as 'easy' (direct recall) rather than 'medium' (paraphrase or linking facts).",
+          "suggested_fix": "Change the question to require linking the creation date and the purpose: 'How has the mandate of the CVC evolved since its creation in 1964?'"
+        },
+        {
+          "id": 2,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall).",
+          "suggested_fix": "Change to: 'What legal change occurred in 2003 that altered the CVC's standing within the Indian government?'"
+        },
+        {
+          "id": 3,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "...",
+          "suggested_fix": ""
+        },
+        {
+          "id": 4,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall).",
+          "suggested_fix": "Change to: 'Which of the following best describes the jurisdictional scope of the CVC's monitoring authority?'"
+        },
+        {
+          "id": 5,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 1
+          },
+          "verdict": "pass",
+          "reason": "...",
+          "suggested_fix": ""
+        },
+        {
+          "id": 6,
+          "scores": {
+            "faithful": 1,
+            "single_key": 1,
+            "plausible_distractors": 1,
+            "clear": 1,
+            "right_level": 0
+          },
+          "verdict": "fail",
+          "reason": "The question is 'easy' (direct recall).",
+          "suggested_fix": "Change to: 'How does the CVC's current status differ from its status at the time of its inception in 1964?'"
+        }
+      ]
+    }
+  ]
+}

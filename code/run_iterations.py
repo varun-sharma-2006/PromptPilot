@@ -47,8 +47,9 @@ def run_version(version, repeats):
     runs = []
     for pid, diff, n in INPUTS:
         meta = passage(pid)
-        user = prompts.fill(p["user"], N=n, DIFFICULTY=diff, COMPETENCY=meta["competency"], PASSAGE=meta["text"])
         for r in range(repeats):
+            user = prompts.fill(p["user"], N=n, DIFFICULTY=diff, COMPETENCY=meta["competency"],
+                                PASSAGE=meta["text"], KEY_ORDER=prompts.key_order(n, seed=r))
             text, info = llm.call(user, p["system"], p["temperature"], p["json_mode"])
             obj, err = llm.parse_json(text)
             res = checks.check_run(obj, meta["text"])

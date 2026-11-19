@@ -43,3 +43,19 @@ def fill(template, **values):
     for k, v in values.items():
         out = out.replace("{" + k + "}", str(v))
     return out
+
+
+def key_order(n, seed=0):
+    """Balanced, shuffled answer letters for n questions, e.g. 'C, A, D, B, A'.
+
+    From v3 the code (not the model) decides where the correct answer goes, because the model
+    ignored the instruction to spread answers (key on D only 2 times in 49 in the v2 runs).
+    """
+    import random
+    rng = random.Random(seed * 1000 + n)
+    letters = []
+    while len(letters) < n:
+        block = list("ABCD")
+        rng.shuffle(block)
+        letters += block
+    return ", ".join(letters[:n])
