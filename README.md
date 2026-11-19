@@ -10,7 +10,8 @@ learner's competency gaps from their quiz answers.
   auto-generated quizzes (iGOT Karmayogi), from the course Problem Bank
 - Course: SCSE4041 Prompt Engineering Mini Project, Bennett University
 - Model: **Google Gemini `gemini-3.1-flash-lite`** through the Gemini API (see `code/llm.py` for why)
-- Prototype: **TODO: Streamlit app link** (see "Deploy" below)
+- Prototype: **Colab notebook with saved outputs:** https://colab.research.google.com/github/varun-sharma-2006/PromptPilot/blob/main/code/KarmaQuiz_demo.ipynb  
+  The Streamlit web app (`code/app.py`) can also be deployed; see "Deploy" below.
 
 ## Team
 
