@@ -11,7 +11,11 @@ import time
 from google import genai
 from google.genai import types
 
-MODEL = "gemini-2.5-flash"
+# Model choice (19 Nov 2026): gemini-2.5-flash is no longer offered to new API keys, the 3.5+ Flash
+# models returned 503 (high demand), and gemini-3-flash-preview allows only 20 free requests a day.
+# gemini-3.1-flash-lite is stable, free, and has enough daily quota for the experiments, so every
+# recorded run uses it. Override with the KARMAQUIZ_MODEL environment variable.
+MODEL = os.environ.get("KARMAQUIZ_MODEL", "gemini-3.1-flash-lite")
 
 _client = None
 
@@ -36,7 +40,7 @@ def client():
     return _client
 
 
-def call(user_prompt, system_prompt=None, temperature=None, json_mode=False, retries=3):
+def call(user_prompt, system_prompt=None, temperature=None, json_mode=False, retries=4):
     """Send one prompt to Gemini and return (text, meta)."""
     cfg = {}
     if system_prompt:
@@ -62,7 +66,10 @@ def call(user_prompt, system_prompt=None, temperature=None, json_mode=False, ret
             }
         except Exception as e:  # rate limits / transient errors
             last_err = e
-            time.sleep(5 * (attempt + 1))
+            msg = str(e)
+            if "PerDay" in msg:  # daily free quota used up: waiting will not help
+                raise
+            time.sleep((20 if "429" in msg else 5) * (attempt + 1))
     raise last_err
 
 
