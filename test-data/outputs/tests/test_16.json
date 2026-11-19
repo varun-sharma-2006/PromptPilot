@@ -1,0 +1,89 @@
+{
+  "case": {
+    "no": 16,
+    "type": "Edge",
+    "kind": "revise",
+    "from_test": 7,
+    "passage": "P4_sbm",
+    "difficulty": "hard",
+    "short": "T1R on the wrong-key Swachh Bharat question, with T2's real review from test 7; then T2 again",
+    "expect": "Revised question passes T2 re-review (faithful = 1, verdict pass)",
+    "auto": "revise_passes"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": true,
+  "rule_detail": "revised key: \"To consolidate and solidify the outcomes attained during the mission's initial phase.\"; re-review verdict=pass; scores={'faithful': 1, 'single_key': 1, 'plausible_distractors': 1, 'clear': 1, 'right_level': 1}",
+  "actual_short": "re-review: pass",
+  "result": {
+    "revised": {
+      "questions": [
+        {
+          "question": "Based on the implementation timeline of the Swachh Bharat Mission, what is the strategic objective of the period spanning 2020–21 to 2024–25?",
+          "options": {
+            "A": "To consolidate and solidify the outcomes attained during the mission's initial phase.",
+            "B": "To initiate the primary construction of the 90 million toilets required for ODF status.",
+            "C": "To transition the national sanitation framework from the Nirmal Bharat Abhiyan model.",
+            "D": "To commemorate the 150th anniversary of Mahatma Gandhi through infrastructure expansion."
+          },
+          "correct": "A",
+          "explanation": "The passage explicitly states that Phase 2, which occurs between 2020–21 and 2024–25, is being implemented to reinforce the achievements of Phase 1.",
+          "source_sentence": "Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1."
+        }
+      ],
+      "note": "",
+      "auto_dropped": []
+    },
+    "re_review": [
+      {
+        "id": 1,
+        "scores": {
+          "faithful": 1,
+          "single_key": 1,
+          "plausible_distractors": 1,
+          "clear": 1,
+          "right_level": 1
+        },
+        "verdict": "pass",
+        "reason": "The question requires an inference based on the provided text regarding the purpose of Phase 2, and the options are clearly distinct.",
+        "suggested_fix": ""
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_revise",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 2.8
+        },
+        "variables": {
+          "N": 1,
+          "DIFFICULTY": "hard",
+          "COMPETENCY": "Domain: Sanitation Programmes",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "KEY_ORDER": "D",
+          "FEEDBACK_JSON": "[\n  {\n    \"question\": {\n      \"question\": \"What is the primary strategic purpose of implementing Phase 2 of the Swachh Bharat Mission between the years 2020–21 and 2024–25?\",\n      \"options\": {\n        \"A\": \"To complete the construction of the remaining 90 million planned toilets.\",\n        \"B\": \"To transition the mission's focus from ODF villages to municipal waste management.\",\n        \"C\": \"To strengthen and sustain the progress made during the initial phase.\",\n        \"D\": \"To launch the country-wide campaign for the 150th anniversary of Mahatma Gandhi.\"\n      },\n      \"correct\": \"B\",\n      \"explanation\": \"According to the text, Phase 2 is being implemented specifically to reinforce what was achieved in Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    },\n    \"review\": {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 0,\n        \"single_key\": 0,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"fail\",\n      \"reason\": \"The marked correct option 'B' is not supported by the source sentence. The source sentence states Phase 2 is to 'reinforce the achievements of Phase 1', which matches option 'C'. Option 'B' is not mentioned in the text as the purpose of Phase 2.\",\n      \"suggested_fix\": \"Change the correct option to 'C' and ensure the explanation reflects the text accurately.\"\n    }\n  }\n]"
+        },
+        "raw_output": "{\n  \"questions\": [\n    {\n      \"question\": \"Based on the implementation timeline of the Swachh Bharat Mission, what is the strategic objective of the period spanning 2020–21 to 2024–25?\",\n      \"options\": {\n        \"A\": \"To consolidate and solidify the outcomes attained during the mission's initial phase.\",\n        \"B\": \"To initiate the primary construction of the 90 million toilets required for ODF status.\",\n        \"C\": \"To transition the national sanitation framework from the Nirmal Bharat Abhiyan model.\",\n        \"D\": \"To commemorate the 150th anniversary of Mahatma Gandhi through infrastructure expansion.\"\n      },\n      \"correct\": \"A\",\n      \"explanation\": \"The passage explicitly states that Phase 2, which occurs between 2020–21 and 2024–25, is being implemented to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 2.7
+        },
+        "variables": {
+          "DIFFICULTY": "hard",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"Based on the implementation timeline of the Swachh Bharat Mission, what is the strategic objective of the period spanning 2020–21 to 2024–25?\",\n    \"options\": {\n      \"A\": \"To consolidate and solidify the outcomes attained during the mission's initial phase.\",\n      \"B\": \"To initiate the primary construction of the 90 million toilets required for ODF status.\",\n      \"C\": \"To transition the national sanitation framework from the Nirmal Bharat Abhiyan model.\",\n      \"D\": \"To commemorate the 150th anniversary of Mahatma Gandhi through infrastructure expansion.\"\n    },\n    \"correct\": \"A\",\n    \"explanation\": \"The passage explicitly states that Phase 2, which occurs between 2020–21 and 2024–25, is being implemented to reinforce the achievements of Phase 1.\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question requires an inference based on the provided text regarding the purpose of Phase 2, and the options are clearly distinct.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

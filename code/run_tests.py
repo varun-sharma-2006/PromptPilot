@@ -83,6 +83,12 @@ def judge(case, res, comp):
         key = "single_key" if rule.endswith("single_key") else "faithful"
         ok = r.get("verdict") == "fail" and int(r.get("scores", {}).get(key, 1)) == 0
         return ok, f"verdict={r.get('verdict')}; scores={r.get('scores')}"
+    if rule == "revise_passes":
+        rr = res["re_review"]
+        ok = bool(rr) and rr[0].get("verdict") == "pass" and int(rr[0].get("scores", {}).get("faithful", 0)) == 1
+        q = res["revised"]["questions"][0] if res["revised"]["questions"] else {}
+        key = q.get("options", {}).get(q.get("correct"), "-")
+        return ok, f"revised key: {key!r}; re-review verdict={rr[0].get('verdict') if rr else None}; scores={rr[0].get('scores') if rr else None}"
     if rule in ("gaps_partial", "gaps_zero"):
         table, summ = res["table"], res["summary"]
         correct, total = sum(r["correct"] for r in table), sum(r["total"] for r in table)
@@ -107,6 +113,14 @@ def run_case(case):
         c = chain.Chain()
         rev = c.review(passage, case["difficulty"], [case["question"]])
         return {"review": rev[0], "auto_checks": checks.check_question(case["question"], passage), "log": c.log}, comp
+    if case["kind"] == "revise":
+        passage, comp = load_passage(case)
+        src = json.loads((OUT / f"test_{case['from_test']:02d}.json").read_text(encoding="utf-8"))
+        bad_q, review = src["case"]["question"], src["result"]["review"]
+        c = chain.Chain()
+        rev = c.generate(passage, comp, case["difficulty"], 1, feedback=[{"question": bad_q, "review": review}])
+        re_review = c.review(passage, case["difficulty"], rev["questions"]) if rev["questions"] else []
+        return {"revised": rev, "re_review": re_review, "log": c.log}, comp
     if case["kind"] == "gaps":
         src = json.loads((OUT / f"test_{case['from_test']:02d}.json").read_text(encoding="utf-8"))["result"]
         qs = src["questions"]
@@ -130,6 +144,9 @@ def short_actual(case, res):
             + (f"; {res['reason']}" if res.get("reason") else "")
     if case["kind"] == "review":
         return f"{res['review'].get('verdict')}, scores {res['review'].get('scores')}"
+    if case["kind"] == "revise":
+        rr = res["re_review"]
+        return f"re-review: {rr[0].get('verdict') if rr else 'no question'}"
     s = res["summary"]
     return f"{sum(r['correct'] for r in res['table'])}/{sum(r['total'] for r in res['table'])}; " + \
         "; ".join(f"{g.get('competency')}: {g.get('level')}" for g in s.get("gaps", []))

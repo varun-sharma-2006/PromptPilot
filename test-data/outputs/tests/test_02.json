@@ -1,0 +1,314 @@
+{
+  "case": {
+    "no": 2,
+    "type": "Normal",
+    "kind": "chain",
+    "passage": "P2_gem",
+    "difficulty": "easy",
+    "n": 5,
+    "short": "GeM passage, easy, 5 questions",
+    "expect": "5 accepted questions, tagged Functional: Public Procurement",
+    "auto": "normal_full"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "5/5 accepted; tags: ['Domain: e-Governance', 'Functional: Public Procurement']",
+  "actual_short": "5 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              1
+            ],
+            "question": "On what date was the Government e Marketplace (GeM) launched?",
+            "explanation": "The passage explicitly states that the initiative was launched on 9 August 2016.",
+            "source_sentence": "The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.",
+            "options": {
+              "A": "9 August 2016",
+              "B": "15 August 2017",
+              "C": "9 September 2016",
+              "D": "1 January 2017"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              3
+            ],
+            "question": "How long did it take to build the GeM platform?",
+            "explanation": "The passage mentions that the platform was built in a record time of 5 months.",
+            "source_sentence": "It was built in a record time of 5 months to facilitate the online procurement of goods and Services.",
+            "options": {
+              "A": "9 months",
+              "B": "5 months",
+              "C": "12 months",
+              "D": "2 years"
+            },
+            "correct": "B"
+          },
+          {
+            "fact_ids": [
+              4
+            ],
+            "question": "Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?",
+            "explanation": "The Ministry of Finance made the use of GeM mandatory by adding Rule No. 149 to the General Financial Rules, 2017.",
+            "source_sentence": "Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.",
+            "options": {
+              "A": "Rule No. 120",
+              "B": "Rule No. 155",
+              "C": "Rule No. 200",
+              "D": "Rule No. 149"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              7
+            ],
+            "question": "According to the World Bank, what is the average savings for buyers on the GeM portal?",
+            "explanation": "The passage states that an independent assessment by the World Bank found average savings of about 9.75% on the median price.",
+            "source_sentence": "According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.",
+            "options": {
+              "A": "5.50%",
+              "B": "12.25%",
+              "C": "9.75%",
+              "D": "15.00%"
+            },
+            "correct": "C"
+          },
+          {
+            "fact_ids": [
+              8
+            ],
+            "question": "What are sellers required to display on products sold on the GeM portal?",
+            "explanation": "The Government of India has made it mandatory for sellers to display the 'country of origin' on products sold on the GeM portal.",
+            "source_sentence": "The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.",
+            "options": {
+              "A": "Manufacturing date",
+              "B": "Retail price",
+              "C": "Country of origin",
+              "D": "Warranty period"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "All criteria met.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "All criteria met.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "All criteria met.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 4,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "All criteria met.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 5,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "All criteria met.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          1
+        ],
+        "question": "On what date was the Government e Marketplace (GeM) launched?",
+        "explanation": "The passage explicitly states that the initiative was launched on 9 August 2016.",
+        "source_sentence": "The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.",
+        "options": {
+          "A": "9 August 2016",
+          "B": "15 August 2017",
+          "C": "9 September 2016",
+          "D": "1 January 2017"
+        },
+        "correct": "A",
+        "competency": "Domain: e-Governance",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the launch date of the GeM platform."
+      },
+      {
+        "fact_ids": [
+          3
+        ],
+        "question": "How long did it take to build the GeM platform?",
+        "explanation": "The passage mentions that the platform was built in a record time of 5 months.",
+        "source_sentence": "It was built in a record time of 5 months to facilitate the online procurement of goods and Services.",
+        "options": {
+          "A": "9 months",
+          "B": "5 months",
+          "C": "12 months",
+          "D": "2 years"
+        },
+        "correct": "B",
+        "competency": "Domain: e-Governance",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the development duration of the GeM platform."
+      },
+      {
+        "fact_ids": [
+          4
+        ],
+        "question": "Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?",
+        "explanation": "The Ministry of Finance made the use of GeM mandatory by adding Rule No. 149 to the General Financial Rules, 2017.",
+        "source_sentence": "Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.",
+        "options": {
+          "A": "Rule No. 120",
+          "B": "Rule No. 155",
+          "C": "Rule No. 200",
+          "D": "Rule No. 149"
+        },
+        "correct": "D",
+        "competency": "Functional: Public Procurement",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the specific rule number mandating GeM usage."
+      },
+      {
+        "fact_ids": [
+          7
+        ],
+        "question": "According to the World Bank, what is the average savings for buyers on the GeM portal?",
+        "explanation": "The passage states that an independent assessment by the World Bank found average savings of about 9.75% on the median price.",
+        "source_sentence": "According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.",
+        "options": {
+          "A": "5.50%",
+          "B": "12.25%",
+          "C": "9.75%",
+          "D": "15.00%"
+        },
+        "correct": "C",
+        "competency": "Functional: Public Procurement",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the average savings percentage reported by the World Bank."
+      },
+      {
+        "fact_ids": [
+          8
+        ],
+        "question": "What are sellers required to display on products sold on the GeM portal?",
+        "explanation": "The Government of India has made it mandatory for sellers to display the 'country of origin' on products sold on the GeM portal.",
+        "source_sentence": "The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.",
+        "options": {
+          "A": "Manufacturing date",
+          "B": "Retail price",
+          "C": "Country of origin",
+          "D": "Warranty period"
+        },
+        "correct": "C",
+        "competency": "Functional: Public Procurement",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the mandatory product display requirement on the GeM portal."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 13.3
+        },
+        "variables": {
+          "N": 5,
+          "DIFFICULTY": "easy",
+          "COMPETENCY": "Functional: Public Procurement",
+          "PASSAGE": "Government e Marketplace (GeM) is an online platform for public procurement in India. The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers. It was built in a record time of 5 months to facilitate the online procurement of goods and Services. Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\nThe platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\nGeM is a contactless, paperless and cashless online marketplace which replaced a variety of manual processes undertaken within a fragmented policy context, formerly overseen by the Directorate General of Supplies and Disposals (DGS&D) in 2016. Since its inception, GeM has brought in the visibility and transparency in public procurement. The portal has transformed public procurement in India by driving its three pillars, namely openness, fairness and inclusiveness, and aims to achieve greater usability, transparency, efficiency and cost savings.\nAccording to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price. The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.",
+          "KEY_ORDER": "A, B, D, C, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"GeM was launched on 9 August 2016\",\n    \"GeM was launched by the Ministry of Commerce and Industry\",\n    \"GeM was built in 5 months\",\n    \"Use of GeM is mandatory under Rule No. 149 of the General Financial Rules, 2017\",\n    \"GeM is owned by GeM SPV\",\n    \"GeM SPV is a 100 percent Government-owned, non-profit company\",\n    \"World Bank assessment shows average savings of 9.75% on the median price\",\n    \"Sellers must display the country of origin on products\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [1],\n      \"question\": \"On what date was the Government e Marketplace (GeM) launched?\",\n      \"answer\": \"9 August 2016\",\n      \"distractors\": [\n        \"15 August 2017\",\n        \"9 September 2016\",\n        \"1 January 2017\"\n      ],\n      \"explanation\": \"The passage explicitly states that the initiative was launched on 9 August 2016.\",\n      \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\"\n    },\n    {\n      \"fact_ids\": [3],\n      \"question\": \"How long did it take to build the GeM platform?\",\n      \"answer\": \"5 months\",\n      \"distractors\": [\n        \"9 months\",\n        \"12 months\",\n        \"2 years\"\n      ],\n      \"explanation\": \"The passage mentions that the platform was built in a record time of 5 months.\",\n      \"source_sentence\": \"It was built in a record time of 5 months to facilitate the online procurement of goods and Services.\"\n    },\n    {\n      \"fact_ids\": [4],\n      \"question\": \"Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?\",\n      \"answer\": \"Rule No. 149\",\n      \"distractors\": [\n        \"Rule No. 120\",\n        \"Rule No. 155\",\n        \"Rule No. 200\"\n      ],\n      \"explanation\": \"The Ministry of Finance made the use of GeM mandatory by adding Rule No. 149 to the General Financial Rules, 2017.\",\n      \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\"\n    },\n    {\n      \"fact_ids\": [7],\n      \"question\": \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n      \"answer\": \"9.75%\",\n      \"distractors\": [\n        \"5.50%\",\n        \"12.25%\",\n        \"15.00%\"\n      ],\n      \"explanation\": \"The passage states that an independent assessment by the World Bank found average savings of about 9.75% on the median price.\",\n      \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\"\n    },\n    {\n      \"fact_ids\": [8],\n      \"question\": \"What are sellers required to display on products sold on the GeM portal?\",\n      \"answer\": \"Country of origin\",\n      \"distractors\": [\n        \"Manufacturing date\",\n        \"Retail price\",\n        \"Warranty period\"\n      ],\n      \"explanation\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products sold on the GeM portal.\",\n      \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 72.6
+        },
+        "variables": {
+          "DIFFICULTY": "easy",
+          "PASSAGE": "Government e Marketplace (GeM) is an online platform for public procurement in India. The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers. It was built in a record time of 5 months to facilitate the online procurement of goods and Services. Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\nThe platform is owned by GeM SPV, a Special Purpose Vehicle which is a 100 percent Government-owned, non-profit company under the Ministry of Commerce and Industries, Government of India.\nGeM is a contactless, paperless and cashless online marketplace which replaced a variety of manual processes undertaken within a fragmented policy context, formerly overseen by the Directorate General of Supplies and Disposals (DGS&D) in 2016. Since its inception, GeM has brought in the visibility and transparency in public procurement. The portal has transformed public procurement in India by driving its three pillars, namely openness, fairness and inclusiveness, and aims to achieve greater usability, transparency, efficiency and cost savings.\nAccording to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price. The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      1\n    ],\n    \"question\": \"On what date was the Government e Marketplace (GeM) launched?\",\n    \"explanation\": \"The passage explicitly states that the initiative was launched on 9 August 2016.\",\n    \"source_sentence\": \"The initiative was launched on 9 August 2016, by the Ministry of Commerce and Industry in the Government of India, with the objective to create an open and transparent procurement platform for government buyers.\",\n    \"options\": {\n      \"A\": \"9 August 2016\",\n      \"B\": \"15 August 2017\",\n      \"C\": \"9 September 2016\",\n      \"D\": \"1 January 2017\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      3\n    ],\n    \"question\": \"How long did it take to build the GeM platform?\",\n    \"explanation\": \"The passage mentions that the platform was built in a record time of 5 months.\",\n    \"source_sentence\": \"It was built in a record time of 5 months to facilitate the online procurement of goods and Services.\",\n    \"options\": {\n      \"A\": \"9 months\",\n      \"B\": \"5 months\",\n      \"C\": \"12 months\",\n      \"D\": \"2 years\"\n    },\n    \"correct\": \"B\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      4\n    ],\n    \"question\": \"Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?\",\n    \"explanation\": \"The Ministry of Finance made the use of GeM mandatory by adding Rule No. 149 to the General Financial Rules, 2017.\",\n    \"source_sentence\": \"Use of GeM by Government users has been authorized and made mandatory by the Ministry of Finance by adding a new Rule No. 149 in the General Financial Rules, 2017.\",\n    \"options\": {\n      \"A\": \"Rule No. 120\",\n      \"B\": \"Rule No. 155\",\n      \"C\": \"Rule No. 200\",\n      \"D\": \"Rule No. 149\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 4,\n    \"fact_ids\": [\n      7\n    ],\n    \"question\": \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n    \"explanation\": \"The passage states that an independent assessment by the World Bank found average savings of about 9.75% on the median price.\",\n    \"source_sentence\": \"According to an independent assessment made by the World Bank, average savings for buyers in Government e Marketplace portal is about 9.75% on the median price.\",\n    \"options\": {\n      \"A\": \"5.50%\",\n      \"B\": \"12.25%\",\n      \"C\": \"9.75%\",\n      \"D\": \"15.00%\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 5,\n    \"fact_ids\": [\n      8\n    ],\n    \"question\": \"What are sellers required to display on products sold on the GeM portal?\",\n    \"explanation\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products sold on the GeM portal.\",\n    \"source_sentence\": \"The Government of India has made it mandatory for sellers to display the 'country of origin' on products to be sold on GeM portal.\",\n    \"options\": {\n      \"A\": \"Manufacturing date\",\n      \"B\": \"Retail price\",\n      \"C\": \"Country of origin\",\n      \"D\": \"Warranty period\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"All criteria met.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"All criteria met.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"All criteria met.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 4,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"All criteria met.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 5,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"All criteria met.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 14.3
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"On what date was the Government e Marketplace (GeM) launched?\",\n    \"options\": {\n      \"A\": \"9 August 2016\",\n      \"B\": \"15 August 2017\",\n      \"C\": \"9 September 2016\",\n      \"D\": \"1 January 2017\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"How long did it take to build the GeM platform?\",\n    \"options\": {\n      \"A\": \"9 months\",\n      \"B\": \"5 months\",\n      \"C\": \"12 months\",\n      \"D\": \"2 years\"\n    },\n    \"correct\": \"B\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?\",\n    \"options\": {\n      \"A\": \"Rule No. 120\",\n      \"B\": \"Rule No. 155\",\n      \"C\": \"Rule No. 200\",\n      \"D\": \"Rule No. 149\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 4,\n    \"question\": \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n    \"options\": {\n      \"A\": \"5.50%\",\n      \"B\": \"12.25%\",\n      \"C\": \"9.75%\",\n      \"D\": \"15.00%\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 5,\n    \"question\": \"What are sellers required to display on products sold on the GeM portal?\",\n    \"options\": {\n      \"A\": \"Manufacturing date\",\n      \"B\": \"Retail price\",\n      \"C\": \"Country of origin\",\n      \"D\": \"Warranty period\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: e-Governance\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the launch date of the GeM platform.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: e-Governance\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the development duration of the GeM platform.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Functional: Public Procurement\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the specific rule number mandating GeM usage.\"\n    },\n    {\n      \"id\": 4,\n      \"competency\": \"Functional: Public Procurement\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the average savings percentage reported by the World Bank.\"\n    },\n    {\n      \"id\": 5,\n      \"competency\": \"Functional: Public Procurement\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the mandatory product display requirement on the GeM portal.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

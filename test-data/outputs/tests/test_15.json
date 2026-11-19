@@ -1,0 +1,78 @@
+{
+  "case": {
+    "no": 15,
+    "type": "Edge",
+    "kind": "gaps",
+    "from_test": 2,
+    "answers": "all_blank",
+    "short": "T4 on test 2 quiz, learner left every answer blank (synthetic)",
+    "expect": "Table shows 0/5; level 'gap'; no invented strengths",
+    "auto": "gaps_zero"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": true,
+  "rule_detail": "0/5 correct; levels expected {'Domain: e-Governance': 'gap', 'Functional: Public Procurement': 'gap'}, model gave {'Domain: e-Governance': 'gap', 'Functional: Public Procurement': 'gap'}",
+  "actual_short": "0/5; Domain: e-Governance: gap; Functional: Public Procurement: gap",
+  "result": {
+    "table": [
+      {
+        "competency": "Domain: e-Governance",
+        "correct": 0,
+        "total": 2,
+        "missed_questions": [
+          "On what date was the Government e Marketplace (GeM) launched?",
+          "How long did it take to build the GeM platform?"
+        ]
+      },
+      {
+        "competency": "Functional: Public Procurement",
+        "correct": 0,
+        "total": 3,
+        "missed_questions": [
+          "Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?",
+          "According to the World Bank, what is the average savings for buyers on the GeM portal?",
+          "What are sellers required to display on products sold on the GeM portal?"
+        ]
+      }
+    ],
+    "summary": {
+      "overall": "You answered 0 out of 5 questions correctly across the assessed competencies.",
+      "gaps": [
+        {
+          "competency": "Domain: e-Governance",
+          "level": "gap",
+          "what_to_review": "Review the launch date and development timeline of the Government e Marketplace (GeM)."
+        },
+        {
+          "competency": "Functional: Public Procurement",
+          "level": "gap",
+          "what_to_review": "Study the General Financial Rules regarding mandatory GeM usage, portal savings, and seller product display requirements."
+        }
+      ],
+      "next_step": "Please begin by reviewing the foundational launch details and mandatory usage rules for the GeM platform."
+    },
+    "answers": [
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "log": [
+      {
+        "prompt": "final/T4_gaps",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 1.3
+        },
+        "variables": {
+          "RESULTS_JSON": "[\n  {\n    \"competency\": \"Domain: e-Governance\",\n    \"correct\": 0,\n    \"total\": 2,\n    \"missed_questions\": [\n      \"On what date was the Government e Marketplace (GeM) launched?\",\n      \"How long did it take to build the GeM platform?\"\n    ]\n  },\n  {\n    \"competency\": \"Functional: Public Procurement\",\n    \"correct\": 0,\n    \"total\": 3,\n    \"missed_questions\": [\n      \"Which rule in the General Financial Rules, 2017, makes the use of GeM mandatory for government users?\",\n      \"According to the World Bank, what is the average savings for buyers on the GeM portal?\",\n      \"What are sellers required to display on products sold on the GeM portal?\"\n    ]\n  }\n]"
+        },
+        "raw_output": "{\n  \"overall\": \"You answered 0 out of 5 questions correctly across the assessed competencies.\",\n  \"gaps\": [\n    {\n      \"competency\": \"Domain: e-Governance\",\n      \"level\": \"gap\",\n      \"what_to_review\": \"Review the launch date and development timeline of the Government e Marketplace (GeM).\"\n    },\n    {\n      \"competency\": \"Functional: Public Procurement\",\n      \"level\": \"gap\",\n      \"what_to_review\": \"Study the General Financial Rules regarding mandatory GeM usage, portal savings, and seller product display requirements.\"\n    }\n  ],\n  \"next_step\": \"Please begin by reviewing the foundational launch details and mandatory usage rules for the GeM platform.\"\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

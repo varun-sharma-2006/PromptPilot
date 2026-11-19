@@ -1,0 +1,222 @@
+{
+  "case": {
+    "no": 9,
+    "type": "Edge",
+    "kind": "chain",
+    "passage": "P6_rti_hindi",
+    "difficulty": "easy",
+    "n": 3,
+    "short": "Hindi passage on RTI, easy, 3 questions",
+    "expect": "3 questions in English; source_sentence copied in Hindi, word for word",
+    "auto": "hindi"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "3 accepted; English stems: False; Hindi verbatim quotes: True",
+  "actual_short": "3 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              2
+            ],
+            "question": "सूचना का अधिकार अधिनियम पूर्णतया कब लागू किया गया था?",
+            "explanation": "अधिनियम के अनुसार, इसे 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया था।",
+            "source_sentence": "पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।",
+            "options": {
+              "A": "15 जून 2005",
+              "B": "12 अक्टूबर 2006",
+              "C": "15 जून 2006",
+              "D": "12 अक्टूबर 2005"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              3
+            ],
+            "question": "सूचना का अधिकार (Right to Information) का मुख्य तात्पर्य क्या है?",
+            "explanation": "गद्यांश के अनुसार, सूचना का अधिकार का तात्पर्य सूचना पाने का अधिकार है।",
+            "source_sentence": "सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है।",
+            "options": {
+              "A": "सूचना पाने का अधिकार",
+              "B": "सरकार बदलने का अधिकार",
+              "C": "भ्रष्टाचार करने का अधिकार",
+              "D": "कानून बनाने का अधिकार"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              4
+            ],
+            "question": "सूचना अधिकार के माध्यम से राष्ट्र क्या सार्वजनिक करता है?",
+            "explanation": "गद्यांश स्पष्ट करता है कि सूचना अधिकार के द्वारा राष्ट्र अपने कार्य और शासन प्रणाली को सार्वजनिक करता है।",
+            "source_sentence": "सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।",
+            "options": {
+              "A": "अपनी निजी संपत्ति और धन",
+              "B": "अपने नागरिकों की सूची",
+              "C": "अपने कार्य और शासन प्रणाली",
+              "D": "अपने गुप्त सैन्य ठिकाने"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is directly supported by the text and meets all criteria.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is directly supported by the text and meets all criteria.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is directly supported by the text and meets all criteria.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          2
+        ],
+        "question": "सूचना का अधिकार अधिनियम पूर्णतया कब लागू किया गया था?",
+        "explanation": "अधिनियम के अनुसार, इसे 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया था।",
+        "source_sentence": "पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।",
+        "options": {
+          "A": "15 जून 2005",
+          "B": "12 अक्टूबर 2006",
+          "C": "15 जून 2006",
+          "D": "12 अक्टूबर 2005"
+        },
+        "correct": "D",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "This is a direct factual recall question regarding the implementation date of the RTI Act."
+      },
+      {
+        "fact_ids": [
+          3
+        ],
+        "question": "सूचना का अधिकार (Right to Information) का मुख्य तात्पर्य क्या है?",
+        "explanation": "गद्यांश के अनुसार, सूचना का अधिकार का तात्पर्य सूचना पाने का अधिकार है।",
+        "source_sentence": "सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है।",
+        "options": {
+          "A": "सूचना पाने का अधिकार",
+          "B": "सरकार बदलने का अधिकार",
+          "C": "भ्रष्टाचार करने का अधिकार",
+          "D": "कानून बनाने का अधिकार"
+        },
+        "correct": "A",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "This question tests the basic definition of the Right to Information, which is a direct recall."
+      },
+      {
+        "fact_ids": [
+          4
+        ],
+        "question": "सूचना अधिकार के माध्यम से राष्ट्र क्या सार्वजनिक करता है?",
+        "explanation": "गद्यांश स्पष्ट करता है कि सूचना अधिकार के द्वारा राष्ट्र अपने कार्य और शासन प्रणाली को सार्वजनिक करता है।",
+        "source_sentence": "सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।",
+        "options": {
+          "A": "अपनी निजी संपत्ति और धन",
+          "B": "अपने नागरिकों की सूची",
+          "C": "अपने कार्य और शासन प्रणाली",
+          "D": "अपने गुप्त सैन्य ठिकाने"
+        },
+        "correct": "C",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "medium",
+        "tag_justification": "This requires understanding the purpose of the RTI Act beyond simple recall of dates or definitions."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 14.0
+        },
+        "variables": {
+          "N": 3,
+          "DIFFICULTY": "easy",
+          "COMPETENCY": "Domain: Right to Information",
+          "PASSAGE": "15 जून 2005 को इसे अधिनियमित किया गया और पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।\nसूचना का अधिकार अर्थात्  राईट टू इनफार्मेशन। सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है। सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।\nलोकतंत्र में देश की जनता अपनी चुनी हुए व्यक्ति को शासन करने का अवसर प्रदान करती है और यह अपेक्षा करती है कि सरकार पूरी ईमानदारी और कर्तव्यनिष्ठा के साथ अपने दायित्वों का पालन करेगी। लेकिन कालान्तर में अधिकांश राष्ट्रों में भ्रष्टाचार बढ़ता गया। भ्रष्टाचार करने के लिए जनविरोधी और अलोकतांत्रिक तरीको को अपनाया गया। लोकतंत्र में मालिक होने के नाते जनता को यह जानने का पूरा अधिकार है, कि जो सरकार उनकी सेवा में है, वह क्या कर रही है।",
+          "KEY_ORDER": "D, A, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"सूचना का अधिकार अधिनियम 15 जून 2005 को अधिनियमित किया गया\",\n    \"सूचना का अधिकार अधिनियम 12 अक्टूबर 2005 को पूर्णतया लागू हुआ\",\n    \"सूचना का अधिकार का तात्पर्य सूचना पाने का अधिकार है\",\n    \"सूचना अधिकार के द्वारा राष्ट्र अपने कार्य और शासन प्रणाली को सार्वजनिक करता है\",\n    \"लोकतंत्र में जनता अपने चुने हुए व्यक्ति को शासन करने का अवसर देती है\",\n    \"जनता को यह जानने का अधिकार है कि सरकार क्या कर रही है\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        2\n      ],\n      \"question\": \"सूचना का अधिकार अधिनियम पूर्णतया कब लागू किया गया था?\",\n      \"answer\": \"12 अक्टूबर 2005\",\n      \"distractors\": [\n        \"15 जून 2005\",\n        \"12 अक्टूबर 2006\",\n        \"15 जून 2006\"\n      ],\n      \"explanation\": \"अधिनियम के अनुसार, इसे 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया था।\",\n      \"source_sentence\": \"पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।\"\n    },\n    {\n      \"fact_ids\": [\n        3\n      ],\n      \"question\": \"सूचना का अधिकार (Right to Information) का मुख्य तात्पर्य क्या है?\",\n      \"answer\": \"सूचना पाने का अधिकार\",\n      \"distractors\": [\n        \"सरकार बदलने का अधिकार\",\n        \"भ्रष्टाचार करने का अधिकार\",\n        \"कानून बनाने का अधिकार\"\n      ],\n      \"explanation\": \"गद्यांश के अनुसार, सूचना का अधिकार का तात्पर्य सूचना पाने का अधिकार है।\",\n      \"source_sentence\": \"सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है।\"\n    },\n    {\n      \"fact_ids\": [\n        4\n      ],\n      \"question\": \"सूचना अधिकार के माध्यम से राष्ट्र क्या सार्वजनिक करता है?\",\n      \"answer\": \"अपने कार्य और शासन प्रणाली\",\n      \"distractors\": [\n        \"अपनी निजी संपत्ति और धन\",\n        \"अपने नागरिकों की सूची\",\n        \"अपने गुप्त सैन्य ठिकाने\"\n      ],\n      \"explanation\": \"गद्यांश स्पष्ट करता है कि सूचना अधिकार के द्वारा राष्ट्र अपने कार्य और शासन प्रणाली को सार्वजनिक करता है।\",\n      \"source_sentence\": \"सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 6.0
+        },
+        "variables": {
+          "DIFFICULTY": "easy",
+          "PASSAGE": "15 जून 2005 को इसे अधिनियमित किया गया और पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।\nसूचना का अधिकार अर्थात्  राईट टू इनफार्मेशन। सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है। सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।\nलोकतंत्र में देश की जनता अपनी चुनी हुए व्यक्ति को शासन करने का अवसर प्रदान करती है और यह अपेक्षा करती है कि सरकार पूरी ईमानदारी और कर्तव्यनिष्ठा के साथ अपने दायित्वों का पालन करेगी। लेकिन कालान्तर में अधिकांश राष्ट्रों में भ्रष्टाचार बढ़ता गया। भ्रष्टाचार करने के लिए जनविरोधी और अलोकतांत्रिक तरीको को अपनाया गया। लोकतंत्र में मालिक होने के नाते जनता को यह जानने का पूरा अधिकार है, कि जो सरकार उनकी सेवा में है, वह क्या कर रही है।",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      2\n    ],\n    \"question\": \"सूचना का अधिकार अधिनियम पूर्णतया कब लागू किया गया था?\",\n    \"explanation\": \"अधिनियम के अनुसार, इसे 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया था।\",\n    \"source_sentence\": \"पूर्णतया 12 अक्टूबर 2005 को सम्पूर्ण धाराओं के साथ लागू कर दिया गया।\",\n    \"options\": {\n      \"A\": \"15 जून 2005\",\n      \"B\": \"12 अक्टूबर 2006\",\n      \"C\": \"15 जून 2006\",\n      \"D\": \"12 अक्टूबर 2005\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      3\n    ],\n    \"question\": \"सूचना का अधिकार (Right to Information) का मुख्य तात्पर्य क्या है?\",\n    \"explanation\": \"गद्यांश के अनुसार, सूचना का अधिकार का तात्पर्य सूचना पाने का अधिकार है।\",\n    \"source_sentence\": \"सूचना का अधिकार का तात्पर्य है, सूचना पाने का अधिकार, जो सूचना अधिकार कानून लागू करने वाला राष्ट्र अपने नागरिकों को प्रदान करता है।\",\n    \"options\": {\n      \"A\": \"सूचना पाने का अधिकार\",\n      \"B\": \"सरकार बदलने का अधिकार\",\n      \"C\": \"भ्रष्टाचार करने का अधिकार\",\n      \"D\": \"कानून बनाने का अधिकार\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      4\n    ],\n    \"question\": \"सूचना अधिकार के माध्यम से राष्ट्र क्या सार्वजनिक करता है?\",\n    \"explanation\": \"गद्यांश स्पष्ट करता है कि सूचना अधिकार के द्वारा राष्ट्र अपने कार्य और शासन प्रणाली को सार्वजनिक करता है।\",\n    \"source_sentence\": \"सूचना अधिकार के द्वारा राष्ट्र अपने नागरिकों को, अपने कार्य को और शासन प्रणाली को सार्वजनिक करता है।\",\n    \"options\": {\n      \"A\": \"अपनी निजी संपत्ति और धन\",\n      \"B\": \"अपने नागरिकों की सूची\",\n      \"C\": \"अपने कार्य और शासन प्रणाली\",\n      \"D\": \"अपने गुप्त सैन्य ठिकाने\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is directly supported by the text and meets all criteria.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is directly supported by the text and meets all criteria.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is directly supported by the text and meets all criteria.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 2.4
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"सूचना का अधिकार अधिनियम पूर्णतया कब लागू किया गया था?\",\n    \"options\": {\n      \"A\": \"15 जून 2005\",\n      \"B\": \"12 अक्टूबर 2006\",\n      \"C\": \"15 जून 2006\",\n      \"D\": \"12 अक्टूबर 2005\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"सूचना का अधिकार (Right to Information) का मुख्य तात्पर्य क्या है?\",\n    \"options\": {\n      \"A\": \"सूचना पाने का अधिकार\",\n      \"B\": \"सरकार बदलने का अधिकार\",\n      \"C\": \"भ्रष्टाचार करने का अधिकार\",\n      \"D\": \"कानून बनाने का अधिकार\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"सूचना अधिकार के माध्यम से राष्ट्र क्या सार्वजनिक करता है?\",\n    \"options\": {\n      \"A\": \"अपनी निजी संपत्ति और धन\",\n      \"B\": \"अपने नागरिकों की सूची\",\n      \"C\": \"अपने कार्य और शासन प्रणाली\",\n      \"D\": \"अपने गुप्त सैन्य ठिकाने\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"This is a direct factual recall question regarding the implementation date of the RTI Act.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"This question tests the basic definition of the Right to Information, which is a direct recall.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"This requires understanding the purpose of the RTI Act beyond simple recall of dates or definitions.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

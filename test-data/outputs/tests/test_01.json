@@ -1,0 +1,228 @@
+{
+  "case": {
+    "no": 1,
+    "type": "Normal",
+    "kind": "chain",
+    "passage": "P1_rti",
+    "difficulty": "medium",
+    "n": 4,
+    "short": "RTI Act passage, medium, 4 questions",
+    "expect": "4 accepted questions, quotes verbatim, tagged Domain: Right to Information",
+    "auto": "normal_full"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "3/4 accepted; tags: ['Domain: Right to Information']",
+  "actual_short": "3 accepted; note: Only 3 questions could be generated as the passage content w",
+  "result": {
+    "status": "ok",
+    "note": "Only 3 questions could be generated as the passage content was exhausted while maintaining the medium difficulty pattern.",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              3,
+              4
+            ],
+            "question": "What determines the timeframe within which a public authority must respond to an RTI request?",
+            "explanation": "The passage specifies a 30-day standard response time, but mandates a 48-hour response if the matter involves the petitioner's life and liberty.",
+            "source_sentence": "Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.",
+            "options": {
+              "A": "The complexity of the information requested by the citizen",
+              "B": "The volume of records held by the specific public authority",
+              "C": "The urgency of the request regarding the petitioner's life and liberty",
+              "D": "The legislative body that originally passed the RTI Act"
+            },
+            "correct": "C"
+          },
+          {
+            "fact_ids": [
+              5
+            ],
+            "question": "What is the primary objective of requiring public authorities to proactively publish information?",
+            "explanation": "The passage states that proactive publication is required so that citizens need minimum recourse to request information formally.",
+            "source_sentence": "The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.",
+            "options": {
+              "A": "To reduce the necessity for citizens to submit formal information requests",
+              "B": "To ensure all government records are stored in a physical format",
+              "C": "To allow public authorities to charge fees for information access",
+              "D": "To replace the need for the RTI Act to exist in the future"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              6,
+              7,
+              8
+            ],
+            "question": "How does the RTI Act relate to the Constitution of India?",
+            "explanation": "The passage clarifies that while RTI is not a Fundamental Right, it protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.",
+            "source_sentence": "Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.",
+            "options": {
+              "A": "It is explicitly listed as a Fundamental Right under Article 19(1)(a)",
+              "B": "It is a constitutional amendment that overrides Article 21",
+              "C": "It is a Fundamental Right that replaces the need for Article 19(1)(a)",
+              "D": "It is not a Fundamental Right itself, but it serves to safeguard specific constitutional rights"
+            },
+            "correct": "D"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly identifies the condition for the response timeframe based on the passage.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question accurately reflects the stated purpose of proactive publication in the text.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly synthesizes the relationship between the RTI Act and the Constitution as described.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          3,
+          4
+        ],
+        "question": "What determines the timeframe within which a public authority must respond to an RTI request?",
+        "explanation": "The passage specifies a 30-day standard response time, but mandates a 48-hour response if the matter involves the petitioner's life and liberty.",
+        "source_sentence": "Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.",
+        "options": {
+          "A": "The complexity of the information requested by the citizen",
+          "B": "The volume of records held by the specific public authority",
+          "C": "The urgency of the request regarding the petitioner's life and liberty",
+          "D": "The legislative body that originally passed the RTI Act"
+        },
+        "correct": "C",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Tests direct recall of the statutory timeframe provision for life and liberty cases under the RTI Act."
+      },
+      {
+        "fact_ids": [
+          5
+        ],
+        "question": "What is the primary objective of requiring public authorities to proactively publish information?",
+        "explanation": "The passage states that proactive publication is required so that citizens need minimum recourse to request information formally.",
+        "source_sentence": "The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.",
+        "options": {
+          "A": "To reduce the necessity for citizens to submit formal information requests",
+          "B": "To ensure all government records are stored in a physical format",
+          "C": "To allow public authorities to charge fees for information access",
+          "D": "To replace the need for the RTI Act to exist in the future"
+        },
+        "correct": "A",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires understanding the purpose of proactive disclosure as a mechanism to minimize formal RTI requests."
+      },
+      {
+        "fact_ids": [
+          6,
+          7,
+          8
+        ],
+        "question": "How does the RTI Act relate to the Constitution of India?",
+        "explanation": "The passage clarifies that while RTI is not a Fundamental Right, it protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.",
+        "source_sentence": "Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.",
+        "options": {
+          "A": "It is explicitly listed as a Fundamental Right under Article 19(1)(a)",
+          "B": "It is a constitutional amendment that overrides Article 21",
+          "C": "It is a Fundamental Right that replaces the need for Article 19(1)(a)",
+          "D": "It is not a Fundamental Right itself, but it serves to safeguard specific constitutional rights"
+        },
+        "correct": "D",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "hard",
+        "tag_justification": "Requires inferring the legal relationship between the RTI Act and constitutional rights rather than simple recall."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 4.5
+        },
+        "variables": {
+          "N": 4,
+          "DIFFICULTY": "medium",
+          "COMPETENCY": "Domain: Right to Information",
+          "PASSAGE": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information. It replaced the former Freedom of Information Act, 2002. \nUnder the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty. The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally. \nAlthough Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution. The authorities under RTI Act 2005 are called public authorities.",
+          "KEY_ORDER": "C, A, D, B"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"The RTI Act, 2005 was enacted by the Parliament of India and the Delhi Legislative Assembly\",\n    \"The RTI Act, 2005 replaced the Freedom of Information Act, 2002\",\n    \"Public authorities must reply to information requests within 30 days\",\n    \"Public authorities must reply within 48 hours if the matter involves life and liberty\",\n    \"Public authorities must computerize records and proactively publish information\",\n    \"The RTI Act is not a Fundamental Right in the Constitution\",\n    \"The RTI Act protects Freedom of Expression and Speech under Article 19(1)(a)\",\n    \"The RTI Act protects Right to Life and Personal Liberty under Article 21\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        3,\n        4\n      ],\n      \"question\": \"What determines the timeframe within which a public authority must respond to an RTI request?\",\n      \"answer\": \"The urgency of the request regarding the petitioner's life and liberty\",\n      \"distractors\": [\n        \"The complexity of the information requested by the citizen\",\n        \"The volume of records held by the specific public authority\",\n        \"The legislative body that originally passed the RTI Act\"\n      ],\n      \"explanation\": \"The passage specifies a 30-day standard response time, but mandates a 48-hour response if the matter involves the petitioner's life and liberty.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"fact_ids\": [\n        5\n      ],\n      \"question\": \"What is the primary objective of requiring public authorities to proactively publish information?\",\n      \"answer\": \"To reduce the necessity for citizens to submit formal information requests\",\n      \"distractors\": [\n        \"To ensure all government records are stored in a physical format\",\n        \"To allow public authorities to charge fees for information access\",\n        \"To replace the need for the RTI Act to exist in the future\"\n      ],\n      \"explanation\": \"The passage states that proactive publication is required so that citizens need minimum recourse to request information formally.\",\n      \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\"\n    },\n    {\n      \"fact_ids\": [\n        6,\n        7,\n        8\n      ],\n      \"question\": \"How does the RTI Act relate to the Constitution of India?\",\n      \"answer\": \"It is not a Fundamental Right itself, but it serves to safeguard specific constitutional rights\",\n      \"distractors\": [\n        \"It is explicitly listed as a Fundamental Right under Article 19(1)(a)\",\n        \"It is a constitutional amendment that overrides Article 21\",\n        \"It is a Fundamental Right that replaces the need for Article 19(1)(a)\"\n      ],\n      \"explanation\": \"The passage clarifies that while RTI is not a Fundamental Right, it protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.\",\n      \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\"\n    }\n  ],\n  \"note\": \"Only 3 questions could be generated as the passage content was exhausted while maintaining the medium difficulty pattern.\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 9.3
+        },
+        "variables": {
+          "DIFFICULTY": "medium",
+          "PASSAGE": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information. It replaced the former Freedom of Information Act, 2002. \nUnder the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty. The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally. \nAlthough Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution. The authorities under RTI Act 2005 are called public authorities.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      3,\n      4\n    ],\n    \"question\": \"What determines the timeframe within which a public authority must respond to an RTI request?\",\n    \"explanation\": \"The passage specifies a 30-day standard response time, but mandates a 48-hour response if the matter involves the petitioner's life and liberty.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within thirty days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\",\n    \"options\": {\n      \"A\": \"The complexity of the information requested by the citizen\",\n      \"B\": \"The volume of records held by the specific public authority\",\n      \"C\": \"The urgency of the request regarding the petitioner's life and liberty\",\n      \"D\": \"The legislative body that originally passed the RTI Act\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      5\n    ],\n    \"question\": \"What is the primary objective of requiring public authorities to proactively publish information?\",\n    \"explanation\": \"The passage states that proactive publication is required so that citizens need minimum recourse to request information formally.\",\n    \"source_sentence\": \"The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally.\",\n    \"options\": {\n      \"A\": \"To reduce the necessity for citizens to submit formal information requests\",\n      \"B\": \"To ensure all government records are stored in a physical format\",\n      \"C\": \"To allow public authorities to charge fees for information access\",\n      \"D\": \"To replace the need for the RTI Act to exist in the future\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      6,\n      7,\n      8\n    ],\n    \"question\": \"How does the RTI Act relate to the Constitution of India?\",\n    \"explanation\": \"The passage clarifies that while RTI is not a Fundamental Right, it protects the fundamental rights to Freedom of Expression and Speech and Right to Life and Personal Liberty.\",\n    \"source_sentence\": \"Although Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution.\",\n    \"options\": {\n      \"A\": \"It is explicitly listed as a Fundamental Right under Article 19(1)(a)\",\n      \"B\": \"It is a constitutional amendment that overrides Article 21\",\n      \"C\": \"It is a Fundamental Right that replaces the need for Article 19(1)(a)\",\n      \"D\": \"It is not a Fundamental Right itself, but it serves to safeguard specific constitutional rights\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly identifies the condition for the response timeframe based on the passage.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question accurately reflects the stated purpose of proactive publication in the text.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly synthesizes the relationship between the RTI Act and the Constitution as described.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 8.8
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"What determines the timeframe within which a public authority must respond to an RTI request?\",\n    \"options\": {\n      \"A\": \"The complexity of the information requested by the citizen\",\n      \"B\": \"The volume of records held by the specific public authority\",\n      \"C\": \"The urgency of the request regarding the petitioner's life and liberty\",\n      \"D\": \"The legislative body that originally passed the RTI Act\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"What is the primary objective of requiring public authorities to proactively publish information?\",\n    \"options\": {\n      \"A\": \"To reduce the necessity for citizens to submit formal information requests\",\n      \"B\": \"To ensure all government records are stored in a physical format\",\n      \"C\": \"To allow public authorities to charge fees for information access\",\n      \"D\": \"To replace the need for the RTI Act to exist in the future\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"How does the RTI Act relate to the Constitution of India?\",\n    \"options\": {\n      \"A\": \"It is explicitly listed as a Fundamental Right under Article 19(1)(a)\",\n      \"B\": \"It is a constitutional amendment that overrides Article 21\",\n      \"C\": \"It is a Fundamental Right that replaces the need for Article 19(1)(a)\",\n      \"D\": \"It is not a Fundamental Right itself, but it serves to safeguard specific constitutional rights\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Tests direct recall of the statutory timeframe provision for life and liberty cases under the RTI Act.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires understanding the purpose of proactive disclosure as a mechanism to minimize formal RTI requests.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"hard\",\n      \"justification\": \"Requires inferring the legal relationship between the RTI Act and constitutional rights rather than simple recall.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "case": {
+    "no": 13,
+    "type": "Invalid",
+    "kind": "chain",
+    "passage_text": "",
+    "difficulty": "easy",
+    "n": 3,
+    "competency": "Domain: Right to Information",
+    "short": "Empty passage",
+    "expect": "Refused before any LLM call: 'Empty passage' message, 0 questions",
+    "auto": "refused_empty"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": true,
+  "rule_detail": "status=refused; LLM calls=0",
+  "actual_short": "0 accepted; Empty passage: nothing to generate questions from.",
+  "result": {
+    "status": "refused",
+    "reason": "Empty passage: nothing to generate questions from.",
+    "questions": [],
+    "log": []
+  }
+}

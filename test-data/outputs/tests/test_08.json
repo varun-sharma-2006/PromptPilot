@@ -1,0 +1,228 @@
+{
+  "case": {
+    "no": 8,
+    "type": "Edge",
+    "kind": "chain",
+    "passage": "P3_cvc",
+    "difficulty": "medium",
+    "n": 8,
+    "short": "Very short CVC passage (504 chars), 8 questions asked",
+    "expect": "Fewer than 8 questions (at most 5), with a note saying why",
+    "auto": "fewer_with_note"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": true,
+  "rule_detail": "T1 wrote 3 (asked 8); 3 accepted; note: 'Only 3 medium-difficulty questions could be generated as the passage is short and the fact'",
+  "actual_short": "3 accepted; note: Only 3 medium-difficulty questions could be generated as the",
+  "result": {
+    "status": "ok",
+    "note": "Only 3 medium-difficulty questions could be generated as the passage is short and the facts are highly interconnected.",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              1,
+              2
+            ],
+            "question": "How has the legal standing of the CVC evolved since its inception?",
+            "explanation": "The passage states the CVC was created in 1964 and later, in 2003, the Parliament enacted a law conferring statutory status on it.",
+            "source_sentence": "In 2003, the Parliament enacted a law conferring statutory status on the CVC.",
+            "options": {
+              "A": "It began as a body in 1964 and gained statutory status through a 2003 law",
+              "B": "It was established as a statutory body in 1964 and gained autonomy in 2003",
+              "C": "It was created by the Parliament in 1964 and became autonomous in 2003",
+              "D": "It was formed in 2003 to replace the 1964 anti-corruption commission"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              3,
+              4
+            ],
+            "question": "What is the nature of the CVC's authority regarding vigilance activities?",
+            "explanation": "The CVC is described as an autonomous body free of executive control that monitors all vigilance activity under the Central Government.",
+            "source_sentence": "It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+            "options": {
+              "A": "It operates under the direct control of the executive to monitor vigilance",
+              "B": "It acts as a subordinate body to the Central Government for vigilance planning",
+              "C": "It operates independently to oversee vigilance across the Central Government",
+              "D": "It functions as an advisory board that lacks monitoring powers over the government"
+            },
+            "correct": "C"
+          },
+          {
+            "fact_ids": [
+              4,
+              5
+            ],
+            "question": "In what capacity does the CVC interact with central government organizations?",
+            "explanation": "The CVC is charged with monitoring vigilance activity and advising authorities on planning, executing, reviewing, and reforming their vigilance work.",
+            "source_sentence": "It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+            "options": {
+              "A": "It executes all vigilance work on behalf of the central government organizations",
+              "B": "It reviews vigilance work only when requested by the executive authority",
+              "C": "It plans the budget for vigilance work within central government organizations",
+              "D": "It provides guidance on vigilance processes while also monitoring their activities"
+            },
+            "correct": "D"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "None",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "None",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "None",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          1,
+          2
+        ],
+        "question": "How has the legal standing of the CVC evolved since its inception?",
+        "explanation": "The passage states the CVC was created in 1964 and later, in 2003, the Parliament enacted a law conferring statutory status on it.",
+        "source_sentence": "In 2003, the Parliament enacted a law conferring statutory status on the CVC.",
+        "options": {
+          "A": "It began as a body in 1964 and gained statutory status through a 2003 law",
+          "B": "It was established as a statutory body in 1964 and gained autonomy in 2003",
+          "C": "It was created by the Parliament in 1964 and became autonomous in 2003",
+          "D": "It was formed in 2003 to replace the 1964 anti-corruption commission"
+        },
+        "correct": "A",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires recalling the specific historical timeline of the CVC's statutory status."
+      },
+      {
+        "fact_ids": [
+          3,
+          4
+        ],
+        "question": "What is the nature of the CVC's authority regarding vigilance activities?",
+        "explanation": "The CVC is described as an autonomous body free of executive control that monitors all vigilance activity under the Central Government.",
+        "source_sentence": "It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+        "options": {
+          "A": "It operates under the direct control of the executive to monitor vigilance",
+          "B": "It acts as a subordinate body to the Central Government for vigilance planning",
+          "C": "It operates independently to oversee vigilance across the Central Government",
+          "D": "It functions as an advisory board that lacks monitoring powers over the government"
+        },
+        "correct": "C",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires understanding the CVC's independent role in overseeing government vigilance activities."
+      },
+      {
+        "fact_ids": [
+          4,
+          5
+        ],
+        "question": "In what capacity does the CVC interact with central government organizations?",
+        "explanation": "The CVC is charged with monitoring vigilance activity and advising authorities on planning, executing, reviewing, and reforming their vigilance work.",
+        "source_sentence": "It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+        "options": {
+          "A": "It executes all vigilance work on behalf of the central government organizations",
+          "B": "It reviews vigilance work only when requested by the executive authority",
+          "C": "It plans the budget for vigilance work within central government organizations",
+          "D": "It provides guidance on vigilance processes while also monitoring their activities"
+        },
+        "correct": "D",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires paraphrasing the CVC's dual role of providing guidance and monitoring organizational vigilance."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 5.3
+        },
+        "variables": {
+          "N": 8,
+          "DIFFICULTY": "medium",
+          "COMPETENCY": "Functional: Vigilance and Ethics",
+          "PASSAGE": "Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption. In 2003, the Parliament enacted a law conferring statutory status on the CVC. It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+          "KEY_ORDER": "A, C, D, B, D, C, A, B"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"CVC was created in 1964 to address governmental corruption\",\n    \"Parliament enacted a law in 2003 giving CVC statutory status\",\n    \"CVC is an autonomous body free from executive control\",\n    \"CVC monitors all vigilance activity under the Central Government\",\n    \"CVC advises central government organizations on vigilance work\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [1, 2],\n      \"question\": \"How has the legal standing of the CVC evolved since its inception?\",\n      \"answer\": \"It began as a body in 1964 and gained statutory status through a 2003 law\",\n      \"distractors\": [\n        \"It was established as a statutory body in 1964 and gained autonomy in 2003\",\n        \"It was created by the Parliament in 1964 and became autonomous in 2003\",\n        \"It was formed in 2003 to replace the 1964 anti-corruption commission\"\n      ],\n      \"explanation\": \"The passage states the CVC was created in 1964 and later, in 2003, the Parliament enacted a law conferring statutory status on it.\",\n      \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\"\n    },\n    {\n      \"fact_ids\": [3, 4],\n      \"question\": \"What is the nature of the CVC's authority regarding vigilance activities?\",\n      \"answer\": \"It operates independently to oversee vigilance across the Central Government\",\n      \"distractors\": [\n        \"It operates under the direct control of the executive to monitor vigilance\",\n        \"It acts as a subordinate body to the Central Government for vigilance planning\",\n        \"It functions as an advisory board that lacks monitoring powers over the government\"\n      ],\n      \"explanation\": \"The CVC is described as an autonomous body free of executive control that monitors all vigilance activity under the Central Government.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    },\n    {\n      \"fact_ids\": [4, 5],\n      \"question\": \"In what capacity does the CVC interact with central government organizations?\",\n      \"answer\": \"It provides guidance on vigilance processes while also monitoring their activities\",\n      \"distractors\": [\n        \"It executes all vigilance work on behalf of the central government organizations\",\n        \"It reviews vigilance work only when requested by the executive authority\",\n        \"It plans the budget for vigilance work within central government organizations\"\n      ],\n      \"explanation\": \"The CVC is charged with monitoring vigilance activity and advising authorities on planning, executing, reviewing, and reforming their vigilance work.\",\n      \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\"\n    }\n  ],\n  \"note\": \"Only 3 medium-difficulty questions could be generated as the passage is short and the facts are highly interconnected.\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 1.6
+        },
+        "variables": {
+          "DIFFICULTY": "medium",
+          "PASSAGE": "Central Vigilance Commission (CVC) is an Indian governmental body created in 1964 to address governmental corruption. In 2003, the Parliament enacted a law conferring statutory status on the CVC. It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      1,\n      2\n    ],\n    \"question\": \"How has the legal standing of the CVC evolved since its inception?\",\n    \"explanation\": \"The passage states the CVC was created in 1964 and later, in 2003, the Parliament enacted a law conferring statutory status on it.\",\n    \"source_sentence\": \"In 2003, the Parliament enacted a law conferring statutory status on the CVC.\",\n    \"options\": {\n      \"A\": \"It began as a body in 1964 and gained statutory status through a 2003 law\",\n      \"B\": \"It was established as a statutory body in 1964 and gained autonomy in 2003\",\n      \"C\": \"It was created by the Parliament in 1964 and became autonomous in 2003\",\n      \"D\": \"It was formed in 2003 to replace the 1964 anti-corruption commission\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      3,\n      4\n    ],\n    \"question\": \"What is the nature of the CVC's authority regarding vigilance activities?\",\n    \"explanation\": \"The CVC is described as an autonomous body free of executive control that monitors all vigilance activity under the Central Government.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\",\n    \"options\": {\n      \"A\": \"It operates under the direct control of the executive to monitor vigilance\",\n      \"B\": \"It acts as a subordinate body to the Central Government for vigilance planning\",\n      \"C\": \"It operates independently to oversee vigilance across the Central Government\",\n      \"D\": \"It functions as an advisory board that lacks monitoring powers over the government\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      4,\n      5\n    ],\n    \"question\": \"In what capacity does the CVC interact with central government organizations?\",\n    \"explanation\": \"The CVC is charged with monitoring vigilance activity and advising authorities on planning, executing, reviewing, and reforming their vigilance work.\",\n    \"source_sentence\": \"It has the status of an autonomous body, free of control from any executive authority, charged with monitoring all vigilance activity under the Central Government of India, advising various authorities in central Government organizations in planning, executing, reviewing, and reforming their vigilance work.\",\n    \"options\": {\n      \"A\": \"It executes all vigilance work on behalf of the central government organizations\",\n      \"B\": \"It reviews vigilance work only when requested by the executive authority\",\n      \"C\": \"It plans the budget for vigilance work within central government organizations\",\n      \"D\": \"It provides guidance on vigilance processes while also monitoring their activities\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"None\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"None\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"None\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 19.6
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"How has the legal standing of the CVC evolved since its inception?\",\n    \"options\": {\n      \"A\": \"It began as a body in 1964 and gained statutory status through a 2003 law\",\n      \"B\": \"It was established as a statutory body in 1964 and gained autonomy in 2003\",\n      \"C\": \"It was created by the Parliament in 1964 and became autonomous in 2003\",\n      \"D\": \"It was formed in 2003 to replace the 1964 anti-corruption commission\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"What is the nature of the CVC's authority regarding vigilance activities?\",\n    \"options\": {\n      \"A\": \"It operates under the direct control of the executive to monitor vigilance\",\n      \"B\": \"It acts as a subordinate body to the Central Government for vigilance planning\",\n      \"C\": \"It operates independently to oversee vigilance across the Central Government\",\n      \"D\": \"It functions as an advisory board that lacks monitoring powers over the government\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"In what capacity does the CVC interact with central government organizations?\",\n    \"options\": {\n      \"A\": \"It executes all vigilance work on behalf of the central government organizations\",\n      \"B\": \"It reviews vigilance work only when requested by the executive authority\",\n      \"C\": \"It plans the budget for vigilance work within central government organizations\",\n      \"D\": \"It provides guidance on vigilance processes while also monitoring their activities\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Vigilance and Ethics\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires recalling the specific historical timeline of the CVC's statutory status.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Vigilance and Ethics\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires understanding the CVC's independent role in overseeing government vigilance activities.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Vigilance and Ethics\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires paraphrasing the CVC's dual role of providing guidance and monitoring organizational vigilance.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

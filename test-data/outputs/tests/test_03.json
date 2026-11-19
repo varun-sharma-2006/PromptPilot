@@ -1,0 +1,226 @@
+{
+  "case": {
+    "no": 3,
+    "type": "Normal",
+    "kind": "chain",
+    "passage": "P4_sbm",
+    "difficulty": "hard",
+    "n": 3,
+    "short": "Swachh Bharat passage, hard, 3 questions",
+    "expect": "3 accepted questions; T3 tags most of them 'hard'",
+    "auto": "normal_hard"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "3/3 accepted; 0 tagged hard",
+  "actual_short": "3 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              2
+            ],
+            "question": "A municipal officer is designing a new waste management protocol. Based on the SBM guidelines, which components must be included to ensure the protocol aligns with the mission's emphasis on scientific solid waste management?",
+            "explanation": "The passage explicitly states that the mission emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.",
+            "source_sentence": "The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.",
+            "options": {
+              "A": "Only the collection and immediate disposal of municipal waste",
+              "B": "Construction of toilets and awareness of menstrual health",
+              "C": "Elimination of open defecation and construction of public toilets",
+              "D": "Segregation, collection, processing, and disposal of municipal waste"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              6,
+              7
+            ],
+            "question": "A government official is reviewing the timeline of the Swachh Bharat Mission to prepare a report on the continuity of sanitation efforts. Which statement accurately reflects the transition between the mission's phases?",
+            "explanation": "The passage states that Phase 1 lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+            "source_sentence": "Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+            "options": {
+              "A": "Phase 2 is being implemented to reinforce the achievements of Phase 1",
+              "B": "Phase 2 was launched in 2019 to replace the Nirmal Bharat Abhiyan",
+              "C": "Phase 1 was extended until 2025 to complete the construction of 90 million toilets",
+              "D": "Phase 2 focuses on the initial goals of the 1954 formal sanitation programme"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              4,
+              5
+            ],
+            "question": "An administrator is documenting the history of sanitation initiatives in India. Based on the passage, how should the relationship between the Swachh Bharat Mission and earlier programs be described?",
+            "explanation": "The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan (launched in 1999 as the Total Sanitation Campaign), and that earlier programs laid the foundation for the approaches used in SBM.",
+            "source_sentence": "It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.",
+            "options": {
+              "A": "SBM is the first integrated sanitation program, replacing all previous efforts like the 1954 formal programme",
+              "B": "SBM is a direct continuation of the 1986 Central Rural Sanitation Programme without any restructuring",
+              "C": "SBM is a restructured version of the Nirmal Bharat Abhiyan, which evolved from earlier programs like the Total Sanitation Campaign",
+              "D": "SBM was launched in 1999 as the Total Sanitation Campaign and later renamed in 2014"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly identifies the components of scientific solid waste management as defined in the text.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question accurately tests the relationship between the two phases of the mission.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly synthesizes the historical lineage of the sanitation programs described in the passage.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          2
+        ],
+        "question": "A municipal officer is designing a new waste management protocol. Based on the SBM guidelines, which components must be included to ensure the protocol aligns with the mission's emphasis on scientific solid waste management?",
+        "explanation": "The passage explicitly states that the mission emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.",
+        "source_sentence": "The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.",
+        "options": {
+          "A": "Only the collection and immediate disposal of municipal waste",
+          "B": "Construction of toilets and awareness of menstrual health",
+          "C": "Elimination of open defecation and construction of public toilets",
+          "D": "Segregation, collection, processing, and disposal of municipal waste"
+        },
+        "correct": "D",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires understanding SBM guidelines to identify the correct components of scientific waste management."
+      },
+      {
+        "fact_ids": [
+          6,
+          7
+        ],
+        "question": "A government official is reviewing the timeline of the Swachh Bharat Mission to prepare a report on the continuity of sanitation efforts. Which statement accurately reflects the transition between the mission's phases?",
+        "explanation": "The passage states that Phase 1 lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+        "source_sentence": "Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+        "options": {
+          "A": "Phase 2 is being implemented to reinforce the achievements of Phase 1",
+          "B": "Phase 2 was launched in 2019 to replace the Nirmal Bharat Abhiyan",
+          "C": "Phase 1 was extended until 2025 to complete the construction of 90 million toilets",
+          "D": "Phase 2 focuses on the initial goals of the 1954 formal sanitation programme"
+        },
+        "correct": "A",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "easy",
+        "tag_justification": "Requires simple recall of the relationship between Phase 1 and Phase 2 of the mission."
+      },
+      {
+        "fact_ids": [
+          4,
+          5
+        ],
+        "question": "An administrator is documenting the history of sanitation initiatives in India. Based on the passage, how should the relationship between the Swachh Bharat Mission and earlier programs be described?",
+        "explanation": "The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan (launched in 1999 as the Total Sanitation Campaign), and that earlier programs laid the foundation for the approaches used in SBM.",
+        "source_sentence": "It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.",
+        "options": {
+          "A": "SBM is the first integrated sanitation program, replacing all previous efforts like the 1954 formal programme",
+          "B": "SBM is a direct continuation of the 1986 Central Rural Sanitation Programme without any restructuring",
+          "C": "SBM is a restructured version of the Nirmal Bharat Abhiyan, which evolved from earlier programs like the Total Sanitation Campaign",
+          "D": "SBM was launched in 1999 as the Total Sanitation Campaign and later renamed in 2014"
+        },
+        "correct": "C",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires linking historical facts to understand the evolution and restructuring of sanitation programs."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 4.5
+        },
+        "variables": {
+          "N": 3,
+          "DIFFICULTY": "hard",
+          "COMPETENCY": "Domain: Sanitation Programmes",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "KEY_ORDER": "D, A, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"SBM was initiated on 2 October 2014 to eliminate open defecation and improve solid waste management\",\n    \"SBM includes scientific solid waste management: segregation, collection, processing, and disposal\",\n    \"SBM aims to increase awareness of menstrual health management\",\n    \"SBM is a restructured version of the 1999 Total Sanitation Campaign/Nirmal Bharat Abhiyan\",\n    \"Formal sanitation programs began in 1954, followed by CRSP (1986), TSC (1999), and NBA (2012)\",\n    \"Phase 1 of SBM lasted until 2 October 2019\",\n    \"Phase 2 of SBM is implemented between 2020–21 and 2024–25\",\n    \"SBM aimed for an ODF India by 2 October 2019 through toilet construction\",\n    \"Approximately 90 million toilets were constructed during Phase 1\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        2\n      ],\n      \"question\": \"A municipal officer is designing a new waste management protocol. Based on the SBM guidelines, which components must be included to ensure the protocol aligns with the mission's emphasis on scientific solid waste management?\",\n      \"answer\": \"Segregation, collection, processing, and disposal of municipal waste\",\n      \"distractors\": [\n        \"Only the collection and immediate disposal of municipal waste\",\n        \"Construction of toilets and awareness of menstrual health\",\n        \"Elimination of open defecation and construction of public toilets\"\n      ],\n      \"explanation\": \"The passage explicitly states that the mission emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\",\n      \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\"\n    },\n    {\n      \"fact_ids\": [\n        6,\n        7\n      ],\n      \"question\": \"A government official is reviewing the timeline of the Swachh Bharat Mission to prepare a report on the continuity of sanitation efforts. Which statement accurately reflects the transition between the mission's phases?\",\n      \"answer\": \"Phase 2 is being implemented to reinforce the achievements of Phase 1\",\n      \"distractors\": [\n        \"Phase 2 was launched in 2019 to replace the Nirmal Bharat Abhiyan\",\n        \"Phase 1 was extended until 2025 to complete the construction of 90 million toilets\",\n        \"Phase 2 focuses on the initial goals of the 1954 formal sanitation programme\"\n      ],\n      \"explanation\": \"The passage states that Phase 1 lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    },\n    {\n      \"fact_ids\": [\n        4,\n        5\n      ],\n      \"question\": \"An administrator is documenting the history of sanitation initiatives in India. Based on the passage, how should the relationship between the Swachh Bharat Mission and earlier programs be described?\",\n      \"answer\": \"SBM is a restructured version of the Nirmal Bharat Abhiyan, which evolved from earlier programs like the Total Sanitation Campaign\",\n      \"distractors\": [\n        \"SBM is the first integrated sanitation program, replacing all previous efforts like the 1954 formal programme\",\n        \"SBM is a direct continuation of the 1986 Central Rural Sanitation Programme without any restructuring\",\n        \"SBM was launched in 1999 as the Total Sanitation Campaign and later renamed in 2014\"\n      ],\n      \"explanation\": \"The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan (launched in 1999 as the Total Sanitation Campaign), and that earlier programs laid the foundation for the approaches used in SBM.\",\n      \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 2.7
+        },
+        "variables": {
+          "DIFFICULTY": "hard",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      2\n    ],\n    \"question\": \"A municipal officer is designing a new waste management protocol. Based on the SBM guidelines, which components must be included to ensure the protocol aligns with the mission's emphasis on scientific solid waste management?\",\n    \"explanation\": \"The passage explicitly states that the mission emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\",\n    \"source_sentence\": \"The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste.\",\n    \"options\": {\n      \"A\": \"Only the collection and immediate disposal of municipal waste\",\n      \"B\": \"Construction of toilets and awareness of menstrual health\",\n      \"C\": \"Elimination of open defecation and construction of public toilets\",\n      \"D\": \"Segregation, collection, processing, and disposal of municipal waste\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      6,\n      7\n    ],\n    \"question\": \"A government official is reviewing the timeline of the Swachh Bharat Mission to prepare a report on the continuity of sanitation efforts. Which statement accurately reflects the transition between the mission's phases?\",\n    \"explanation\": \"The passage states that Phase 1 lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\",\n    \"options\": {\n      \"A\": \"Phase 2 is being implemented to reinforce the achievements of Phase 1\",\n      \"B\": \"Phase 2 was launched in 2019 to replace the Nirmal Bharat Abhiyan\",\n      \"C\": \"Phase 1 was extended until 2025 to complete the construction of 90 million toilets\",\n      \"D\": \"Phase 2 focuses on the initial goals of the 1954 formal sanitation programme\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      4,\n      5\n    ],\n    \"question\": \"An administrator is documenting the history of sanitation initiatives in India. Based on the passage, how should the relationship between the Swachh Bharat Mission and earlier programs be described?\",\n    \"explanation\": \"The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan (launched in 1999 as the Total Sanitation Campaign), and that earlier programs laid the foundation for the approaches used in SBM.\",\n    \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\",\n    \"options\": {\n      \"A\": \"SBM is the first integrated sanitation program, replacing all previous efforts like the 1954 formal programme\",\n      \"B\": \"SBM is a direct continuation of the 1986 Central Rural Sanitation Programme without any restructuring\",\n      \"C\": \"SBM is a restructured version of the Nirmal Bharat Abhiyan, which evolved from earlier programs like the Total Sanitation Campaign\",\n      \"D\": \"SBM was launched in 1999 as the Total Sanitation Campaign and later renamed in 2014\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly identifies the components of scientific solid waste management as defined in the text.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question accurately tests the relationship between the two phases of the mission.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly synthesizes the historical lineage of the sanitation programs described in the passage.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 2.5
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"A municipal officer is designing a new waste management protocol. Based on the SBM guidelines, which components must be included to ensure the protocol aligns with the mission's emphasis on scientific solid waste management?\",\n    \"options\": {\n      \"A\": \"Only the collection and immediate disposal of municipal waste\",\n      \"B\": \"Construction of toilets and awareness of menstrual health\",\n      \"C\": \"Elimination of open defecation and construction of public toilets\",\n      \"D\": \"Segregation, collection, processing, and disposal of municipal waste\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"A government official is reviewing the timeline of the Swachh Bharat Mission to prepare a report on the continuity of sanitation efforts. Which statement accurately reflects the transition between the mission's phases?\",\n    \"options\": {\n      \"A\": \"Phase 2 is being implemented to reinforce the achievements of Phase 1\",\n      \"B\": \"Phase 2 was launched in 2019 to replace the Nirmal Bharat Abhiyan\",\n      \"C\": \"Phase 1 was extended until 2025 to complete the construction of 90 million toilets\",\n      \"D\": \"Phase 2 focuses on the initial goals of the 1954 formal sanitation programme\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"An administrator is documenting the history of sanitation initiatives in India. Based on the passage, how should the relationship between the Swachh Bharat Mission and earlier programs be described?\",\n    \"options\": {\n      \"A\": \"SBM is the first integrated sanitation program, replacing all previous efforts like the 1954 formal programme\",\n      \"B\": \"SBM is a direct continuation of the 1986 Central Rural Sanitation Programme without any restructuring\",\n      \"C\": \"SBM is a restructured version of the Nirmal Bharat Abhiyan, which evolved from earlier programs like the Total Sanitation Campaign\",\n      \"D\": \"SBM was launched in 1999 as the Total Sanitation Campaign and later renamed in 2014\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires understanding SBM guidelines to identify the correct components of scientific waste management.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"Requires simple recall of the relationship between Phase 1 and Phase 2 of the mission.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires linking historical facts to understand the evolution and restructuring of sanitation programs.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

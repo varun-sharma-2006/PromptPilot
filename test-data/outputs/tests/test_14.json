@@ -1,0 +1,223 @@
+{
+  "case": {
+    "no": 14,
+    "type": "Invalid",
+    "kind": "chain",
+    "passage_text": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+    "difficulty": "easy",
+    "n": 3,
+    "competency": "Domain: Right to Information",
+    "short": "Gibberish passage",
+    "expect": "0 questions and a note that the text has no testable facts",
+    "auto": "zero_with_note"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "3 questions; note: ''",
+  "actual_short": "3 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              4
+            ],
+            "question": "Which number is mentioned in the passage?",
+            "explanation": "The passage explicitly lists 1234 as one of its components.",
+            "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+            "options": {
+              "A": "5678",
+              "B": "4321",
+              "C": "9999",
+              "D": "1234"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              9
+            ],
+            "question": "Which of these numbers appears in the provided text?",
+            "explanation": "The number 9981 is directly stated in the passage.",
+            "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+            "options": {
+              "A": "9981",
+              "B": "9982",
+              "C": "9881",
+              "D": "8991"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              1
+            ],
+            "question": "What is the first word listed in the passage?",
+            "explanation": "The passage begins with the string qwerty.",
+            "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+            "options": {
+              "A": "asdf",
+              "B": "zxcv",
+              "C": "qwerty",
+              "D": "lorem"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, directly supported by the text, and has distinct distractors.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, directly supported by the text, and has distinct distractors.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, directly supported by the text, and has distinct distractors.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          4
+        ],
+        "question": "Which number is mentioned in the passage?",
+        "explanation": "The passage explicitly lists 1234 as one of its components.",
+        "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+        "options": {
+          "A": "5678",
+          "B": "4321",
+          "C": "9999",
+          "D": "1234"
+        },
+        "correct": "D",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "The question requires simple recall of a specific fact directly stated in the provided text."
+      },
+      {
+        "fact_ids": [
+          9
+        ],
+        "question": "Which of these numbers appears in the provided text?",
+        "explanation": "The number 9981 is directly stated in the passage.",
+        "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+        "options": {
+          "A": "9981",
+          "B": "9982",
+          "C": "9881",
+          "D": "8991"
+        },
+        "correct": "A",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "The question tests the ability to identify a specific piece of information explicitly mentioned in the text."
+      },
+      {
+        "fact_ids": [
+          1
+        ],
+        "question": "What is the first word listed in the passage?",
+        "explanation": "The passage begins with the string qwerty.",
+        "source_sentence": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+        "options": {
+          "A": "asdf",
+          "B": "zxcv",
+          "C": "qwerty",
+          "D": "lorem"
+        },
+        "correct": "C",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "The question asks for direct recall of the first word, which is explicitly stated in the source."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 2.0
+        },
+        "variables": {
+          "N": 3,
+          "DIFFICULTY": "easy",
+          "COMPETENCY": "Domain: Right to Information",
+          "PASSAGE": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+          "KEY_ORDER": "D, A, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"The passage contains the string qwerty\",\n    \"The passage contains the string asdf\",\n    \"The passage contains the string zxcv\",\n    \"The passage contains the number 1234\",\n    \"The passage contains the string lorem\",\n    \"The passage contains the string ipsum\",\n    \"The passage contains the string dolor\",\n    \"The passage contains the string kjh\",\n    \"The passage contains the number 9981\",\n    \"The passage contains the string blorp\",\n    \"The passage contains the string snee\",\n    \"The passage contains the string wuzzle\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        4\n      ],\n      \"question\": \"Which number is mentioned in the passage?\",\n      \"answer\": \"1234\",\n      \"distractors\": [\n        \"5678\",\n        \"4321\",\n        \"9999\"\n      ],\n      \"explanation\": \"The passage explicitly lists 1234 as one of its components.\",\n      \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\"\n    },\n    {\n      \"fact_ids\": [\n        9\n      ],\n      \"question\": \"Which of these numbers appears in the provided text?\",\n      \"answer\": \"9981\",\n      \"distractors\": [\n        \"9982\",\n        \"9881\",\n        \"8991\"\n      ],\n      \"explanation\": \"The number 9981 is directly stated in the passage.\",\n      \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\"\n    },\n    {\n      \"fact_ids\": [\n        1\n      ],\n      \"question\": \"What is the first word listed in the passage?\",\n      \"answer\": \"qwerty\",\n      \"distractors\": [\n        \"asdf\",\n        \"zxcv\",\n        \"lorem\"\n      ],\n      \"explanation\": \"The passage begins with the string qwerty.\",\n      \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 1.6
+        },
+        "variables": {
+          "DIFFICULTY": "easy",
+          "PASSAGE": "qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      4\n    ],\n    \"question\": \"Which number is mentioned in the passage?\",\n    \"explanation\": \"The passage explicitly lists 1234 as one of its components.\",\n    \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\",\n    \"options\": {\n      \"A\": \"5678\",\n      \"B\": \"4321\",\n      \"C\": \"9999\",\n      \"D\": \"1234\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      9\n    ],\n    \"question\": \"Which of these numbers appears in the provided text?\",\n    \"explanation\": \"The number 9981 is directly stated in the passage.\",\n    \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\",\n    \"options\": {\n      \"A\": \"9981\",\n      \"B\": \"9982\",\n      \"C\": \"9881\",\n      \"D\": \"8991\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      1\n    ],\n    \"question\": \"What is the first word listed in the passage?\",\n    \"explanation\": \"The passage begins with the string qwerty.\",\n    \"source_sentence\": \"qwerty asdf zxcv 1234 lorem ipsum dolor kjh 9981 blorp snee wuzzle\",\n    \"options\": {\n      \"A\": \"asdf\",\n      \"B\": \"zxcv\",\n      \"C\": \"qwerty\",\n      \"D\": \"lorem\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, directly supported by the text, and has distinct distractors.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, directly supported by the text, and has distinct distractors.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, directly supported by the text, and has distinct distractors.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 9.1
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"Which number is mentioned in the passage?\",\n    \"options\": {\n      \"A\": \"5678\",\n      \"B\": \"4321\",\n      \"C\": \"9999\",\n      \"D\": \"1234\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"Which of these numbers appears in the provided text?\",\n    \"options\": {\n      \"A\": \"9981\",\n      \"B\": \"9982\",\n      \"C\": \"9881\",\n      \"D\": \"8991\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"What is the first word listed in the passage?\",\n    \"options\": {\n      \"A\": \"asdf\",\n      \"B\": \"zxcv\",\n      \"C\": \"qwerty\",\n      \"D\": \"lorem\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"The question requires simple recall of a specific fact directly stated in the provided text.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"The question tests the ability to identify a specific piece of information explicitly mentioned in the text.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"The question asks for direct recall of the first word, which is explicitly stated in the source.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

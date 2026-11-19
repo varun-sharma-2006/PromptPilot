@@ -1,0 +1,225 @@
+{
+  "case": {
+    "no": 10,
+    "type": "Edge",
+    "kind": "chain",
+    "passage": "P1_rti",
+    "difficulty": "easy",
+    "n": 3,
+    "modify": "replace",
+    "find": "thirty days",
+    "replace": "ninety days",
+    "short": "RTI passage changed to say 'ninety days' instead of 'thirty days'",
+    "expect": "Any question on reply time uses 90 days (the passage), not 30 (outside knowledge)",
+    "auto": "follows_passage_90"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "1 question(s) on reply time; keyed answers: ['48 hours']",
+  "actual_short": "3 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              1
+            ],
+            "question": "In which year was the Right to Information Act enacted?",
+            "explanation": "The passage explicitly states that the Right to Information Act was enacted in 2005.",
+            "source_sentence": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.",
+            "options": {
+              "A": "2002",
+              "B": "2008",
+              "C": "2010",
+              "D": "2005"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              4
+            ],
+            "question": "What is the time limit for a public authority to reply if a request involves a petitioner's life and liberty?",
+            "explanation": "The passage states that the public authority must reply within 48 hours in cases involving a petitioner's life and liberty.",
+            "source_sentence": "Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty.",
+            "options": {
+              "A": "48 hours",
+              "B": "7 days",
+              "C": "30 days",
+              "D": "90 days"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              2
+            ],
+            "question": "Which legislation did the RTI Act, 2005 replace?",
+            "explanation": "The passage states that the RTI Act replaced the former Freedom of Information Act, 2002.",
+            "source_sentence": "It replaced the former Freedom of Information Act, 2002.",
+            "options": {
+              "A": "Right to Information Act, 2000",
+              "B": "Public Records Act, 1993",
+              "C": "Freedom of Information Act, 2002",
+              "D": "Information Technology Act, 2000"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, accurate, and directly supported by the passage.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, accurate, and directly supported by the passage.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, accurate, and directly supported by the passage.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          1
+        ],
+        "question": "In which year was the Right to Information Act enacted?",
+        "explanation": "The passage explicitly states that the Right to Information Act was enacted in 2005.",
+        "source_sentence": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.",
+        "options": {
+          "A": "2002",
+          "B": "2008",
+          "C": "2010",
+          "D": "2005"
+        },
+        "correct": "D",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "This is a direct recall question regarding the enactment year of the RTI Act."
+      },
+      {
+        "fact_ids": [
+          4
+        ],
+        "question": "What is the time limit for a public authority to reply if a request involves a petitioner's life and liberty?",
+        "explanation": "The passage states that the public authority must reply within 48 hours in cases involving a petitioner's life and liberty.",
+        "source_sentence": "Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty.",
+        "options": {
+          "A": "48 hours",
+          "B": "7 days",
+          "C": "30 days",
+          "D": "90 days"
+        },
+        "correct": "A",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "This question requires simple recall of the specific statutory time limit for life and liberty cases."
+      },
+      {
+        "fact_ids": [
+          2
+        ],
+        "question": "Which legislation did the RTI Act, 2005 replace?",
+        "explanation": "The passage states that the RTI Act replaced the former Freedom of Information Act, 2002.",
+        "source_sentence": "It replaced the former Freedom of Information Act, 2002.",
+        "options": {
+          "A": "Right to Information Act, 2000",
+          "B": "Public Records Act, 1993",
+          "C": "Freedom of Information Act, 2002",
+          "D": "Information Technology Act, 2000"
+        },
+        "correct": "C",
+        "competency": "Domain: Right to Information",
+        "tagged_difficulty": "easy",
+        "tag_justification": "This is a factual recall question identifying the legislation replaced by the RTI Act."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 7.1
+        },
+        "variables": {
+          "N": 3,
+          "DIFFICULTY": "easy",
+          "COMPETENCY": "Domain: Right to Information",
+          "PASSAGE": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information. It replaced the former Freedom of Information Act, 2002. \nUnder the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty. The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally. \nAlthough Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution. The authorities under RTI Act 2005 are called public authorities.",
+          "KEY_ORDER": "D, A, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"The RTI Act was enacted in 2005\",\n    \"The RTI Act replaced the Freedom of Information Act, 2002\",\n    \"Public authorities must reply to information requests within ninety days\",\n    \"Public authorities must reply within 48 hours if the matter involves life and liberty\",\n    \"Public authorities are required to computerize their records\",\n    \"The RTI Act protects fundamental rights under Article 19(1)(a) and Article 21\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        1\n      ],\n      \"question\": \"In which year was the Right to Information Act enacted?\",\n      \"answer\": \"2005\",\n      \"distractors\": [\n        \"2002\",\n        \"2008\",\n        \"2010\"\n      ],\n      \"explanation\": \"The passage explicitly states that the Right to Information Act was enacted in 2005.\",\n      \"source_sentence\": \"The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.\"\n    },\n    {\n      \"fact_ids\": [\n        4\n      ],\n      \"question\": \"What is the time limit for a public authority to reply if a request involves a petitioner's life and liberty?\",\n      \"answer\": \"48 hours\",\n      \"distractors\": [\n        \"7 days\",\n        \"30 days\",\n        \"90 days\"\n      ],\n      \"explanation\": \"The passage states that the public authority must reply within 48 hours in cases involving a petitioner's life and liberty.\",\n      \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\"\n    },\n    {\n      \"fact_ids\": [\n        2\n      ],\n      \"question\": \"Which legislation did the RTI Act, 2005 replace?\",\n      \"answer\": \"Freedom of Information Act, 2002\",\n      \"distractors\": [\n        \"Right to Information Act, 2000\",\n        \"Public Records Act, 1993\",\n        \"Information Technology Act, 2000\"\n      ],\n      \"explanation\": \"The passage states that the RTI Act replaced the former Freedom of Information Act, 2002.\",\n      \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 12.9
+        },
+        "variables": {
+          "DIFFICULTY": "easy",
+          "PASSAGE": "The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information. It replaced the former Freedom of Information Act, 2002. \nUnder the provisions of the 2005 RTI Act, any citizen of India may request information from a \"public authority\" (a body of Government or \"instrumentality of State\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty. The Act also requires every public authority to computerize their records for wide dissemination and to proactively publish certain categories of information so that the citizens need minimum recourse to request information formally. \nAlthough Right to Information is not included as a Fundamental Right in the Constitution of India, it protects the fundamental rights to Freedom of Expression and Speech under Article 19(1)(a) and Right to Life and Personal Liberty under Article 21 guaranteed by the Constitution. The authorities under RTI Act 2005 are called public authorities.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      1\n    ],\n    \"question\": \"In which year was the Right to Information Act enacted?\",\n    \"explanation\": \"The passage explicitly states that the Right to Information Act was enacted in 2005.\",\n    \"source_sentence\": \"The Right to Information Act, 2005 (RTI Act) is an act of the Parliament of India and the Delhi Legislative Assembly which sets out the rules and procedures regarding citizens' right to access information.\",\n    \"options\": {\n      \"A\": \"2002\",\n      \"B\": \"2008\",\n      \"C\": \"2010\",\n      \"D\": \"2005\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      4\n    ],\n    \"question\": \"What is the time limit for a public authority to reply if a request involves a petitioner's life and liberty?\",\n    \"explanation\": \"The passage states that the public authority must reply within 48 hours in cases involving a petitioner's life and liberty.\",\n    \"source_sentence\": \"Under the provisions of the 2005 RTI Act, any citizen of India may request information from a \\\"public authority\\\" (a body of Government or \\\"instrumentality of State\\\") which is required to reply within ninety days, or within 48 hours in case of the matter involving a petitioner's life and liberty.\",\n    \"options\": {\n      \"A\": \"48 hours\",\n      \"B\": \"7 days\",\n      \"C\": \"30 days\",\n      \"D\": \"90 days\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      2\n    ],\n    \"question\": \"Which legislation did the RTI Act, 2005 replace?\",\n    \"explanation\": \"The passage states that the RTI Act replaced the former Freedom of Information Act, 2002.\",\n    \"source_sentence\": \"It replaced the former Freedom of Information Act, 2002.\",\n    \"options\": {\n      \"A\": \"Right to Information Act, 2000\",\n      \"B\": \"Public Records Act, 1993\",\n      \"C\": \"Freedom of Information Act, 2002\",\n      \"D\": \"Information Technology Act, 2000\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, accurate, and directly supported by the passage.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, accurate, and directly supported by the passage.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, accurate, and directly supported by the passage.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 5.9
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"In which year was the Right to Information Act enacted?\",\n    \"options\": {\n      \"A\": \"2002\",\n      \"B\": \"2008\",\n      \"C\": \"2010\",\n      \"D\": \"2005\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"What is the time limit for a public authority to reply if a request involves a petitioner's life and liberty?\",\n    \"options\": {\n      \"A\": \"48 hours\",\n      \"B\": \"7 days\",\n      \"C\": \"30 days\",\n      \"D\": \"90 days\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"Which legislation did the RTI Act, 2005 replace?\",\n    \"options\": {\n      \"A\": \"Right to Information Act, 2000\",\n      \"B\": \"Public Records Act, 1993\",\n      \"C\": \"Freedom of Information Act, 2002\",\n      \"D\": \"Information Technology Act, 2000\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"This is a direct recall question regarding the enactment year of the RTI Act.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"This question requires simple recall of the specific statutory time limit for life and liberty cases.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Right to Information\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"This is a factual recall question identifying the legislation replaced by the RTI Act.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

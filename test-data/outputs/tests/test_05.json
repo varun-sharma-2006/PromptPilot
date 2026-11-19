@@ -1,0 +1,61 @@
+{
+  "case": {
+    "no": 5,
+    "type": "Normal",
+    "kind": "gaps",
+    "from_test": 1,
+    "answers": "first_half_correct",
+    "short": "T4 on test 1 quiz, learner gets 2 of 4 right (synthetic)",
+    "expect": "Table shows 2/4; level 'partial' (0.5); summary names the missed ideas",
+    "auto": "gaps_partial"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "1/3 correct; levels expected {'Domain: Right to Information': 'gap'}, model gave {'Domain: Right to Information': 'gap'}",
+  "actual_short": "1/3; Domain: Right to Information: gap",
+  "result": {
+    "table": [
+      {
+        "competency": "Domain: Right to Information",
+        "correct": 1,
+        "total": 3,
+        "missed_questions": [
+          "What is the primary objective of requiring public authorities to proactively publish information?",
+          "How does the RTI Act relate to the Constitution of India?"
+        ]
+      }
+    ],
+    "summary": {
+      "overall": "You answered 1 out of 3 questions correctly in this assessment.",
+      "gaps": [
+        {
+          "competency": "Domain: Right to Information",
+          "level": "gap",
+          "what_to_review": "Review the primary objectives of proactive information disclosure and the constitutional foundations of the RTI Act."
+        }
+      ],
+      "next_step": "Start by reviewing the foundational objectives and constitutional links of the RTI Act to strengthen your understanding."
+    },
+    "answers": [
+      "C",
+      "B",
+      "A"
+    ],
+    "log": [
+      {
+        "prompt": "final/T4_gaps",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 4.1
+        },
+        "variables": {
+          "RESULTS_JSON": "[\n  {\n    \"competency\": \"Domain: Right to Information\",\n    \"correct\": 1,\n    \"total\": 3,\n    \"missed_questions\": [\n      \"What is the primary objective of requiring public authorities to proactively publish information?\",\n      \"How does the RTI Act relate to the Constitution of India?\"\n    ]\n  }\n]"
+        },
+        "raw_output": "{\n  \"overall\": \"You answered 1 out of 3 questions correctly in this assessment.\",\n  \"gaps\": [\n    {\n      \"competency\": \"Domain: Right to Information\",\n      \"level\": \"gap\",\n      \"what_to_review\": \"Review the primary objectives of proactive information disclosure and the constitutional foundations of the RTI Act.\"\n    }\n  ],\n  \"next_step\": \"Start by reviewing the foundational objectives and constitutional links of the RTI Act to strengthen your understanding.\"\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

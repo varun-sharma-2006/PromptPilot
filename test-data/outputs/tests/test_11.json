@@ -1,0 +1,229 @@
+{
+  "case": {
+    "no": 11,
+    "type": "Edge",
+    "kind": "chain",
+    "passage": "P4_sbm",
+    "difficulty": "medium",
+    "n": 3,
+    "competency": "Functional: Public Procurement",
+    "short": "Sanitation passage but competency set to Public Procurement",
+    "expect": "T3 tags the questions Domain: Sanitation Programmes (what they really test), not the requested label",
+    "auto": "tag_sanitation"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": true,
+  "rule_detail": "tags: ['Domain: Sanitation Programmes', 'Domain: Sanitation Programmes', 'Domain: Sanitation Programmes']",
+  "actual_short": "3 accepted",
+  "result": {
+    "status": "ok",
+    "note": "",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              1,
+              2
+            ],
+            "question": "What was the primary objective of the campaign launched by the Government of India in October 2014?",
+            "explanation": "The passage states that the SBM was initiated on 2 October 2014 to eliminate open defecation and improve solid waste management.",
+            "source_sentence": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages.",
+            "options": {
+              "A": "To launch the first formal sanitation programme in rural India",
+              "B": "To replace the Total Sanitation Campaign with a new municipal policy",
+              "C": "To construct 90 million toilets specifically for menstrual health awareness",
+              "D": "To eradicate open defecation and enhance the management of solid waste"
+            },
+            "correct": "D"
+          },
+          {
+            "fact_ids": [
+              3,
+              4
+            ],
+            "question": "How does the passage characterize the relationship between the Swachh Bharat Mission and the Total Sanitation Campaign?",
+            "explanation": "The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.",
+            "source_sentence": "It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.",
+            "options": {
+              "A": "The Swachh Bharat Mission is a restructured evolution of the earlier Total Sanitation Campaign",
+              "B": "The Total Sanitation Campaign was a pilot project created by the Swachh Bharat Mission",
+              "C": "The Swachh Bharat Mission was replaced by the Total Sanitation Campaign in 1999",
+              "D": "Both programs were launched simultaneously to address different sanitation needs"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              5,
+              6
+            ],
+            "question": "What is the intended purpose of the current phase of the Swachh Bharat Mission?",
+            "explanation": "The passage explains that Phase 2 is being implemented to reinforce the achievements of Phase 1.",
+            "source_sentence": "Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+            "options": {
+              "A": "To initiate the construction of the first 90 million toilets in India",
+              "B": "To replace the scientific waste management goals of the first phase",
+              "C": "To strengthen the outcomes achieved during the first phase of the mission",
+              "D": "To launch the Total Sanitation Campaign as a new national initiative"
+            },
+            "correct": "C"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question is clear, accurate, and meets the medium difficulty level by paraphrasing the mission's goals.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly links the historical context provided in the passage.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question accurately reflects the passage's description of Phase 2's purpose.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          1,
+          2
+        ],
+        "question": "What was the primary objective of the campaign launched by the Government of India in October 2014?",
+        "explanation": "The passage states that the SBM was initiated on 2 October 2014 to eliminate open defecation and improve solid waste management.",
+        "source_sentence": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages.",
+        "options": {
+          "A": "To launch the first formal sanitation programme in rural India",
+          "B": "To replace the Total Sanitation Campaign with a new municipal policy",
+          "C": "To construct 90 million toilets specifically for menstrual health awareness",
+          "D": "To eradicate open defecation and enhance the management of solid waste"
+        },
+        "correct": "D",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "easy",
+        "tag_justification": "The question requires direct recall of the primary objective stated in the source text."
+      },
+      {
+        "fact_ids": [
+          3,
+          4
+        ],
+        "question": "How does the passage characterize the relationship between the Swachh Bharat Mission and the Total Sanitation Campaign?",
+        "explanation": "The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.",
+        "source_sentence": "It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.",
+        "options": {
+          "A": "The Swachh Bharat Mission is a restructured evolution of the earlier Total Sanitation Campaign",
+          "B": "The Total Sanitation Campaign was a pilot project created by the Swachh Bharat Mission",
+          "C": "The Swachh Bharat Mission was replaced by the Total Sanitation Campaign in 1999",
+          "D": "Both programs were launched simultaneously to address different sanitation needs"
+        },
+        "correct": "A",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires understanding the relationship between two programs by paraphrasing information provided in the text."
+      },
+      {
+        "fact_ids": [
+          5,
+          6
+        ],
+        "question": "What is the intended purpose of the current phase of the Swachh Bharat Mission?",
+        "explanation": "The passage explains that Phase 2 is being implemented to reinforce the achievements of Phase 1.",
+        "source_sentence": "Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.",
+        "options": {
+          "A": "To initiate the construction of the first 90 million toilets in India",
+          "B": "To replace the scientific waste management goals of the first phase",
+          "C": "To strengthen the outcomes achieved during the first phase of the mission",
+          "D": "To launch the Total Sanitation Campaign as a new national initiative"
+        },
+        "correct": "C",
+        "competency": "Domain: Sanitation Programmes",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires linking the current phase's purpose to the outcomes of the previous phase described in the text."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 7.2
+        },
+        "variables": {
+          "N": 3,
+          "DIFFICULTY": "medium",
+          "COMPETENCY": "Functional: Public Procurement",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "KEY_ORDER": "D, A, C"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"SBM was initiated by the Government of India on 2 October 2014\",\n    \"SBM aims to eliminate open defecation and improve solid waste management\",\n    \"SBM is a restructured version of the Nirmal Bharat Abhiyan\",\n    \"Nirmal Bharat Abhiyan was launched in 1999 as the Total Sanitation Campaign\",\n    \"Phase 1 of SBM lasted until 2 October 2019\",\n    \"Phase 2 of SBM is implemented between 2020–21 and 2024–25\",\n    \"Approximately 90 million toilets were constructed during Phase 1\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        1,\n        2\n      ],\n      \"question\": \"What was the primary objective of the campaign launched by the Government of India in October 2014?\",\n      \"answer\": \"To eradicate open defecation and enhance the management of solid waste\",\n      \"distractors\": [\n        \"To launch the first formal sanitation programme in rural India\",\n        \"To replace the Total Sanitation Campaign with a new municipal policy\",\n        \"To construct 90 million toilets specifically for menstrual health awareness\"\n      ],\n      \"explanation\": \"The passage states that the SBM was initiated on 2 October 2014 to eliminate open defecation and improve solid waste management.\",\n      \"source_sentence\": \"Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages.\"\n    },\n    {\n      \"fact_ids\": [\n        3,\n        4\n      ],\n      \"question\": \"How does the passage characterize the relationship between the Swachh Bharat Mission and the Total Sanitation Campaign?\",\n      \"answer\": \"The Swachh Bharat Mission is a restructured evolution of the earlier Total Sanitation Campaign\",\n      \"distractors\": [\n        \"The Total Sanitation Campaign was a pilot project created by the Swachh Bharat Mission\",\n        \"The Swachh Bharat Mission was replaced by the Total Sanitation Campaign in 1999\",\n        \"Both programs were launched simultaneously to address different sanitation needs\"\n      ],\n      \"explanation\": \"The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.\",\n      \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\"\n    },\n    {\n      \"fact_ids\": [\n        5,\n        6\n      ],\n      \"question\": \"What is the intended purpose of the current phase of the Swachh Bharat Mission?\",\n      \"answer\": \"To strengthen the outcomes achieved during the first phase of the mission\",\n      \"distractors\": [\n        \"To initiate the construction of the first 90 million toilets in India\",\n        \"To replace the scientific waste management goals of the first phase\",\n        \"To launch the Total Sanitation Campaign as a new national initiative\"\n      ],\n      \"explanation\": \"The passage explains that Phase 2 is being implemented to reinforce the achievements of Phase 1.\",\n      \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\"\n    }\n  ],\n  \"note\": \"\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 13.9
+        },
+        "variables": {
+          "DIFFICULTY": "medium",
+          "PASSAGE": "Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages. The mission also emphasizes scientific solid waste management, including segregation, collection, processing, and disposal of municipal waste. The program also aims to increase awareness of menstrual health management. It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\nA formal sanitation programme was first launched in  India in 1954, followed by the Central Rural Sanitation Programme in 1986, the Total Sanitation Campaign (TSC) in 1999 and the Nirmal Bharat Abhiyan in 2012. These earlier programs laid the foundation for integrated sanitation and waste management approaches, which were further expanded under the Swachh Bharat Mission. Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\nInitiated by the Government of India, the mission aimed to achieve an \"open-defecation free\" (ODF) India by 2 October 2019, the 150th anniversary of the birth of Mahatma Gandhi through construction of toilets. According to government data, approximately 90 million toilets were constructed during this period.",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      1,\n      2\n    ],\n    \"question\": \"What was the primary objective of the campaign launched by the Government of India in October 2014?\",\n    \"explanation\": \"The passage states that the SBM was initiated on 2 October 2014 to eliminate open defecation and improve solid waste management.\",\n    \"source_sentence\": \"Swachh Bharat Mission (SBM), Swachh Bharat Abhiyan or Clean India Mission is a country-wide campaign initiated by the Government of India on 2 October 2014 to eliminate open defecation and improve solid waste management and to create Open Defecation Free (ODF) villages.\",\n    \"options\": {\n      \"A\": \"To launch the first formal sanitation programme in rural India\",\n      \"B\": \"To replace the Total Sanitation Campaign with a new municipal policy\",\n      \"C\": \"To construct 90 million toilets specifically for menstrual health awareness\",\n      \"D\": \"To eradicate open defecation and enhance the management of solid waste\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      3,\n      4\n    ],\n    \"question\": \"How does the passage characterize the relationship between the Swachh Bharat Mission and the Total Sanitation Campaign?\",\n    \"explanation\": \"The passage clarifies that SBM is a restructured version of the Nirmal Bharat Abhiyan, which was launched in 1999 as the Total Sanitation Campaign.\",\n    \"source_sentence\": \"It is a restructured version of the Nirmal Bharat Abhiyan which was launched by the Government of India in 1999, as Total Sanitation Campaign.\",\n    \"options\": {\n      \"A\": \"The Swachh Bharat Mission is a restructured evolution of the earlier Total Sanitation Campaign\",\n      \"B\": \"The Total Sanitation Campaign was a pilot project created by the Swachh Bharat Mission\",\n      \"C\": \"The Swachh Bharat Mission was replaced by the Total Sanitation Campaign in 1999\",\n      \"D\": \"Both programs were launched simultaneously to address different sanitation needs\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      5,\n      6\n    ],\n    \"question\": \"What is the intended purpose of the current phase of the Swachh Bharat Mission?\",\n    \"explanation\": \"The passage explains that Phase 2 is being implemented to reinforce the achievements of Phase 1.\",\n    \"source_sentence\": \"Phase 1 of the Swachh Bharat Mission (SBM) lasted until 2 October 2019, and Phase 2 is being implemented between 2020–21 and 2024–25 to reinforce the achievements of Phase 1.\",\n    \"options\": {\n      \"A\": \"To initiate the construction of the first 90 million toilets in India\",\n      \"B\": \"To replace the scientific waste management goals of the first phase\",\n      \"C\": \"To strengthen the outcomes achieved during the first phase of the mission\",\n      \"D\": \"To launch the Total Sanitation Campaign as a new national initiative\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question is clear, accurate, and meets the medium difficulty level by paraphrasing the mission's goals.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly links the historical context provided in the passage.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question accurately reflects the passage's description of Phase 2's purpose.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 3.9
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"What was the primary objective of the campaign launched by the Government of India in October 2014?\",\n    \"options\": {\n      \"A\": \"To launch the first formal sanitation programme in rural India\",\n      \"B\": \"To replace the Total Sanitation Campaign with a new municipal policy\",\n      \"C\": \"To construct 90 million toilets specifically for menstrual health awareness\",\n      \"D\": \"To eradicate open defecation and enhance the management of solid waste\"\n    },\n    \"correct\": \"D\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"How does the passage characterize the relationship between the Swachh Bharat Mission and the Total Sanitation Campaign?\",\n    \"options\": {\n      \"A\": \"The Swachh Bharat Mission is a restructured evolution of the earlier Total Sanitation Campaign\",\n      \"B\": \"The Total Sanitation Campaign was a pilot project created by the Swachh Bharat Mission\",\n      \"C\": \"The Swachh Bharat Mission was replaced by the Total Sanitation Campaign in 1999\",\n      \"D\": \"Both programs were launched simultaneously to address different sanitation needs\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"What is the intended purpose of the current phase of the Swachh Bharat Mission?\",\n    \"options\": {\n      \"A\": \"To initiate the construction of the first 90 million toilets in India\",\n      \"B\": \"To replace the scientific waste management goals of the first phase\",\n      \"C\": \"To strengthen the outcomes achieved during the first phase of the mission\",\n      \"D\": \"To launch the Total Sanitation Campaign as a new national initiative\"\n    },\n    \"correct\": \"C\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"The question requires direct recall of the primary objective stated in the source text.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires understanding the relationship between two programs by paraphrasing information provided in the text.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"Domain: Sanitation Programmes\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires linking the current phase's purpose to the outcomes of the previous phase described in the text.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "case": {
+    "no": 4,
+    "type": "Normal",
+    "kind": "chain",
+    "passage": "P5_digital_india",
+    "difficulty": "medium",
+    "n": 4,
+    "short": "Digital India passage, medium, 4 questions",
+    "expect": "4 accepted questions, tagged Domain: e-Governance",
+    "auto": "normal_full"
+  },
+  "model": "gemini-3.1-flash-lite",
+  "pass": false,
+  "rule_detail": "3/4 accepted; tags: ['UNTAGGED']",
+  "actual_short": "3 accepted; note: Only 3 medium-difficulty questions could be generated that l",
+  "result": {
+    "status": "ok",
+    "note": "Only 3 medium-difficulty questions could be generated that link facts or require synthesis without repeating the same logic.",
+    "auto_dropped": [],
+    "review_rounds": [
+      {
+        "round": 1,
+        "questions": [
+          {
+            "fact_ids": [
+              1,
+              4
+            ],
+            "question": "How does the Digital India programme structure its objective of improving citizen access to government?",
+            "explanation": "The passage states the programme is organised around three pillars: digital infrastructure as a utility, governance and on-demand services, and digital empowerment.",
+            "source_sentence": "The programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment.",
+            "options": {
+              "A": "By mandating that all private companies provide free internet to rural areas",
+              "B": "By replacing all physical government offices with automated kiosks",
+              "C": "By focusing on digital infrastructure, on-demand governance services, and digital empowerment",
+              "D": "By focusing exclusively on the development of the Unified Payments Interface"
+            },
+            "correct": "C"
+          },
+          {
+            "fact_ids": [
+              5,
+              6
+            ],
+            "question": "What is the current status of the Digital India programme after a decade of operation?",
+            "explanation": "The passage notes that while it built major infrastructure like Aadhaar and UPI, gaps in areas like rural access and transparency persist.",
+            "source_sentence": "Independent assessments after a decade of launch credit it with building one of the world's largest \"digital public infrastructure\"—Aadhaar, the Unified Payments Interface, and several other platforms.",
+            "options": {
+              "A": "It has successfully established major digital public infrastructure, though significant challenges remain",
+              "B": "It has fully resolved all issues regarding rural access and gender parity",
+              "C": "It has been discontinued due to a lack of transparency and data protection",
+              "D": "It has shifted its focus away from digital infrastructure to prioritize job creation"
+            },
+            "correct": "A"
+          },
+          {
+            "fact_ids": [
+              1,
+              7
+            ],
+            "question": "What role does Digital India play regarding platforms like the Government e-Marketplace (GeM)?",
+            "explanation": "The passage describes Digital India as the umbrella under which the government promotes platforms like GeM.",
+            "source_sentence": "The programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace.",
+            "options": {
+              "A": "It acts as a direct competitor to the Government e-Marketplace",
+              "B": "It is a specific sub-component managed exclusively by the GeM team",
+              "C": "It provides the funding for GeM but does not oversee its operations",
+              "D": "It serves as the overarching framework for promoting state-backed digital platforms"
+            },
+            "correct": "D"
+          }
+        ],
+        "reviews": [
+          {
+            "id": 1,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly identifies the three pillars mentioned in the text.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 2,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question accurately synthesizes the achievements and the persistent gaps mentioned in the passage.",
+            "suggested_fix": ""
+          },
+          {
+            "id": 3,
+            "scores": {
+              "faithful": 1,
+              "single_key": 1,
+              "plausible_distractors": 1,
+              "clear": 1,
+              "right_level": 1
+            },
+            "verdict": "pass",
+            "reason": "The question correctly identifies the relationship between the programme and the platforms as described in the text.",
+            "suggested_fix": ""
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "fact_ids": [
+          1,
+          4
+        ],
+        "question": "How does the Digital India programme structure its objective of improving citizen access to government?",
+        "explanation": "The passage states the programme is organised around three pillars: digital infrastructure as a utility, governance and on-demand services, and digital empowerment.",
+        "source_sentence": "The programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment.",
+        "options": {
+          "A": "By mandating that all private companies provide free internet to rural areas",
+          "B": "By replacing all physical government offices with automated kiosks",
+          "C": "By focusing on digital infrastructure, on-demand governance services, and digital empowerment",
+          "D": "By focusing exclusively on the development of the Unified Payments Interface"
+        },
+        "correct": "C",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "easy",
+        "tag_justification": "The question tests direct recall of the core pillars of the Digital India programme."
+      },
+      {
+        "fact_ids": [
+          5,
+          6
+        ],
+        "question": "What is the current status of the Digital India programme after a decade of operation?",
+        "explanation": "The passage notes that while it built major infrastructure like Aadhaar and UPI, gaps in areas like rural access and transparency persist.",
+        "source_sentence": "Independent assessments after a decade of launch credit it with building one of the world's largest \"digital public infrastructure\"—Aadhaar, the Unified Payments Interface, and several other platforms.",
+        "options": {
+          "A": "It has successfully established major digital public infrastructure, though significant challenges remain",
+          "B": "It has fully resolved all issues regarding rural access and gender parity",
+          "C": "It has been discontinued due to a lack of transparency and data protection",
+          "D": "It has shifted its focus away from digital infrastructure to prioritize job creation"
+        },
+        "correct": "A",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "medium",
+        "tag_justification": "Requires understanding the overall progress and current status of the programme beyond a single fact."
+      },
+      {
+        "fact_ids": [
+          1,
+          7
+        ],
+        "question": "What role does Digital India play regarding platforms like the Government e-Marketplace (GeM)?",
+        "explanation": "The passage describes Digital India as the umbrella under which the government promotes platforms like GeM.",
+        "source_sentence": "The programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace.",
+        "options": {
+          "A": "It acts as a direct competitor to the Government e-Marketplace",
+          "B": "It is a specific sub-component managed exclusively by the GeM team",
+          "C": "It provides the funding for GeM but does not oversee its operations",
+          "D": "It serves as the overarching framework for promoting state-backed digital platforms"
+        },
+        "correct": "D",
+        "competency": "UNTAGGED",
+        "tagged_difficulty": "hard",
+        "tag_justification": "Requires inferring the relationship between the overarching framework and specific digital platforms like GeM."
+      }
+    ],
+    "log": [
+      {
+        "prompt": "final/T1_generate",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.2,
+          "json_mode": true,
+          "seconds": 85.7
+        },
+        "variables": {
+          "N": 4,
+          "DIFFICULTY": "medium",
+          "COMPETENCY": "Domain: e-Governance",
+          "PASSAGE": "Digital India is a government of India programme that aims to deliver government services electronically, expand broadband connectivity to rural India, improve citizens' digital literacy, and expand digital inclusion. Indian Prime Minister Narendra Modi launched it on 1 July 2015; the Ministry of Electronics and Information Technology (MeitY) primarily administers it, working alongside related programmes such as Bharat Broadband Network, Make in India, and Atmanirbhar Bharat.\nThe programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment. Independent assessments after a decade of launch credit it with building one of the world's largest \"digital public infrastructure\"—Aadhaar, the Unified Payments Interface, and several other platforms. Gaps in rural access, gender parity, data protection, and programme transparency persist.\nThe programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace. At the launch of the program, several domestic and international companies promised to invest ₹4.5 lakh crore (equivalent to ₹7.4 trillion or US$79 billion in 2026), with Mukesh Ambani leading with a ₹2.5 lakh crore (equivalent to ₹4.1 trillion or US$44 billion in 2026) pledge. The programme was expected to create 18 lakh jobs",
+          "KEY_ORDER": "C, A, D, B"
+        },
+        "raw_output": "{\n  \"facts\": [\n    \"Digital India aims to deliver services electronically, expand rural broadband, improve digital literacy, and expand digital inclusion\",\n    \"Prime Minister Narendra Modi launched Digital India on 1 July 2015\",\n    \"MeitY primarily administers the programme\",\n    \"Digital India is organised around three pillars: digital infrastructure, governance/on-demand services, and digital empowerment\",\n    \"Independent assessments credit the programme with building large digital public infrastructure like Aadhaar and UPI\",\n    \"Gaps in rural access, gender parity, data protection, and transparency persist\",\n    \"Digital India acts as an umbrella for platforms like ONDC and GeM\",\n    \"At launch, companies pledged ₹4.5 lakh crore in investments\",\n    \"The programme was expected to create 18 lakh jobs\"\n  ],\n  \"questions\": [\n    {\n      \"fact_ids\": [\n        1,\n        4\n      ],\n      \"question\": \"How does the Digital India programme structure its objective of improving citizen access to government?\",\n      \"answer\": \"By focusing on digital infrastructure, on-demand governance services, and digital empowerment\",\n      \"distractors\": [\n        \"By mandating that all private companies provide free internet to rural areas\",\n        \"By replacing all physical government offices with automated kiosks\",\n        \"By focusing exclusively on the development of the Unified Payments Interface\"\n      ],\n      \"explanation\": \"The passage states the programme is organised around three pillars: digital infrastructure as a utility, governance and on-demand services, and digital empowerment.\",\n      \"source_sentence\": \"The programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment.\"\n    },\n    {\n      \"fact_ids\": [\n        5,\n        6\n      ],\n      \"question\": \"What is the current status of the Digital India programme after a decade of operation?\",\n      \"answer\": \"It has successfully established major digital public infrastructure, though significant challenges remain\",\n      \"distractors\": [\n        \"It has fully resolved all issues regarding rural access and gender parity\",\n        \"It has been discontinued due to a lack of transparency and data protection\",\n        \"It has shifted its focus away from digital infrastructure to prioritize job creation\"\n      ],\n      \"explanation\": \"The passage notes that while it built major infrastructure like Aadhaar and UPI, gaps in areas like rural access and transparency persist.\",\n      \"source_sentence\": \"Independent assessments after a decade of launch credit it with building one of the world's largest \\\"digital public infrastructure\\\"—Aadhaar, the Unified Payments Interface, and several other platforms.\"\n    },\n    {\n      \"fact_ids\": [\n        1,\n        7\n      ],\n      \"question\": \"What role does Digital India play regarding platforms like the Government e-Marketplace (GeM)?\",\n      \"answer\": \"It serves as the overarching framework for promoting state-backed digital platforms\",\n      \"distractors\": [\n        \"It acts as a direct competitor to the Government e-Marketplace\",\n        \"It is a specific sub-component managed exclusively by the GeM team\",\n        \"It provides the funding for GeM but does not oversee its operations\"\n      ],\n      \"explanation\": \"The passage describes Digital India as the umbrella under which the government promotes platforms like GeM.\",\n      \"source_sentence\": \"The programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace.\"\n    }\n  ],\n  \"note\": \"Only 3 medium-difficulty questions could be generated that link facts or require synthesis without repeating the same logic.\"\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T2_review",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 30.3
+        },
+        "variables": {
+          "DIFFICULTY": "medium",
+          "PASSAGE": "Digital India is a government of India programme that aims to deliver government services electronically, expand broadband connectivity to rural India, improve citizens' digital literacy, and expand digital inclusion. Indian Prime Minister Narendra Modi launched it on 1 July 2015; the Ministry of Electronics and Information Technology (MeitY) primarily administers it, working alongside related programmes such as Bharat Broadband Network, Make in India, and Atmanirbhar Bharat.\nThe programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment. Independent assessments after a decade of launch credit it with building one of the world's largest \"digital public infrastructure\"—Aadhaar, the Unified Payments Interface, and several other platforms. Gaps in rural access, gender parity, data protection, and programme transparency persist.\nThe programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace. At the launch of the program, several domestic and international companies promised to invest ₹4.5 lakh crore (equivalent to ₹7.4 trillion or US$79 billion in 2026), with Mukesh Ambani leading with a ₹2.5 lakh crore (equivalent to ₹4.1 trillion or US$44 billion in 2026) pledge. The programme was expected to create 18 lakh jobs",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"fact_ids\": [\n      1,\n      4\n    ],\n    \"question\": \"How does the Digital India programme structure its objective of improving citizen access to government?\",\n    \"explanation\": \"The passage states the programme is organised around three pillars: digital infrastructure as a utility, governance and on-demand services, and digital empowerment.\",\n    \"source_sentence\": \"The programme is organised around three pillars: digital infrastructure as a utility available to every citizen, governance and on-demand services, and digital empowerment.\",\n    \"options\": {\n      \"A\": \"By mandating that all private companies provide free internet to rural areas\",\n      \"B\": \"By replacing all physical government offices with automated kiosks\",\n      \"C\": \"By focusing on digital infrastructure, on-demand governance services, and digital empowerment\",\n      \"D\": \"By focusing exclusively on the development of the Unified Payments Interface\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 2,\n    \"fact_ids\": [\n      5,\n      6\n    ],\n    \"question\": \"What is the current status of the Digital India programme after a decade of operation?\",\n    \"explanation\": \"The passage notes that while it built major infrastructure like Aadhaar and UPI, gaps in areas like rural access and transparency persist.\",\n    \"source_sentence\": \"Independent assessments after a decade of launch credit it with building one of the world's largest \\\"digital public infrastructure\\\"—Aadhaar, the Unified Payments Interface, and several other platforms.\",\n    \"options\": {\n      \"A\": \"It has successfully established major digital public infrastructure, though significant challenges remain\",\n      \"B\": \"It has fully resolved all issues regarding rural access and gender parity\",\n      \"C\": \"It has been discontinued due to a lack of transparency and data protection\",\n      \"D\": \"It has shifted its focus away from digital infrastructure to prioritize job creation\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"fact_ids\": [\n      1,\n      7\n    ],\n    \"question\": \"What role does Digital India play regarding platforms like the Government e-Marketplace (GeM)?\",\n    \"explanation\": \"The passage describes Digital India as the umbrella under which the government promotes platforms like GeM.\",\n    \"source_sentence\": \"The programme has become the umbrella under which the Government of India has built and promoted state-run and state-backed digital platforms, including the Open Network for Digital Commerce and Government e-Marketplace.\",\n    \"options\": {\n      \"A\": \"It acts as a direct competitor to the Government e-Marketplace\",\n      \"B\": \"It is a specific sub-component managed exclusively by the GeM team\",\n      \"C\": \"It provides the funding for GeM but does not oversee its operations\",\n      \"D\": \"It serves as the overarching framework for promoting state-backed digital platforms\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"reviews\": [\n    {\n      \"id\": 1,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly identifies the three pillars mentioned in the text.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 2,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question accurately synthesizes the achievements and the persistent gaps mentioned in the passage.\",\n      \"suggested_fix\": \"\"\n    },\n    {\n      \"id\": 3,\n      \"scores\": {\n        \"faithful\": 1,\n        \"single_key\": 1,\n        \"plausible_distractors\": 1,\n        \"clear\": 1,\n        \"right_level\": 1\n      },\n      \"verdict\": \"pass\",\n      \"reason\": \"The question correctly identifies the relationship between the programme and the platforms as described in the text.\",\n      \"suggested_fix\": \"\"\n    }\n  ]\n}",
+        "parse_error": null
+      },
+      {
+        "prompt": "final/T3_tag",
+        "meta": {
+          "model": "gemini-3.1-flash-lite",
+          "temperature": 0.0,
+          "json_mode": true,
+          "seconds": 15.3
+        },
+        "variables": {
+          "COMPETENCY_LIST": "- Domain: Right to Information\n- Domain: Sanitation Programmes\n- Domain: e-Governance\n- Functional: Public Procurement\n- Functional: Vigilance and Ethics\n- Behavioural: Citizen Centricity",
+          "QUESTIONS_JSON": "[\n  {\n    \"id\": 1,\n    \"question\": \"How does the Digital India programme structure its objective of improving citizen access to government?\",\n    \"options\": {\n      \"A\": \"By mandating that all private companies provide free internet to rural areas\",\n      \"B\": \"By replacing all physical government offices with automated kiosks\",\n      \"C\": \"By focusing on digital infrastructure, on-demand governance services, and digital empowerment\",\n      \"D\": \"By focusing exclusively on the development of the Unified Payments Interface\"\n    },\n    \"correct\": \"C\"\n  },\n  {\n    \"id\": 2,\n    \"question\": \"What is the current status of the Digital India programme after a decade of operation?\",\n    \"options\": {\n      \"A\": \"It has successfully established major digital public infrastructure, though significant challenges remain\",\n      \"B\": \"It has fully resolved all issues regarding rural access and gender parity\",\n      \"C\": \"It has been discontinued due to a lack of transparency and data protection\",\n      \"D\": \"It has shifted its focus away from digital infrastructure to prioritize job creation\"\n    },\n    \"correct\": \"A\"\n  },\n  {\n    \"id\": 3,\n    \"question\": \"What role does Digital India play regarding platforms like the Government e-Marketplace (GeM)?\",\n    \"options\": {\n      \"A\": \"It acts as a direct competitor to the Government e-Marketplace\",\n      \"B\": \"It is a specific sub-component managed exclusively by the GeM team\",\n      \"C\": \"It provides the funding for GeM but does not oversee its operations\",\n      \"D\": \"It serves as the overarching framework for promoting state-backed digital platforms\"\n    },\n    \"correct\": \"D\"\n  }\n]"
+        },
+        "raw_output": "{\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"competency\": \"e-Governance\",\n      \"difficulty\": \"easy\",\n      \"justification\": \"The question tests direct recall of the core pillars of the Digital India programme.\"\n    },\n    {\n      \"id\": 2,\n      \"competency\": \"e-Governance\",\n      \"difficulty\": \"medium\",\n      \"justification\": \"Requires understanding the overall progress and current status of the programme beyond a single fact.\"\n    },\n    {\n      \"id\": 3,\n      \"competency\": \"e-Governance\",\n      \"difficulty\": \"hard\",\n      \"justification\": \"Requires inferring the relationship between the overarching framework and specific digital platforms like GeM.\"\n    }\n  ]\n}",
+        "parse_error": null
+      }
+    ]
+  }
+}
