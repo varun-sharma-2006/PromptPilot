@@ -14,7 +14,7 @@ times and authors.
 - Prompt versions: T1 v1 (the Milestone 1 baseline), v2, v3, final; T2 v1, v2, final.
 - New prompts beyond Milestone 1: T1R (revise failed questions) and T4 counts moved into code.
 - The prompt chain (`code/chain.py`), the Streamlit prototype (`code/app.py`) and four diagrams.
-- 15 test cases (normal, edge, invalid) with pre-written pass/fail rules (`code/run_tests.py`) and their saved outputs.
+- 16 test cases (normal, edge, invalid) with pre-written pass/fail rules (`code/run_tests.py`) and their saved outputs.
 - Milestone 2 PDF and research abstract (`docs/`).
 
 ### Changed
