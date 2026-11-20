@@ -1,5 +1,5 @@
 {
-  "_note": "Fill every value marked TODO, then run: python docs/build_pdf.py. If you deploy the Streamlit app (README), you may replace links.prototype with its URL.",
+  "_note": "Team details used by docs/build_pdf.py. After a change, run: python docs/build_pdf.py",
   "team_id": "PE-B37-07",
   "team_name": "PromptPilot",
   "project_title": "KarmaQuiz: A Prompt-Engineered Workflow to Generate, Quality-Check and Competency-Tag MCQs from Learning Material (SIH26101, iGOT Karmayogi)",
@@ -27,7 +27,7 @@
   "links": {
     "prototype": "https://colab.research.google.com/github/varun-sharma-2006/PromptPilot/blob/main/code/KarmaQuiz_demo.ipynb",
     "repository": "https://github.com/varun-sharma-2006/PromptPilot",
-    "reel": "TODO Drive or unlisted YouTube link",
+    "reel": "https://drive.google.com/file/d/1FCrb3o7sfWe-cWwaJ1Jp3DU3fELq6Foy/view?usp=sharing",
     "reel_seconds": 125
   }
 }
