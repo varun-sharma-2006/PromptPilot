@@ -12,3 +12,17 @@ live in the Streamlit app (`streamlit run code/app.py`) or the Colab notebook, n
 
 After uploading, set the link to "Anyone with the link can view", test it in a private window,
 and enter the exact length in seconds in `docs/team.json` (`reel_seconds`) and form Q14.
+
+## Recording checklist
+
+- [ ] Set `GOOGLE_API_KEY` in the terminal **before** you start recording, and never show it on screen
+      (no `echo`, no `.streamlit/secrets.toml` in an open editor tab).
+- [ ] Run `python code/check_secrets.py` first. Close every tab that isn't needed.
+- [ ] Use 1920×1080 and zoom the browser to 125% so table text is readable on a phone.
+- [ ] Do one practice run first: the free API tier can return a 429 error. If it does, wait one
+      minute and run again rather than cutting in an old result.
+- [ ] Cut waiting time while the model runs, but don't cut between the button press and the result
+      in a way that hides that the run is real.
+- [ ] Voice-over: record in a quiet room, separately if needed, and keep it within 90–150 s in total.
+- [ ] Export as MP4, upload, set "Anyone with the link can view", open it in a private window, and
+      write the exact length in `docs/team.json` → `links.reel_seconds`.

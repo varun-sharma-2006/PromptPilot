@@ -19,7 +19,7 @@ learner's competency gaps from their quiz answers.
 |---|---|
 | Varun Sharma (leader) | Chain code, T1/T1R/T2 final prompts, Streamlit app, Milestone 2 PDF |
 | Yashika Garg | Test data and test table, prompt versions v2 and v3, experiment runner and checks, diagrams, research abstract |
-| Om Bansal | TODO: confirm task (planned: reel recording and voice-over, hands-on comparison with existing quiz tools) |
+| Om Bansal | Offline tests, secret scanner and GitHub Actions checks, prompt and test-data documentation, reel |
 
 ## The chain (5 prompts)
 
@@ -39,9 +39,10 @@ options A–D, or whose source sentence is not found word for word in the passag
 ```
 README.md            this file
 CHANGELOG.md         dated changes since Milestone 1
-requirements.txt
+requirements.txt     (requirements-dev.txt adds pytest for the offline tests)
 prompts/
-  v1/ v2/ v3/        older prompt versions (one .txt per prompt)
+  README.md          prompt file format, versions and variables
+  v1/ v2/ v3/ v4/    older prompt versions (one .txt per prompt)
   final/             final prompts: T1_generate, T1_revise, T2_review, T3_tag, T4_gaps
 code/
   app.py             Streamlit prototype
@@ -54,7 +55,9 @@ code/
   fetch_passages.py  downloads the public test passages
   make_diagrams.py   draws docs/diagrams
   screenshots.py     screenshots of real app runs
-test-data/
+  check_secrets.py   fails if an API key or password is in a tracked file
+tests/               offline tests (no API key): checks, prompt files, saved test data
+test-data/           (README.md explains every file)
   passages/          6 public passages (Wikipedia, CC BY-SA 4.0) with revision IDs
   cases/             the 16 test inputs with expected outputs
   outputs/           every saved output: iterations/ (per prompt version) and tests/ (per test)
@@ -75,6 +78,14 @@ Reproduce the numbers in the report:
 ```bash
 python code/run_iterations.py v1     # also v2, v3, final
 python code/run_tests.py
+```
+
+Offline checks (no API key, also run by GitHub Actions on every push):
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest tests -q            # 56 tests: checks, prompt files, saved test data
+python code/check_secrets.py         # run before every push
 ```
 
 ## Deploy (Streamlit Community Cloud)

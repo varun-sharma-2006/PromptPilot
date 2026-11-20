@@ -3,6 +3,15 @@
 All changes since Milestone 1 (submitted 7 October 2026). The git history has the exact commit
 times and authors.
 
+## 2026-11-20
+
+### Added
+- Offline tests in `tests/` (56 tests, no API key): automatic checks, every prompt file and its
+  `{VARIABLES}`, and consistency of the saved test data with the test table.
+- `code/check_secrets.py`: scans tracked files for API keys and passwords.
+- GitHub Actions workflow (`.github/workflows/offline-checks.yml`) runs both on every push.
+- `prompts/README.md` and `test-data/README.md`.
+
 ## 2026-11-19
 
 ### Added
